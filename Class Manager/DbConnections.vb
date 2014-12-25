@@ -1,21 +1,22 @@
 ﻿Imports System.Data
-Imports System.Data.SqlClient
+Imports System.Data.SQLite
 
 Module DbConnections
-    Public SQLCONN As New SqlConnection
-    Public SQLCMD As New SqlCommand
-    Public SQLDA As New SqlDataAdapter
-    Public SQLDR As SqlDataReader
+    Public SQLCONN As New SQLiteConnection
+    Public SQLCMD As New SQLiteCommand
+    Public SQLDA As New SQLiteDataAdapter
+    Public SQLDR As SQLiteDataReader
     Public SQLSTR As String
     Public msgboxtitle = ""
+
 
     Public Sub DBConn()
         If SQLCONN.State = ConnectionState.Open Then SQLCONN.Close()
         Try
-            SQLCONN = New SqlConnection("Data Source=(LocalDB)\v11.0;AttachDbFilename=C:\Users\Miguel Rigunay\Desktop\Class Manager\Class Manager\ClassRecords.mdf;Integrated Security=True")
+            SQLCONN = New SQLiteConnection("Data Source=ClassRecords.sqlite")
             SQLCONN.Open()
         Catch ex As Exception
-            MsgBox("CONNECTION UNSUCCESSFUL", MsgBoxStyle.Critical, msgboxtitle)
+            MsgBox(ex.Message)
         End Try
 
     End Sub

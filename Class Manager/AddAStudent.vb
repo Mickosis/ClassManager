@@ -1,5 +1,6 @@
 ﻿Imports System.IO
 Imports System.Data.SqlClient
+Imports System.Data.SQLite
 
 Public Class AddAStudent
 
@@ -43,31 +44,31 @@ Public Class AddAStudent
                 MsgBox("Contact Number Missing", MsgBoxStyle.OkOnly, msgboxtitle)
             ElseIf TextBox5.Text = "" Then
                 MsgBox("E-mail Address Missing", MsgBoxStyle.OkOnly, msgboxtitle)
-        Else
-            Dim sourcepath As String = TextBox6.Text
+            Else
+                Dim sourcepath As String = TextBox6.Text
                 Dim DestPath As String = "C:\Mickosis\Class Manager\"
-            Dim folderpath As String = TextBox1.Text
-            If Not Directory.Exists(DestPath) Then
-                Directory.CreateDirectory(DestPath)
-            End If
+                Dim folderpath As String = TextBox1.Text
+                If Not Directory.Exists(DestPath) Then
+                    Directory.CreateDirectory(DestPath)
+                End If
                 Directory.CreateDirectory("C:\Mickosis\Class Manager\" + folderpath)
-            Dim file = New FileInfo(TextBox6.Text)
+                Dim file = New FileInfo(TextBox6.Text)
                 file.CopyTo(Path.Combine(DestPath, TextBox1.Text, file.Name), True)
-            DBConn()
-            SQLCMD.Parameters.AddWithValue("@name", Path.Combine(DestPath, TextBox1.Text, file.Name))
-            Dim ms As New MemoryStream()
-            PictureBox1.Image.Save(ms, PictureBox1.Image.RawFormat)
-            Dim data As Byte() = ms.GetBuffer()
-            Dim p As New SqlParameter("@photo", SqlDbType.Image)
-            p.Value = data
-            SQLCMD.Parameters.Add(p)
-            SQLSTR = "INSERT INTO MasterStudents (StudentID, FirstName, LastName, ContactNumber, EmailAddress, photo, path) VALUES ('" & TextBox1.Text & "', '" & TextBox2.Text & "', '" & TextBox3.Text & "', '" & TextBox4.Text & "', '" & TextBox5.Text & "', @photo, @name)"
-            alterDB()
-            MsgBox("Input successful!", , msgboxtitle)
-            SQLCONN.Close()
-            SQLCMD.Parameters.Clear()
-            PictureBox1.ImageLocation = "C:\Users\Miguel Rigunay\Desktop\LRC\LRChitect System\WindowsApplication2\Resources\Default.jpg"
-                TextBox6.Text = "C:\Users\Miguel Rigunay\Desktop\LRC\LRChitect System\WindowsApplication2\Resources\Default.jpg"
+                DBConn()
+                SQLCMD.Parameters.AddWithValue("@name", Path.Combine(DestPath, TextBox1.Text, file.Name))
+                Dim ms As New MemoryStream()
+                PictureBox1.Image.Save(ms, PictureBox1.Image.RawFormat)
+                Dim data As Byte() = ms.GetBuffer()
+                Dim p As New SQLiteParameter("@photo", SqlDbType.Image)
+                p.Value = data
+                SQLCMD.Parameters.Add(p)
+                SQLSTR = "INSERT INTO MasterStudents (StudentID, FirstName, LastName, ContactNumber, EmailAddress, path) VALUES ('" & TextBox1.Text & "', '" & TextBox2.Text & "', '" & TextBox3.Text & "', '" & TextBox4.Text & "', '" & TextBox5.Text & "', @name)"
+                alterDB()
+                MsgBox("Input successful!", , msgboxtitle)
+                SQLCONN.Close()
+                SQLCMD.Parameters.Clear()
+                PictureBox1.ImageLocation = "Default.jpg"
+                TextBox6.Text = "Default.jpg"
             End If
         End If
     End Sub

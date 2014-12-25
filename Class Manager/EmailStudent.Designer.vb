@@ -116,8 +116,9 @@ Partial Class EmailStudent
         '
         Me.TextBox4.Location = New System.Drawing.Point(129, 100)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox4.Size = New System.Drawing.Size(136, 20)
         Me.TextBox4.TabIndex = 9
+        Me.TextBox4.Text = "Class Manager Notification"
         '
         'RichTextBox1
         '
@@ -125,7 +126,7 @@ Partial Class EmailStudent
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(218, 98)
         Me.RichTextBox1.TabIndex = 10
-        Me.RichTextBox1.Text = ""
+        Me.RichTextBox1.Text = "This is a Class Manager Notification, please contact professor/s immediately."
         '
         'Button2
         '

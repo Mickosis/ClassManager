@@ -1,5 +1,6 @@
 ﻿Imports System.IO
 Imports System.Data.SqlClient
+Imports System.Data.SQLite
 
 Public Class UpdateStudent
 
@@ -49,10 +50,10 @@ Public Class UpdateStudent
                 Dim ms As New MemoryStream()
                 PictureBox1.Image.Save(ms, PictureBox1.Image.RawFormat)
                 Dim data As Byte() = ms.GetBuffer()
-                Dim p As New SqlParameter("@photo", SqlDbType.Image)
+                Dim p As New SQLiteParameter("@photo", SqlDbType.Image)
                 p.Value = data
                 SQLCMD.Parameters.Add(p)
-                SQLSTR = "UPDATE MasterStudents SET FirstName= '" & TextBox2.Text & "', LastName= '" & TextBox3.Text & "', ContactNumber= '" & TextBox4.Text & "', EmailAddress= '" & TextBox5.Text & "', photo = @photo, path = @name  WHERE StudentID = '" & TextBox1.Text & "'"
+                SQLSTR = "UPDATE MasterStudents SET FirstName= '" & TextBox2.Text & "', LastName= '" & TextBox3.Text & "', ContactNumber= '" & TextBox4.Text & "', EmailAddress= '" & TextBox5.Text & "', path = @name  WHERE StudentID = '" & TextBox1.Text & "'"
                 alterDB()
                 MsgBox("Update successful!", , msgboxtitle)
                 SQLCONN.Close()

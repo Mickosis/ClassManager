@@ -191,8 +191,7 @@ Partial Class AddAStudent
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(141, 20)
         Me.TextBox6.TabIndex = 21
-        Me.TextBox6.Text = "C:\Users\Miguel Rigunay\Desktop\LRC\LRChitect System\WindowsApplication2\Resource" & _
-    "s\Default.jpg"
+        Me.TextBox6.Text = "Default.jpg"
         '
         'PictureBox1
         '
