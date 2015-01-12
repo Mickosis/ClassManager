@@ -159,6 +159,12 @@
     <Compile Include="ClassCreateHome.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ClassCreateHomeAddStudents.Designer.vb">
+      <DependentUpon>ClassCreateHomeAddStudents.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClassCreateHomeAddStudents.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ClassHome.Designer.vb">
       <DependentUpon>ClassHome.vb</DependentUpon>
     </Compile>
@@ -231,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ClassCreateHome.resx">
       <DependentUpon>ClassCreateHome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassCreateHomeAddStudents.resx">
+      <DependentUpon>ClassCreateHomeAddStudents.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClassHome.resx">
       <DependentUpon>ClassHome.vb</DependentUpon>

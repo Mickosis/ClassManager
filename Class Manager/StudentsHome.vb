@@ -30,6 +30,7 @@ Public Class StudentsHome
             ListView1.GridLines = True
             ListView1.FullRowSelect = True
             ListView1.View = View.Details
+            ListView1.MultiSelect = False
             ListView1.Columns.Add("StudentID", 80)
             ListView1.Columns.Add("First Name", 80)
             ListView1.Columns.Add("Last Name", 80)
