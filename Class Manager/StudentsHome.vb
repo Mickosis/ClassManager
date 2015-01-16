@@ -1,5 +1,4 @@
-﻿Imports System.Data.SqlClient
-Imports System.Web
+﻿Imports System.Web
 Imports System.IO
 Imports System.Net.Mail
 
@@ -47,8 +46,8 @@ Public Class StudentsHome
                 End With
             End While
             SQLDR.Close()
-        Catch ex As SqlException
-            MessageBox.Show(ex.Message, "MySQL Error: " & ex.Number, MessageBoxButtons.OK, MessageBoxIcon.Exclamation, msgboxtitle)
+        Catch ex As Exception
+            MsgBox(ex.Message)
         End Try
     End Sub
 
@@ -100,5 +99,9 @@ Public Class StudentsHome
 
             End With
         End If
+    End Sub
+
+    Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView1.SelectedIndexChanged
+
     End Sub
 End Class
