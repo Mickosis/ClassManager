@@ -34,10 +34,10 @@
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
-            DBConn()
-            SQLSTR = "SELECT * FROM MasterStudents WHERE StudentID LIKE '%" & TextBox1.Text & "%' OR FirstName LIKE '" & TextBox2.Text & "%' OR LastName LIKE '" & TextBox3.Text & "%' "
-            readDB()
             ListView1.Clear()
+            DBConn()
+            SQLSTR = "SELECT * FROM MasterStudents WHERE StudentID LIKE '%" & TextBox1.Text & "%' AND FirstName LIKE '" & TextBox2.Text & "%' AND LastName LIKE '" & TextBox3.Text & "%' "
+            readDB()
             ListView1.GridLines = True
             ListView1.FullRowSelect = True
             ListView1.View = View.Details
@@ -83,12 +83,14 @@
                 Dim FirstName = item.SubItems(1).Text
                 Dim LastName = item.SubItems(2).Text
                 DBConn()
-                SQLSTR = "INSERT INTO '" & TextBox4.Text & "' (StudentID, FirstName, LastName) VALUES '" & StudentID & "', '" & FirstName & "', '" & LastName & "' "
+                SQLSTR = "INSERT INTO '" & TextBox4.Text & "' (StudentID, FirstName, LastName) VALUES ('" & StudentID & "', '" & FirstName & "', '" & LastName & "') "
                 alterDB()
                 MsgBox("Students succesfully added", msgboxtitle)
             Next
         Catch ex As Exception
         End Try
+        SQLCONN.Close()
+
 
     End Sub
 

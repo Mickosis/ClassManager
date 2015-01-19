@@ -22,7 +22,7 @@ Public Class ClassCreateHome
                         TextBox2.Text = reader.GetValue(0)
                     End While
                     reader.Close()
-                    SQLSTR = "CREATE TABLE '" & TextBox2.Text & "' (StudentID INT NOT NULL UNIQUE, FirstName TEXT, LastName TEXT, Prelim INTEGER, Midterms INTEGER, FINALS INTEGER)"
+                    SQLSTR = "CREATE TABLE '" & TextBox2.Text & "' (StudentID INTEGER NOT NULL UNIQUE, FirstName TEXT, LastName TEXT, Prelim INTEGER, Midterms INTEGER, FINALS INTEGER)"
                     alterDB()
                     MsgBox("Class created!", , msgboxtitle)
                     ClassCreateHomeAddStudents.TextBox4.Text = TextBox2.Text

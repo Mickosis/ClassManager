@@ -5,18 +5,18 @@ Imports System.Net.Mail
 Public Class StudentsHome
 
     Private Sub ImportExcelFileToolStripMenuItem_Click(sender As Object, e As EventArgs)
-        Me.Hide()
+        Me.Close()
         ImportExcelHome.Show()
     End Sub
 
     Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
-        Me.Hide()
+        Me.Close()
         Home.Show()
 
     End Sub
 
     Private Sub ImportExcelFileToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles ImportExcelFileToolStripMenuItem.Click
-        Me.Hide()
+        Me.Close()
         ImportExcelHome.Show()
 
     End Sub
@@ -52,7 +52,7 @@ Public Class StudentsHome
     End Sub
 
     Private Sub AddAStudentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddAStudentToolStripMenuItem.Click
-        Me.Hide()
+        Me.Close()
         AddAStudent.Show()
     End Sub
 
