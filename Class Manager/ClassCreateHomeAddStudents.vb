@@ -77,21 +77,15 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        Try
             For Each item As ListViewItem In ListView1.SelectedItems
-                Dim StudentID = Integer.Parse(item.SubItems(0).Text)
-                Dim FirstName = item.SubItems(1).Text
-                Dim LastName = item.SubItems(2).Text
+            Dim StudentID As Integer : StudentID = CInt(item.SubItems(0).Text)
+            Dim FirstName As String : FirstName = item.SubItems(1).Text
+            Dim LastName As String : LastName = item.SubItems(2).Text
                 DBConn()
-                SQLSTR = "INSERT INTO '" & TextBox4.Text & "' (StudentID, FirstName, LastName) VALUES ('" & StudentID & "', '" & FirstName & "', '" & LastName & "') "
+            SQLSTR = "INSERT INTO '" & TextBox4.Text & "' (StudentID, FirstName, LastName, Prelim, Midterms, FINALS) VALUES ('" & StudentID & "', '" & FirstName & "', '" & LastName & "', 0, 0, 0) "
                 alterDB()
-                MsgBox("Students succesfully added", msgboxtitle)
             Next
-        Catch ex As Exception
-        End Try
-        SQLCONN.Close()
-
-
+        MsgBox("Students added!", , msgboxtitle)
     End Sub
 
 End Class
