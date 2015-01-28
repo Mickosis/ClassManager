@@ -33,6 +33,7 @@ Partial Class StudentsHome
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -116,15 +117,25 @@ Partial Class StudentsHome
         '
         Me.TextBox1.Location = New System.Drawing.Point(582, 326)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.Size = New System.Drawing.Size(10, 20)
         Me.TextBox1.TabIndex = 12
         Me.TextBox1.Visible = False
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(582, 295)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(209, 23)
+        Me.Button3.TabIndex = 13
+        Me.Button3.Text = "Delete Student"
+        Me.Button3.UseVisualStyleBackColor = True
         '
         'StudentsHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(872, 413)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -151,4 +162,5 @@ Partial Class StudentsHome
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Button3 As System.Windows.Forms.Button
 End Class

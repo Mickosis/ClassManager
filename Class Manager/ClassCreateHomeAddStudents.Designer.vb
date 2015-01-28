@@ -123,7 +123,7 @@ Partial Class ClassCreateHomeAddStudents
         '
         Me.TextBox4.Location = New System.Drawing.Point(241, 11)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox4.Size = New System.Drawing.Size(10, 20)
         Me.TextBox4.TabIndex = 19
         '
         'ClassCreateHomeAddStudents

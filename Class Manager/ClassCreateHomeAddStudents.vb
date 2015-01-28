@@ -1,4 +1,6 @@
-﻿Public Class ClassCreateHomeAddStudents
+﻿Imports System.Data.SQLite
+
+Public Class ClassCreateHomeAddStudents
 
     Private Sub ClassCreateHomeAddStudents_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         SQLCONN.Close()
@@ -27,8 +29,8 @@
                 End With
             End While
             SQLDR.Close()
-        Catch ex As Exception
-            MsgBox(ex.Message)
+        Catch ex As SQLiteException
+            MsgBox("An exception occurred:" & ex.Message)
         End Try
     End Sub
 
@@ -57,7 +59,7 @@
                     .subitems.add(SQLDR("path"))
                 End With
             End While
-        Catch ex As Exception
+        Catch ex As SQLiteException
 
             SQLCONN.Close()
         End Try
@@ -77,14 +79,14 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-            For Each item As ListViewItem In ListView1.SelectedItems
+        For Each item As ListViewItem In ListView1.SelectedItems
             Dim StudentID As Integer : StudentID = CInt(item.SubItems(0).Text)
             Dim FirstName As String : FirstName = item.SubItems(1).Text
             Dim LastName As String : LastName = item.SubItems(2).Text
-                DBConn()
-            SQLSTR = "INSERT INTO '" & TextBox4.Text & "' (StudentID, FirstName, LastName, Prelim, Midterms, FINALS) VALUES ('" & StudentID & "', '" & FirstName & "', '" & LastName & "', 0, 0, 0) "
-                alterDB()
-            Next
+            DBConn()
+            SQLSTR = "INSERT INTO '" & TextBox4.Text & "' (StudentID, FirstName, LastName, Prelim, Midterms, Finals) VALUES ('" & StudentID & "', '" & FirstName & "', '" & LastName & "', 0, 0, 0) "
+            alterDB()
+        Next
         MsgBox("Students added!", , msgboxtitle)
     End Sub
 

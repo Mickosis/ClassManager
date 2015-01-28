@@ -1,4 +1,6 @@
-﻿Public Class ImportExcelDialog
+﻿Imports System.Data.SQLite
+
+Public Class ImportExcelDialog
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim confirm As DialogResult = MsgBox("Are all information correct?", MsgBoxStyle.YesNo, msgboxtitle)
@@ -9,7 +11,7 @@
                 Try
 
 
-                Catch ex As Exception
+                Catch ex As SQLiteException
 
                 End Try
             End If

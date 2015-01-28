@@ -12,11 +12,12 @@ Module DbConnections
 
     Public Sub DBConn()
         If SQLCONN.State = ConnectionState.Open Then SQLCONN.Close()
+
         Try
-            SQLCONN = New SQLiteConnection("Data Source=ClassRecords.sqlite")
+            SQLCONN = New SQLiteConnection("Data Source=ClassRecords.db")
             SQLCONN.Open()
-        Catch ex As Exception
-            MsgBox(ex.Message)
+        Catch ex As SQLiteException
+            MsgBox("An exception occurred:" & ex.Message)
         End Try
 
     End Sub

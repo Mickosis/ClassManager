@@ -153,6 +153,12 @@
     <Compile Include="AddAStudent.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AddGrades.Designer.vb">
+      <DependentUpon>AddGrades.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddGrades.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ClassCreateHome.Designer.vb">
       <DependentUpon>ClassCreateHome.vb</DependentUpon>
     </Compile>
@@ -247,6 +253,9 @@
     <EmbeddedResource Include="AddAStudent.resx">
       <DependentUpon>AddAStudent.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddGrades.resx">
+      <DependentUpon>AddGrades.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClassCreateHome.resx">
       <DependentUpon>ClassCreateHome.vb</DependentUpon>
     </EmbeddedResource>
@@ -291,7 +300,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

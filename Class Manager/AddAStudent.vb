@@ -40,10 +40,6 @@ Public Class AddAStudent
                 MsgBox("First Name Missing", MsgBoxStyle.OkOnly, msgboxtitle)
             ElseIf TextBox3.Text = "" Then
                 MsgBox("Last Name Missing", MsgBoxStyle.OkOnly, msgboxtitle)
-            ElseIf TextBox4.Text = "" Then
-                MsgBox("Contact Number Missing", MsgBoxStyle.OkOnly, msgboxtitle)
-            ElseIf TextBox5.Text = "" Then
-                MsgBox("E-mail Address Missing", MsgBoxStyle.OkOnly, msgboxtitle)
             Else
                 Dim sourcepath As String = TextBox6.Text
                 Dim DestPath As String = "C:\Mickosis\Class Manager\"
