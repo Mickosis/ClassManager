@@ -37,11 +37,19 @@ Partial Class ClassCreateHome
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(140, 348)
+        Me.Button1.Location = New System.Drawing.Point(140, 424)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(166, 23)
         Me.Button1.TabIndex = 0
@@ -85,7 +93,7 @@ Partial Class ClassCreateHome
         '
         Me.TextBox2.Location = New System.Drawing.Point(22, 457)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(10, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(34, 20)
         Me.TextBox2.TabIndex = 12
         '
         'TextBox3
@@ -161,15 +169,91 @@ Partial Class ClassCreateHome
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(35, 187)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(114, 13)
+        Me.Label7.Size = New System.Drawing.Size(127, 13)
         Me.Label7.TabIndex = 21
-        Me.Label7.Text = "General Class settings:"
+        Me.Label7.Text = "General Subject Settings:"
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Location = New System.Drawing.Point(171, 319)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox7.TabIndex = 22
+        Me.TextBox7.Text = "40"
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Location = New System.Drawing.Point(171, 346)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox8.TabIndex = 23
+        Me.TextBox8.Text = "10"
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Location = New System.Drawing.Point(171, 373)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox9.TabIndex = 24
+        Me.TextBox9.Text = "10"
+        '
+        'TextBox10
+        '
+        Me.TextBox10.Location = New System.Drawing.Point(171, 398)
+        Me.TextBox10.Name = "TextBox10"
+        Me.TextBox10.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox10.TabIndex = 25
+        Me.TextBox10.Text = "40"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(77, 325)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(65, 13)
+        Me.Label8.TabIndex = 26
+        Me.Label8.Text = "Quiz Weight"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(41, 349)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(114, 13)
+        Me.Label9.TabIndex = 27
+        Me.Label9.Text = "Class Standing Weight"
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(63, 376)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(99, 13)
+        Me.Label10.TabIndex = 28
+        Me.Label10.Text = "Attendance Weight"
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(29, 401)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(119, 13)
+        Me.Label11.TabIndex = 29
+        Me.Label11.Text = "Periodical Exam Weight"
         '
         'ClassCreateHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(403, 511)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.TextBox10)
+        Me.Controls.Add(Me.TextBox9)
+        Me.Controls.Add(Me.TextBox8)
+        Me.Controls.Add(Me.TextBox7)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.TextBox6)
@@ -206,4 +290,12 @@ Partial Class ClassCreateHome
     Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox9 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents Label11 As System.Windows.Forms.Label
 End Class

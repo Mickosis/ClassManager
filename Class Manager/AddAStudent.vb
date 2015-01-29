@@ -1,5 +1,4 @@
 ﻿Imports System.IO
-Imports System.Data.SqlClient
 Imports System.Data.SQLite
 
 Public Class AddAStudent
@@ -33,6 +32,7 @@ Public Class AddAStudent
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim confirm As DialogResult = MsgBox("Are all information correct?", MsgBoxStyle.YesNo, msgboxtitle)
+
         If confirm = Windows.Forms.DialogResult.Yes Then
             If TextBox1.Text = "" Then
                 MsgBox("Student Number Missing", MsgBoxStyle.OkOnly, msgboxtitle)
@@ -64,7 +64,7 @@ Public Class AddAStudent
                 SQLCONN.Close()
                 SQLCMD.Parameters.Clear()
                 PictureBox1.ImageLocation = "Default.jpg"
-                TextBox6.Text = "Default.jpg"
+                TextBox6.Text = "C:\Users\Mico\Desktop\Class Manager\Class Manager\Resources\Default.jpg"
             End If
         End If
     End Sub

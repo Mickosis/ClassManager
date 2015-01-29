@@ -1,5 +1,6 @@
 ﻿Imports System.Data.OleDb
 Imports System.Data.SqlClient
+Imports System.Data.SQLite
 
 Public Class ImportExcelHome
 
@@ -34,6 +35,14 @@ Public Class ImportExcelHome
         DataGridView1.DataSource = dts
         DataGridView1.DataMember = "[Sheet1$]"
         conn.Close()
+
+        With DataGridView1
+            .RowHeadersVisible = False
+            .Columns(0).HeaderCell.Value = "Student ID"
+            .Columns(1).HeaderCell.Value = "First Name"
+            .Columns(2).HeaderCell.Value = "Last Name"
+        End With
+
     End Sub
 
     Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
@@ -49,7 +58,27 @@ Public Class ImportExcelHome
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim ExcelString As String
+        Dim ExcelConn As SQLiteConnection = New SQLiteConnection("Data Source=ClassRecords.db")
+        Dim Ex As New SQLiteCommand
 
+
+
+        For Each item As DataGridViewRow In DataGridView1.Rows
+            Dim StudentID As Integer : StudentID = CInt(item.Cells(0).Value)
+            Dim FirstName As String : FirstName = item.Cells(1).Value
+            Dim LastName As String : LastName = item.Cells(2).Value
+            Dim DefaultPhoto As String = "C:\Users\Mico\Desktop\Class Manager\Class Manager\Resources\Default.jpg"
+            Dim DefaultEmail As String = "temp@temp.com"
+            ExcelString = "INSERT INTO MasterStudents (StudentID, FirstName, LastName, ContactNumber, EmailAddress, Path) VALUES ('" & StudentID & "', '" & FirstName & "', '" & LastName & "', 0, '" & DefaultEmail & "', '" & DefaultPhoto & "')"
+            ExcelConn.Open()
+            Ex.CommandText = ExcelString
+            Ex.Connection = ExcelConn
+            Ex.ExecuteNonQuery()
+            ExcelConn.Close()
+        Next
+        MsgBox("Students added!", , msgboxtitle)
+        ExcelConn.Close()
     End Sub
 
     Private Sub StudentRecords1_Load(sender As Object, e As EventArgs) Handles MyBase.Load

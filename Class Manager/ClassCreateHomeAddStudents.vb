@@ -83,11 +83,16 @@ Public Class ClassCreateHomeAddStudents
             Dim StudentID As Integer : StudentID = CInt(item.SubItems(0).Text)
             Dim FirstName As String : FirstName = item.SubItems(1).Text
             Dim LastName As String : LastName = item.SubItems(2).Text
+            SQLSTR = "INSERT INTO '" & TextBox4.Text & "' (StudentID, FirstName, LastName) VALUES ('" & StudentID & "', '" & FirstName & "', '" & LastName & "')"
             DBConn()
-            SQLSTR = "INSERT INTO '" & TextBox4.Text & "' (StudentID, FirstName, LastName, Prelim, Midterms, Finals) VALUES ('" & StudentID & "', '" & FirstName & "', '" & LastName & "', 0, 0, 0) "
             alterDB()
         Next
         MsgBox("Students added!", , msgboxtitle)
     End Sub
 
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Me.Hide()
+        ClassHome.Show()
+
+    End Sub
 End Class

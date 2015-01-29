@@ -23,7 +23,6 @@ Public Class StudentsHome
     End Sub
 
     Private Sub StudentsHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Try
             DBConn()
             SQLSTR = "SELECT * FROM MasterStudents"
             readDB()
@@ -46,10 +45,6 @@ Public Class StudentsHome
                     .subitems.add(SQLDR("path"))
                 End With
             End While
-            SQLDR.Close()
-        Catch ex As SQLiteException
-            MsgBox("An exception occurred:" & ex.Message)
-        End Try
     End Sub
 
     Private Sub AddAStudentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddAStudentToolStripMenuItem.Click

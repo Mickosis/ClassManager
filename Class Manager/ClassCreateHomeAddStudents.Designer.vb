@@ -33,6 +33,7 @@ Partial Class ClassCreateHomeAddStudents
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -126,11 +127,21 @@ Partial Class ClassCreateHomeAddStudents
         Me.TextBox4.Size = New System.Drawing.Size(10, 20)
         Me.TextBox4.TabIndex = 19
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(175, 110)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 23)
+        Me.Button3.TabIndex = 20
+        Me.Button3.Text = "Button3"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'ClassCreateHomeAddStudents
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(518, 491)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.PictureBox1)
@@ -160,4 +171,5 @@ Partial Class ClassCreateHomeAddStudents
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents Button3 As System.Windows.Forms.Button
 End Class
