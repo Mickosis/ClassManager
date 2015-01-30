@@ -95,6 +95,7 @@ Partial Class AddGrades
         Me.TextBox33 = New System.Windows.Forms.TextBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
+        Me.Button8 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -766,11 +767,21 @@ Partial Class AddGrades
         Me.Label8.TabIndex = 35
         Me.Label8.Text = "Label8"
         '
+        'Button8
+        '
+        Me.Button8.Location = New System.Drawing.Point(13, 481)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(206, 23)
+        Me.Button8.TabIndex = 36
+        Me.Button8.Text = "Refresh Grades"
+        Me.Button8.UseVisualStyleBackColor = True
+        '
         'AddGrades
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1256, 734)
+        Me.Controls.Add(Me.Button8)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.TextBox8)
         Me.Controls.Add(Me.GroupBox3)
@@ -887,4 +898,5 @@ Partial Class AddGrades
     Friend WithEvents Label31 As System.Windows.Forms.Label
     Friend WithEvents Label34 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents Button8 As System.Windows.Forms.Button
 End Class

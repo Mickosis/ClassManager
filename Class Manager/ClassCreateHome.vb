@@ -13,10 +13,13 @@ Public Class ClassCreateHome
         Dim ClassStandingWeight As Integer = TextBox8.Text
         Dim AttendanceWeight As Integer = TextBox9.Text
         Dim PeriodicalExamWeight As Integer = TextBox10.Text
-
         If PrelimWeight + MidtermWeight + FinalWeight < 100 Then
             MsgBox("Weights must total to 100")
         ElseIf PrelimWeight + MidtermWeight + FinalWeight > 100 Then
+            MsgBox("Weights must not exceed 100")
+        ElseIf QuizWeight + ClassStandingWeight + AttendanceWeight + PeriodicalExamWeight < 100 Then
+            MsgBox("Weights must total to 100")
+        ElseIf QuizWeight + ClassStandingWeight + AttendanceWeight + PeriodicalExamWeight > 100 Then
             MsgBox("Weights must not exceed 100")
         Else
             Dim confirm As DialogResult = MsgBox("Are all information correct?", MsgBoxStyle.YesNo, msgboxtitle)
