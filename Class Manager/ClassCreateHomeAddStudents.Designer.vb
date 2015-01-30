@@ -133,7 +133,7 @@ Partial Class ClassCreateHomeAddStudents
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 20
-        Me.Button3.Text = "Button3"
+        Me.Button3.Text = "Back"
         Me.Button3.UseVisualStyleBackColor = True
         '
         'ClassCreateHomeAddStudents

@@ -2,25 +2,27 @@
 
 Public Class UpdateClass
 
-    Private Sub UpdateClass_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-            DBConn()
-            SQLSTR = "SELECT * FROM MasterClasslist"
-            readDB()
-            ListView1.GridLines = True
-            ListView1.FullRowSelect = True
-            ListView1.View = View.Details
-            ListView1.MultiSelect = False
-            ListView1.Columns.Add("ClassID", 80)
-            ListView1.Columns.Add("Name", 80)
-            ListView1.Columns.Add("Desc", 320)
-            While (SQLDR.Read())
-                With ListView1.Items.Add(SQLDR("ClassID"))
-                    .subitems.add(SQLDR("Name"))
-                    .subitems.add(SQLDR("Desc"))
-                End With
-            End While
-        SQLDR.Close()
+    Private Sub UpdateClass_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
 
+        DBConn()
+        SQLSTR = "SELECT * FROM MasterClasslist"
+        readDB()
+        ListView1.GridLines = True
+        ListView1.FullRowSelect = True
+        ListView1.View = View.Details
+        ListView1.Clear()
+        ListView1.MultiSelect = False
+        ListView1.Columns.Add("ClassID", 80)
+        ListView1.Columns.Add("Name", 80)
+        ListView1.Columns.Add("Desc", 320)
+        While (SQLDR.Read())
+            With ListView1.Items.Add(SQLDR("ClassID"))
+                .subitems.add(SQLDR("Name"))
+                .subitems.add(SQLDR("Desc"))
+            End With
+        End While
+        SQLDR.Dispose()
+        SQLCONN.Close()
         Button2.Enabled = False
 
     End Sub

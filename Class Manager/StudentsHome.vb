@@ -22,11 +22,6 @@ Public Class StudentsHome
 
     End Sub
 
-    Private Sub StudentsHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Button4.PerformClick()
-
-    End Sub
-
     Private Sub AddAStudentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddAStudentToolStripMenuItem.Click
         Me.Hide()
         AddAStudent.Show()
@@ -92,13 +87,38 @@ Public Class StudentsHome
         End If
     End Sub
 
-    Private Sub ContextMenuStrip1_Opening(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles ContextMenuStrip1.Opening
+    Private Sub StudentsHome_Activate(sender As Object, e As EventArgs) Handles MyBase.Activated
+        DBConn()
+        SQLSTR = "SELECT * FROM MasterStudents"
+        readDB()
+        ListView1.Clear()
+        ListView1.GridLines = True
+        ListView1.FullRowSelect = True
+        ListView1.View = View.Details
+        ListView1.MultiSelect = False
+        ListView1.Columns.Add("StudentID", 80)
+        ListView1.Columns.Add("First Name", 80)
+        ListView1.Columns.Add("Last Name", 80)
+        ListView1.Columns.Add("Contact Number", 80)
+        ListView1.Columns.Add("E-mail", 80)
+        ListView1.Columns.Add("Path", 50)
+        While (SQLDR.Read())
+            With ListView1.Items.Add(SQLDR("StudentID"))
+                .subitems.add(SQLDR("FirstName"))
+                .subitems.add(SQLDR("LastName"))
+                .subitems.add(SQLDR("ContactNumber"))
+                .subitems.add(SQLDR("EmailAddress"))
+                .subitems.add(SQLDR("path"))
+            End With
+        End While
+        SQLDR.Dispose()
+        SQLCONN.Close()
 
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         DBConn()
-        SQLSTR = "SELECT * FROM MasterStudents"
+        SQLSTR = "SELECT * FROM MasterStudents WHERE StudentID LIKE '%" & TextBox2.Text & "%' AND FirstName LIKE '" & TextBox3.Text & "%' AND LastName LIKE '" & TextBox4.Text & "%' "
         readDB()
         ListView1.Clear()
         ListView1.GridLines = True

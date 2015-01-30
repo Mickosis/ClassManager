@@ -37,6 +37,13 @@ Partial Class StudentsHome
         Me.Button3 = New System.Windows.Forms.Button()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -83,9 +90,9 @@ Partial Class StudentsHome
         '
         'ListView1
         '
-        Me.ListView1.Location = New System.Drawing.Point(25, 47)
+        Me.ListView1.Location = New System.Drawing.Point(25, 209)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(471, 312)
+        Me.ListView1.Size = New System.Drawing.Size(471, 150)
         Me.ListView1.TabIndex = 8
         Me.ListView1.UseCompatibleStateImageBehavior = False
         '
@@ -147,11 +154,75 @@ Partial Class StudentsHome
         Me.Button4.Text = "Refresh"
         Me.Button4.UseVisualStyleBackColor = True
         '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(93, 47)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox2.TabIndex = 15
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(93, 73)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox3.TabIndex = 16
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(93, 100)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox4.TabIndex = 17
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(13, 54)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(58, 13)
+        Me.Label1.TabIndex = 18
+        Me.Label1.Text = "Student ID"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(13, 80)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(57, 13)
+        Me.Label2.TabIndex = 19
+        Me.Label2.Text = "First Name"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(13, 107)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(58, 13)
+        Me.Label3.TabIndex = 20
+        Me.Label3.Text = "Last Name"
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(247, 47)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.TabIndex = 21
+        Me.Button5.Text = "Search"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
         'StudentsHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(872, 413)
+        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.TextBox1)
@@ -183,4 +254,11 @@ Partial Class StudentsHome
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Button5 As System.Windows.Forms.Button
 End Class

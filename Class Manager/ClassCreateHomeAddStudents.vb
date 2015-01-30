@@ -2,17 +2,16 @@
 
 Public Class ClassCreateHomeAddStudents
 
-    Private Sub ClassCreateHomeAddStudents_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        SQLCONN.Close()
+    Private Sub ClassCreateHomeAddStudents_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
 
-        Try
             DBConn()
             SQLSTR = "SELECT * FROM MasterStudents"
             readDB()
             ListView1.GridLines = True
             ListView1.FullRowSelect = True
             ListView1.View = View.Details
-            ListView1.MultiSelect = True
+        ListView1.MultiSelect = True
+        ListView1.Clear()
             ListView1.Columns.Add("StudentID", 80)
             ListView1.Columns.Add("First Name", 80)
             ListView1.Columns.Add("Last Name", 80)
@@ -28,14 +27,11 @@ Public Class ClassCreateHomeAddStudents
                     .subitems.add(SQLDR("path"))
                 End With
             End While
-            SQLDR.Close()
-        Catch ex As SQLiteException
-            MsgBox("An exception occurred:" & ex.Message)
-        End Try
+            SQLDR.Dispose()
+            SQLCONN.Close()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Try
             ListView1.Clear()
             DBConn()
             SQLSTR = "SELECT * FROM MasterStudents WHERE StudentID LIKE '%" & TextBox1.Text & "%' AND FirstName LIKE '" & TextBox2.Text & "%' AND LastName LIKE '" & TextBox3.Text & "%' "
@@ -59,10 +55,8 @@ Public Class ClassCreateHomeAddStudents
                     .subitems.add(SQLDR("path"))
                 End With
             End While
-        Catch ex As SQLiteException
-
-            SQLCONN.Close()
-        End Try
+        SQLDR.Dispose()
+        SQLCONN.Close()
     End Sub
 
     Public Sub ListView1_MouseDown(ByVal sender As Object, _
