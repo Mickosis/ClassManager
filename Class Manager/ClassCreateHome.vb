@@ -34,7 +34,7 @@ Public Class ClassCreateHome
                         TextBox2.Text = reader.GetValue(0)
                     End While
                     reader.Close()
-                    SQLSTR = "CREATE TABLE '" & TextBox2.Text & "' (StudentID INTEGER NOT NULL UNIQUE, FirstName TEXT, LastName TEXT, Q1 INTEGER, Q2 INTEGER, Q3 INTEGER, Q4 INTEGER, Q5 INTEGER, Q6 INTEGER, S1 INTEGER, S2 INTEGER, S3 INTEGER, A1 INTEGER, A2 INTEGER, A3 INTEGER, PrelimExam INTEGER, MidtermExam INTEGER, FinalExam INTEGER, PrelimTotal INTEGER, MidtermTotal INTEGER, FinalTotal INTEGER)"
+                    SQLSTR = "CREATE TABLE '" & TextBox2.Text & "' (StudentID INTEGER NOT NULL UNIQUE, FirstName TEXT, LastName TEXT, Q1 INTEGER DEFAULT 0, Q2 INTEGER DEFAULT 0, Q3 INTEGER DEFAULT 0, Q4 INTEGER DEFAULT 0, Q5 INTEGER DEFAULT 0, Q6 INTEGER DEFAULT 0, S1 INTEGER DEFAULT 0, S2 INTEGER DEFAULT 0, S3 INTEGER DEFAULT 0, A1 INTEGER DEFAULT 0, A2 INTEGER DEFAULT 0, A3 INTEGER DEFAULT 0, PrelimExam INTEGER DEFAULT 0, MidtermExam INTEGER DEFAULT 0, FinalExam INTEGER DEFAULT 0, PrelimTotal INTEGER DEFAULT 0, MidtermTotal INTEGER DEFAULT 0, FinalTotal INTEGER DEFAULT 0, FinalFinal INTEGER DEFAULT 0)"
                     alterDB()
                     MsgBox("Class created!", , msgboxtitle)
                     ClassCreateHomeAddStudents.TextBox4.Text = TextBox2.Text

@@ -23,28 +23,8 @@ Public Class StudentsHome
     End Sub
 
     Private Sub StudentsHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-            DBConn()
-            SQLSTR = "SELECT * FROM MasterStudents"
-            readDB()
-            ListView1.GridLines = True
-            ListView1.FullRowSelect = True
-            ListView1.View = View.Details
-            ListView1.MultiSelect = False
-            ListView1.Columns.Add("StudentID", 80)
-            ListView1.Columns.Add("First Name", 80)
-            ListView1.Columns.Add("Last Name", 80)
-            ListView1.Columns.Add("Contact Number", 80)
-            ListView1.Columns.Add("E-mail", 80)
-            ListView1.Columns.Add("Path", 50)
-            While (SQLDR.Read())
-                With ListView1.Items.Add(SQLDR("StudentID"))
-                    .subitems.add(SQLDR("FirstName"))
-                    .subitems.add(SQLDR("LastName"))
-                    .subitems.add(SQLDR("ContactNumber"))
-                    .subitems.add(SQLDR("EmailAddress"))
-                    .subitems.add(SQLDR("path"))
-                End With
-            End While
+        Button4.PerformClick()
+
     End Sub
 
     Private Sub AddAStudentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddAStudentToolStripMenuItem.Click
@@ -68,8 +48,6 @@ Public Class StudentsHome
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        UpdateStudent.Show()
-        Me.Hide()
         PictureBox1.Image = Nothing
         If Not ListView1.SelectedItems.Count = 0 Then
             With ListView1.SelectedItems.Item(0)
@@ -81,7 +59,8 @@ Public Class StudentsHome
                 UpdateStudent.TextBox6.Text = .SubItems(5).Text
                 UpdateStudent.PictureBox1.Image = System.Drawing.Image.FromFile _
                     (.SubItems(5).Text)
-
+                UpdateStudent.Show()
+                Me.Hide()
             End With
         End If
     End Sub
@@ -111,5 +90,37 @@ Public Class StudentsHome
             alterDB()
             MsgBox("Student removed!")
         End If
+    End Sub
+
+    Private Sub ContextMenuStrip1_Opening(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles ContextMenuStrip1.Opening
+
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        DBConn()
+        SQLSTR = "SELECT * FROM MasterStudents"
+        readDB()
+        ListView1.Clear()
+        ListView1.GridLines = True
+        ListView1.FullRowSelect = True
+        ListView1.View = View.Details
+        ListView1.MultiSelect = False
+        ListView1.Columns.Add("StudentID", 80)
+        ListView1.Columns.Add("First Name", 80)
+        ListView1.Columns.Add("Last Name", 80)
+        ListView1.Columns.Add("Contact Number", 80)
+        ListView1.Columns.Add("E-mail", 80)
+        ListView1.Columns.Add("Path", 50)
+        While (SQLDR.Read())
+            With ListView1.Items.Add(SQLDR("StudentID"))
+                .subitems.add(SQLDR("FirstName"))
+                .subitems.add(SQLDR("LastName"))
+                .subitems.add(SQLDR("ContactNumber"))
+                .subitems.add(SQLDR("EmailAddress"))
+                .subitems.add(SQLDR("path"))
+            End With
+        End While
+        SQLDR.Dispose()
+        SQLCONN.Close()
     End Sub
 End Class
