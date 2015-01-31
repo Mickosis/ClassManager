@@ -4,7 +4,7 @@
 Public Class ClassCreateHome
 
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Create.Click
         Dim PrelimWeight As Integer = TextBox3.Text
         Dim MidtermWeight As Integer = TextBox4.Text
         Dim FinalWeight As Integer = TextBox5.Text
@@ -48,4 +48,28 @@ Public Class ClassCreateHome
         End If
     End Sub
 
+    Private Sub Create_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Create.MouseHover
+
+        Create.Image = My.Resources.Browse_and_Update_pressed
+
+    End Sub
+    Private Sub Create_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Create.MouseLeave
+
+        Create.Image = My.Resources.Browse_and_Update
+
+    End Sub
+
+    Private Sub Close_Click(sender As Object, e As EventArgs) Handles Close.Click
+        If MessageBox.Show("Do you want to exit?", "Class Manager", _
+       MessageBoxButtons.YesNo, MessageBoxIcon.Warning) _
+       = DialogResult.Yes Then
+            Application.Exit()
+        End If
+    End Sub
+
+    Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
+        Me.Hide()
+        ClassHome.Show()
+
+    End Sub
 End Class

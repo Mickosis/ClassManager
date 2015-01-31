@@ -202,6 +202,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -267,6 +272,7 @@
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="ImportExcelHome.resx">
       <DependentUpon>ImportExcelHome.vb</DependentUpon>
@@ -316,6 +322,31 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\syncbuttonpressed.png" />
+    <None Include="Resources\SyncButton.png" />
+    <None Include="Resources\studentsbuttonpressed.png" />
+    <None Include="Resources\StudentsButton.png" />
+    <None Include="Resources\Students Update and Contact.png" />
+    <None Include="Resources\Students Update and Contact pressed.png" />
+    <None Include="Resources\People.png" />
+    <None Include="Resources\okaypressed.png" />
+    <None Include="Resources\okay.png" />
+    <None Include="Resources\importdbasepressed.png" />
+    <None Include="Resources\importdbase.png" />
+    <None Include="Resources\Default.png" />
+    <None Include="Resources\addbrowse.png" />
+    <None Include="Resources\addbrowsepressed.png" />
+    <None Include="Resources\arrow mail.png" />
+    <None Include="Resources\arrow.png" />
+    <None Include="Resources\arrowpressed.png" />
+    <None Include="Resources\Browse and Update pressed.png" />
+    <None Include="Resources\Browse and Update.png" />
+    <None Include="Resources\browseimport.png" />
+    <None Include="Resources\browseimportpressed.png" />
+    <None Include="Resources\ClassesButton.png" />
+    <None Include="Resources\classesbuttonpressed.png" />
+    <None Include="Resources\CloseButton.png" />
+    <None Include="Resources\closebuttonpressed.png" />
     <Content Include="Resources\Default.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

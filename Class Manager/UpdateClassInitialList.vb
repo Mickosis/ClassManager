@@ -27,7 +27,7 @@ Public Class UpdateClassInitialList
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Students.Click
         Dim ClassIntl = TextBox1.Text
         Me.Hide()
         ClassCreateHomeAddStudents.TextBox4.Text = ClassIntl
@@ -35,10 +35,49 @@ Public Class UpdateClassInitialList
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+
+    Private Sub Students_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Students.MouseHover
+
+        Students.Image = My.Resources.Browse_and_Update_pressed
+
+    End Sub
+    Private Sub Students_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Students.MouseLeave
+
+        Students.Image = My.Resources.Browse_and_Update
+
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Grade.Click
         Dim ClassIntl = TextBox1.Text
         AddGrades.TextBox1.Text = ClassIntl
         Me.Hide()
         AddGrades.Show()
+    End Sub
+
+    Private Sub Grade_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Grade.MouseHover
+
+        Grade.Image = My.Resources.Browse_and_Update_pressed
+
+    End Sub
+    Private Sub Grade_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Grade.MouseLeave
+
+        Grade.Image = My.Resources.Browse_and_Update
+
+
+    End Sub
+
+    Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
+        Me.Hide()
+        ClassHome.Show()
+
+    End Sub
+
+    Private Sub Close_Click(sender As Object, e As EventArgs) Handles Close.Click
+        If MessageBox.Show("Do you want to exit?", "Class Manager", _
+      MessageBoxButtons.YesNo, MessageBoxIcon.Warning) _
+      = DialogResult.Yes Then
+            Application.Exit()
+        End If
     End Sub
 End Class

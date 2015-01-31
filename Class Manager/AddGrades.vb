@@ -6,19 +6,17 @@ Public Class AddGrades
     Dim CB
 
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.Hide()
-        UpdateClassInitialList.Show()
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
 
     End Sub
 
     Private Sub AddGrades_Activate(sender As Object, e As EventArgs) Handles MyBase.Activated
 
-        Button8.PerformClick()
+        Refresh.PerformClick()
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles UpGrade.Click
         DBConn()
         SQLSTR = "UPDATE '" & TextBox1.Text & "' SET Q1 = '" & TextBox6.Text & "', Q2 = '" & TextBox7.Text & "', S1 = '" & TextBox9.Text & "', A1 = '" & TextBox10.Text & "', PrelimExam = '" & TextBox11.Text & "', PrelimTotal = '" & TextBox12.Text & "', Q3 = '" & TextBox19.Text & "', Q4 = '" & TextBox20.Text & "', S2 = '" & TextBox21.Text & "', A2 = '" & TextBox22.Text & "', MidtermExam = '" & TextBox24.Text & "', MidtermTotal = '" & TextBox25.Text & "', Q5 = '" & TextBox27.Text & "', Q6 = '" & TextBox28.Text & "', S3 = '" & TextBox29.Text & "', A3 = '" & TextBox30.Text & "', FinalExam = '" & TextBox32.Text & "', FinalTotal = '" & TextBox33.Text & "' WHERE StudentID = '" & Label17.Text & "'"
         alterDB()
@@ -28,7 +26,19 @@ Public Class AddGrades
 
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+
+    Private Sub UpGrade_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles UpGrade.MouseHover
+
+        UpGrade.Image = My.Resources.importdbasepressed
+
+    End Sub
+    Private Sub UpGrade_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles UpGrade.MouseLeave
+
+        UpGrade.Image = My.Resources.importdbase
+
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Update.Click
         Dim PrelimWeight As Integer = TextBox2.Text
         Dim MidtermWeight As Integer = TextBox3.Text
         Dim FinalWeight As Integer = TextBox4.Text
@@ -74,6 +84,18 @@ Public Class AddGrades
 
     End Sub
 
+
+    Private Sub Update_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Update.MouseHover
+
+        Update.Image = My.Resources.importdbasepressed
+
+    End Sub
+    Private Sub Update_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Update.MouseLeave
+
+        Update.Image = My.Resources.importdbase
+
+    End Sub
+
     Private Sub DataGridView1_CellDoubleClick(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
 
         'Update Name
@@ -107,9 +129,9 @@ Public Class AddGrades
 
         'Compute grades on load
         'Compute theg grades
-        Button5.PerformClick()
-        Button6.PerformClick()
-        Button7.PerformClick()
+        CPrelim.PerformClick()
+        CMidterm.PerformClick()
+        CFinals.PerformClick()
         Dim FinalWeight As Decimal = TextBox4.Text / 100
         Dim MidtermWeight As Decimal = TextBox3.Text / 100
         Dim PrelimWeight As Decimal = TextBox2.Text / 100
@@ -133,7 +155,7 @@ Public Class AddGrades
 
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles CPrelim.Click
         If TextBox6.Text > 100 Then
             MsgBox("Transmuted grade must not exceed 100")
         ElseIf TextBox7.Text > 100 Then
@@ -173,7 +195,18 @@ Public Class AddGrades
 
     End Sub
 
-    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+    Private Sub CPrelim_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles CPrelim.MouseHover
+
+        CPrelim.Image = My.Resources.importdbasepressed
+
+    End Sub
+    Private Sub CPrelim_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles CPrelim.MouseLeave
+
+        CPrelim.Image = My.Resources.importdbase
+
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles CMidterm.Click
         If TextBox25.Text > 100 Then
             MsgBox("Transmuted grade must not exceed 100")
         ElseIf TextBox24.Text > 100 Then
@@ -214,7 +247,19 @@ Public Class AddGrades
 
     End Sub
 
-    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+
+    Private Sub CMidterm_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles CMidterm.MouseHover
+
+        CMidterm.Image = My.Resources.importdbasepressed
+
+    End Sub
+    Private Sub CMidterm_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles CMidterm.MouseLeave
+
+        CMidterm.Image = My.Resources.importdbase
+
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles CFinals.Click
         If TextBox33.Text > 100 Then
             MsgBox("Transmuted grade must not exceed 100")
         ElseIf TextBox32.Text > 100 Then
@@ -254,10 +299,23 @@ Public Class AddGrades
 
     End Sub
 
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Button5.PerformClick()
-        Button6.PerformClick()
-        Button7.PerformClick()
+
+    Private Sub CFinals_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles CFinals.MouseHover
+
+        CFinals.Image = My.Resources.importdbasepressed
+
+    End Sub
+    Private Sub CFinals_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles CFinals.MouseLeave
+
+        CFinals.Image = My.Resources.importdbase
+
+    End Sub
+
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles ComputeAll.Click
+        CPrelim.PerformClick()
+        CMidterm.PerformClick()
+        CFinals.PerformClick()
         Dim FinalWeight As Decimal = TextBox4.Text / 100
         Dim MidtermWeight As Decimal = TextBox3.Text / 100
         Dim PrelimWeight As Decimal = TextBox2.Text / 100
@@ -275,7 +333,19 @@ Public Class AddGrades
         End If
     End Sub
 
-    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+
+    Private Sub ComputeAll_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles ComputeAll.MouseHover
+
+        ComputeAll.Image = My.Resources.importdbasepressed
+
+    End Sub
+    Private Sub ComputeAll_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles ComputeAll.MouseLeave
+
+        ComputeAll.Image = My.Resources.importdbase
+
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Refresh.Click
 
         Dim ClassIntl = TextBox1.Text
 
@@ -332,6 +402,43 @@ Public Class AddGrades
             TextBox17.Text = reader.GetValue(7)
         End While
         reader.Close()
+    End Sub
+
+
+    Private Sub Refresh_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Refresh.MouseHover
+
+        Refresh.Image = My.Resources.importdbasepressed
+
+    End Sub
+    Private Sub Selected_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Refresh.MouseLeave
+
+        Refresh.Image = My.Resources.importdbase
+
+    End Sub
+
+    Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
+        Me.Hide()
+        UpdateClassInitialList.Show()
+    End Sub
+
+    Private Sub Close_Click(sender As Object, e As EventArgs) Handles Close.Click
+        If MessageBox.Show("Do you want to exit?", "Class Manager", _
+       MessageBoxButtons.YesNo, MessageBoxIcon.Warning) _
+       = DialogResult.Yes Then
+            Application.Exit()
+        End If
+    End Sub
+
+    Private Sub Label17_Click(sender As Object, e As EventArgs) Handles Label17.Click
+
+    End Sub
+
+    Private Sub Label18_Click(sender As Object, e As EventArgs) Handles Label18.Click
+
+    End Sub
+
+    Private Sub Label19_Click(sender As Object, e As EventArgs) Handles Label19.Click
+
     End Sub
 End Class
 

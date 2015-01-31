@@ -4,7 +4,7 @@ Imports System.Data.SQLite
 
 Public Class UpdateStudent
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Browse.Click
         Dim fdlg As OpenFileDialog = New OpenFileDialog()
         fdlg.Title = "Choose a Profile Photo"
         fdlg.Filter = "Picture Files(*.jpg;*.jpeg;*.png;*.bmp;*.gif)|*.jpg;*.jpeg;*.png;*.bmp;*.gif"
@@ -22,7 +22,19 @@ Public Class UpdateStudent
         TextBox6.Text = fdlg.FileName.ToString
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Browse_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Browse.MouseHover
+
+        Browse.Image = My.Resources.Browse_and_Update_pressed
+
+    End Sub
+    Private Sub Browse_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Browse.MouseLeave
+
+        Browse.Image = My.Resources.Browse_and_Update
+
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Update.Click
         Dim confirm As DialogResult = MsgBox("Are all information correct?", MsgBoxStyle.YesNo, msgboxtitle)
         If confirm = Windows.Forms.DialogResult.Yes Then
             If TextBox1.Text = "" Then
@@ -64,9 +76,34 @@ Public Class UpdateStudent
         End If
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Update_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Update.MouseHover
+
+        Update.Image = My.Resources.Browse_and_Update_pressed
+
+    End Sub
+    Private Sub Update_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Update.MouseLeave
+
+        Update.Image = My.Resources.Browse_and_Update
+
+
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
         Me.Hide()
         StudentsHome.Show()
 
+    End Sub
+
+    Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
+        Me.Hide()
+        StudentsHome.Show()
+    End Sub
+
+    Private Sub Close_Click(sender As Object, e As EventArgs) Handles Close.Click
+        If MessageBox.Show("Do you want to exit?", "Class Manager", _
+       MessageBoxButtons.YesNo, MessageBoxIcon.Warning) _
+       = DialogResult.Yes Then
+            Application.Exit()
+        End If
     End Sub
 End Class

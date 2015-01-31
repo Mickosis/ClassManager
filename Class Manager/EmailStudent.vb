@@ -5,7 +5,7 @@ Imports System.Net.Mail
 
 Public Class EmailStudent
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Email.Click
         Try
             Dim Smtp_Server As New SmtpClient
             Dim e_mail As New MailMessage()
@@ -29,9 +29,40 @@ Public Class EmailStudent
         End Try
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Add_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Email.MouseHover
+
+        Email.Image = My.Resources.arrowpressed
+
+    End Sub
+    Private Sub Add_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Email.MouseLeave
+
+        Email.Image = My.Resources.arrow_mail
+
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
         Me.Hide()
         StudentsHome.Show()
+
+    End Sub
+
+    Private Sub Close_Click(sender As Object, e As EventArgs) Handles Close.Click
+        If MessageBox.Show("Do you want to exit?", "Class Manager", _
+       MessageBoxButtons.YesNo, MessageBoxIcon.Warning) _
+       = DialogResult.Yes Then
+            Application.Exit()
+        End If
+    End Sub
+
+    Private Sub RichTextBox1_TextChanged(sender As Object, e As EventArgs) Handles RichTextBox1.TextChanged
+
+    End Sub
+
+    Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
+        Me.Hide()
+        StudentsHome.Show()
+
 
     End Sub
 End Class

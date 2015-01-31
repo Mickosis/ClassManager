@@ -3,24 +3,24 @@ Imports System.Data.SQLite
 
 Public Class AddAStudent
 
-    Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
+    Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Me.Hide()
         Home.Show()
 
 
     End Sub
 
-    Private Sub AddAStudentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddAStudentToolStripMenuItem.Click
+    Private Sub AddAStudentToolStripMenuItem_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub ImportExcelFileToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ImportExcelFileToolStripMenuItem.Click
+    Private Sub ImportExcelFileToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Me.Hide()
         ImportExcelHome.Show()
 
     End Sub
 
-    Private Sub ViewStudentsListToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViewStudentsListToolStripMenuItem.Click
+    Private Sub ViewStudentsListToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Me.Hide()
         StudentsHome.Show()
 
@@ -30,7 +30,7 @@ Public Class AddAStudent
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Add.Click
         Dim confirm As DialogResult = MsgBox("Are all information correct?", MsgBoxStyle.YesNo, msgboxtitle)
 
         If confirm = Windows.Forms.DialogResult.Yes Then
@@ -63,13 +63,24 @@ Public Class AddAStudent
                 MsgBox("Input successful!", , msgboxtitle)
                 SQLCONN.Close()
                 SQLCMD.Parameters.Clear()
-                PictureBox1.ImageLocation = "Default.jpg"
-                TextBox6.Text = "C:\Users\Mico\Desktop\Class Manager\Class Manager\Resources\Default.jpg"
+                PictureBox1.ImageLocation = "Default.png"
+                TextBox6.Text = "C:\Users\Mico\Desktop\Class Manager\Class Manager\Resources\Default.png"
             End If
         End If
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Add_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Add.MouseHover
+
+        Add.Image = My.Resources.addbrowsepressed
+
+    End Sub
+    Private Sub SAdd_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Add.MouseLeave
+
+        Add.Image = My.Resources.addbrowse
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Browse.Click
         Dim fdlg As OpenFileDialog = New OpenFileDialog()
         fdlg.Title = "Choose a Profile Photo"
         fdlg.Filter = "Picture Files(*.jpg;*.jpeg;*.png;*.bmp;*.gif)|*.jpg;*.jpeg;*.png;*.bmp;*.gif"
@@ -87,7 +98,31 @@ Public Class AddAStudent
         TextBox6.Text = fdlg.FileName.ToString
     End Sub
 
+    Private Sub Browse_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Browse.MouseHover
+
+        Browse.Image = My.Resources.addbrowsepressed
+
+    End Sub
+    Private Sub Browse_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Browse.MouseLeave
+
+        Browse.Image = My.Resources.addbrowse
+
+    End Sub
+
     Private Sub TextBox6_TextChanged(sender As Object, e As EventArgs) Handles TextBox6.TextChanged
 
+    End Sub
+
+    Private Sub HomeToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
+        Me.Hide()
+        StudentsHome.Show()
+    End Sub
+
+    Private Sub Close_Click(sender As Object, e As EventArgs) Handles Close.Click
+        If MessageBox.Show("Do you want to exit?", "Class Manager", _
+       MessageBoxButtons.YesNo, MessageBoxIcon.Warning) _
+       = DialogResult.Yes Then
+            Application.Exit()
+        End If
     End Sub
 End Class

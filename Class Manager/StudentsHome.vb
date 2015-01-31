@@ -16,13 +16,15 @@ Public Class StudentsHome
 
     End Sub
 
-    Private Sub ImportExcelFileToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles ImportExcelFileToolStripMenuItem.Click
+
+
+    Private Sub ImportExcelFileToolStripMenuItem_Click_1(sender As Object, e As EventArgs)
         Me.Hide()
         ImportExcelHome.Show()
 
     End Sub
 
-    Private Sub AddAStudentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddAStudentToolStripMenuItem.Click
+    Private Sub AddAStudentToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Me.Hide()
         AddAStudent.Show()
     End Sub
@@ -39,10 +41,10 @@ Public Class StudentsHome
             TextBox1.Text = (selection.SubItems(4).Text)
         End If
 
-        Button1.Enabled = True
+        AddStudent.Enabled = True
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Update_Click(sender As Object, e As EventArgs) Handles Update.Click
         PictureBox1.Image = Nothing
         If Not ListView1.SelectedItems.Count = 0 Then
             With ListView1.SelectedItems.Item(0)
@@ -60,7 +62,19 @@ Public Class StudentsHome
         End If
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Update_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Update.MouseHover
+
+        Update.Image = My.Resources.Students_Update_and_Contact_pressed
+
+    End Sub
+    Private Sub Update_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Update.MouseLeave
+
+        Update.Image = My.Resources.Students_Update_and_Contact
+
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Email.Click
         EmailStudent.Show()
         Me.Hide()
         If Not ListView1.SelectedItems.Count = 0 Then
@@ -71,20 +85,20 @@ Public Class StudentsHome
         End If
     End Sub
 
-    Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView1.SelectedIndexChanged
+    Private Sub Email_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Email.MouseHover
+
+        Email.Image = My.Resources.Students_Update_and_Contact_pressed
+
+    End Sub
+    Private Sub Email_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Email.MouseLeave
+
+        Email.Image = My.Resources.Students_Update_and_Contact
+
 
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Dim confirm As DialogResult = MsgBox("Do you want to delete student from directory?", MsgBoxStyle.YesNo, msgboxtitle)
-        If confirm = Windows.Forms.DialogResult.Yes Then
-            DBConn()
-            With ListView1.SelectedItems.Item(0)
-                SQLSTR = "DELETE FROM MasterStudents WHERE StudentID = '" & .SubItems(0).Text & "'"
-            End With
-            alterDB()
-            MsgBox("Student removed!")
-        End If
+    Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView1.SelectedIndexChanged
+
     End Sub
 
     Private Sub StudentsHome_Activate(sender As Object, e As EventArgs) Handles MyBase.Activated
@@ -116,7 +130,7 @@ Public Class StudentsHome
 
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Search.Click
         DBConn()
         SQLSTR = "SELECT * FROM MasterStudents WHERE StudentID LIKE '%" & TextBox2.Text & "%' AND FirstName LIKE '" & TextBox3.Text & "%' AND LastName LIKE '" & TextBox4.Text & "%' "
         readDB()
@@ -143,4 +157,78 @@ Public Class StudentsHome
         SQLDR.Dispose()
         SQLCONN.Close()
     End Sub
+
+    Private Sub Search_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Search.MouseHover
+
+        Search.Image = My.Resources.okaypressed
+
+    End Sub
+    Private Sub Search_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Search.MouseLeave
+
+        Search.Image = My.Resources.okay
+
+
+    End Sub
+
+    Private Sub Close_Click(sender As Object, e As EventArgs) Handles Close.Click
+        If MessageBox.Show("Do you want to exit?", "Class Manager", _
+       MessageBoxButtons.YesNo, MessageBoxIcon.Warning) _
+       = DialogResult.Yes Then
+            Application.Exit()
+        End If
+    End Sub
+
+    Private Sub Import_Click(sender As Object, e As EventArgs) Handles Import.Click
+        Me.Hide()
+        ImportExcelHome.Show()
+    End Sub
+
+    Private Sub Import_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Import.MouseHover
+
+        Import.Image = My.Resources.Students_Update_and_Contact_pressed
+
+    End Sub
+    Private Sub Import_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Import.MouseLeave
+
+        Import.Image = My.Resources.Students_Update_and_Contact
+
+
+    End Sub
+
+    Private Sub ViewStudentsListToolStripMenuItem_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles AddStudent.Click
+        Me.Hide()
+        AddAStudent.Show()
+    End Sub
+    Private Sub Add_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles AddStudent.MouseHover
+
+        AddStudent.Image = My.Resources.Students_Update_and_Contact_pressed
+
+    End Sub
+    Private Sub Add_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles AddStudent.MouseLeave
+
+        AddStudent.Image = My.Resources.Students_Update_and_Contact
+
+
+    End Sub
+
+    Private Sub Refresh_Click(sender As Object, e As EventArgs) Handles Refresh.Click
+
+    End Sub
+
+    Private Sub Refresh_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Refresh.MouseHover
+
+        Refresh.Image = My.Resources.okaypressed
+
+    End Sub
+    Private Sub Refresh_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Refresh.MouseLeave
+
+        Refresh.Image = My.Resources.okay
+
+
+    End Sub
+
 End Class

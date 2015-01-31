@@ -23,11 +23,11 @@ Public Class UpdateClass
         End While
         SQLDR.Dispose()
         SQLCONN.Close()
-        Button2.Enabled = False
+        DelClass.Enabled = False
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Selected.Click
         If Not ListView1.SelectedItems.Count = 0 Then
             With ListView1.SelectedItems.Item(0)
                 UpdateClassInitialList.TextBox1.Text = .SubItems(0).Text
@@ -37,7 +37,18 @@ Public Class UpdateClass
         End If
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Selected_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Selected.MouseHover
+
+        Selected.Image = My.Resources.Browse_and_Update_pressed
+
+    End Sub
+    Private Sub Selected_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Selected.MouseLeave
+
+        Selected.Image = My.Resources.Browse_and_Update
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles DelClass.Click
 
         Dim confirm As DialogResult = MsgBox("Are you sure you want to delete this class?", MsgBoxStyle.YesNo, msgboxtitle)
         If confirm = Windows.Forms.DialogResult.Yes Then
@@ -47,24 +58,52 @@ Public Class UpdateClass
             End With
             alterDB()
             MsgBox("Class deleted succesfully!", , msgboxtitle)
-            Me.Close()
+            Me.Hide()
             ClassHome.Show()
 
         End If
 
     End Sub
 
+    Private Sub Create_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles DelClass.MouseHover
+
+        DelClass.Image = My.Resources.Browse_and_Update_pressed
+
+    End Sub
+    Private Sub Create_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles DelClass.MouseLeave
+
+        DelClass.Image = My.Resources.Browse_and_Update
+
+    End Sub
+
     Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView1.SelectedIndexChanged
         If ListView1.SelectedItems.Count = 1 Then
-            Button2.Enabled = True
+            DelClass.Enabled = True
         ElseIf ListView1.SelectedItems.Count = 0 Then
-            Button2.Enabled = False
+            DelClass.Enabled = False
 
         End If
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        Me.Close()
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Close_Click(sender As Object, e As EventArgs) Handles Close.Click
+        If MessageBox.Show("Do you want to exit?", "Class Manager", _
+       MessageBoxButtons.YesNo, MessageBoxIcon.Warning) _
+       = DialogResult.Yes Then
+            Application.Exit()
+        End If
+    End Sub
+
+    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+
+    Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
+        Me.Hide()
+
         ClassHome.Show()
 
     End Sub
