@@ -33,7 +33,6 @@ Partial Class StudentsHome
         Me.Email = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.Refresh = New System.Windows.Forms.Button()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
@@ -135,22 +134,6 @@ Partial Class StudentsHome
         '
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
         Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
-        '
-        'Refresh
-        '
-        Me.Refresh.FlatAppearance.BorderSize = 0
-        Me.Refresh.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.Refresh.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Refresh.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Refresh.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Refresh.Image = Global.Class_Manager.My.Resources.Resources.okay
-        Me.Refresh.Location = New System.Drawing.Point(453, 143)
-        Me.Refresh.Name = "Refresh"
-        Me.Refresh.Size = New System.Drawing.Size(111, 49)
-        Me.Refresh.TabIndex = 14
-        Me.Refresh.Text = "Refresh"
-        Me.Refresh.UseVisualStyleBackColor = True
         '
         'TextBox2
         '
@@ -289,7 +272,6 @@ Partial Class StudentsHome
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.Refresh)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "StudentsHome"
@@ -311,7 +293,6 @@ Partial Class StudentsHome
     Friend WithEvents Email As System.Windows.Forms.Button
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
-    Friend WithEvents Refresh As System.Windows.Forms.Button
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox

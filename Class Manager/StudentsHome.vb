@@ -215,20 +215,5 @@ Public Class StudentsHome
 
     End Sub
 
-    Private Sub Refresh_Click(sender As Object, e As EventArgs) Handles Refresh.Click
-
-    End Sub
-
-    Private Sub Refresh_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Refresh.MouseHover
-
-        Refresh.Image = My.Resources.okaypressed
-
-    End Sub
-    Private Sub Refresh_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Refresh.MouseLeave
-
-        Refresh.Image = My.Resources.okay
-
-
-    End Sub
 
 End Class
