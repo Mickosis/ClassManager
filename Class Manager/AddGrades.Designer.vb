@@ -100,6 +100,7 @@ Partial Class AddGrades
         Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StudentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Close = New System.Windows.Forms.Button()
+        Me.Label35 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -808,16 +809,16 @@ Partial Class AddGrades
         'TextBox8
         '
         Me.TextBox8.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox8.Location = New System.Drawing.Point(1096, 663)
+        Me.TextBox8.Location = New System.Drawing.Point(245, 543)
         Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(100, 29)
+        Me.TextBox8.Size = New System.Drawing.Size(145, 29)
         Me.TextBox8.TabIndex = 34
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(1202, 666)
+        Me.Label8.Location = New System.Drawing.Point(255, 603)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(0, 21)
         Me.Label8.TabIndex = 35
@@ -878,12 +879,23 @@ Partial Class AddGrades
         Me.Close.TabIndex = 38
         Me.Close.UseVisualStyleBackColor = False
         '
+        'Label35
+        '
+        Me.Label35.AutoSize = True
+        Me.Label35.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label35.Location = New System.Drawing.Point(241, 509)
+        Me.Label35.Name = "Label35"
+        Me.Label35.Size = New System.Drawing.Size(162, 21)
+        Me.Label35.TabIndex = 39
+        Me.Label35.Text = "Final Semestral Grade"
+        '
         'AddGrades
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(1289, 713)
+        Me.Controls.Add(Me.Label35)
         Me.Controls.Add(Me.Close)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Refresh)
@@ -1011,4 +1023,5 @@ Partial Class AddGrades
     Friend WithEvents HomeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents StudentToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Close As System.Windows.Forms.Button
+    Friend WithEvents Label35 As System.Windows.Forms.Label
 End Class

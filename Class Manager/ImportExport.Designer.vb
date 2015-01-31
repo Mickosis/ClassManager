@@ -32,6 +32,7 @@ Partial Class ImportExport
         Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StudentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Close = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -45,9 +46,9 @@ Partial Class ImportExport
         Me.Import.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Import.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Import.Image = Global.Class_Manager.My.Resources.Resources.addbrowse
-        Me.Import.Location = New System.Drawing.Point(304, 90)
+        Me.Import.Location = New System.Drawing.Point(304, 93)
         Me.Import.Name = "Import"
-        Me.Import.Size = New System.Drawing.Size(77, 32)
+        Me.Import.Size = New System.Drawing.Size(95, 32)
         Me.Import.TabIndex = 0
         Me.Import.Text = "Import DB"
         Me.Import.UseVisualStyleBackColor = True
@@ -61,9 +62,9 @@ Partial Class ImportExport
         Me.Export.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Export.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Export.Image = Global.Class_Manager.My.Resources.Resources.addbrowse
-        Me.Export.Location = New System.Drawing.Point(304, 136)
+        Me.Export.Location = New System.Drawing.Point(288, 128)
         Me.Export.Name = "Export"
-        Me.Export.Size = New System.Drawing.Size(77, 34)
+        Me.Export.Size = New System.Drawing.Size(111, 34)
         Me.Export.TabIndex = 1
         Me.Export.Text = "Export DB"
         Me.Export.UseVisualStyleBackColor = True
@@ -79,7 +80,7 @@ Partial Class ImportExport
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(103, 140)
+        Me.TextBox2.Location = New System.Drawing.Point(103, 128)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(178, 29)
         Me.TextBox2.TabIndex = 3
@@ -140,12 +141,29 @@ Partial Class ImportExport
         Me.Close.TabIndex = 24
         Me.Close.UseVisualStyleBackColor = False
         '
+        'Button1
+        '
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Image = Global.Class_Manager.My.Resources.Resources.addbrowse
+        Me.Button1.Location = New System.Drawing.Point(144, 163)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(107, 34)
+        Me.Button1.TabIndex = 25
+        Me.Button1.Text = "Create DB"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'ImportExport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(427, 205)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Close)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Browse)
@@ -173,4 +191,5 @@ Partial Class ImportExport
     Friend WithEvents HomeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents StudentToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Close As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class
