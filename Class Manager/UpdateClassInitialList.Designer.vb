@@ -48,6 +48,7 @@ Partial Class UpdateClassInitialList
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(10, 20)
         Me.TextBox1.TabIndex = 1
+        Me.TextBox1.Visible = False
         '
         'Students
         '

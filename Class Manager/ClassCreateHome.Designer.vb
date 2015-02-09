@@ -111,6 +111,7 @@ Partial Class ClassCreateHome
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(34, 20)
         Me.TextBox2.TabIndex = 12
+        Me.TextBox2.Visible = False
         '
         'TextBox3
         '
@@ -145,7 +146,7 @@ Partial Class ClassCreateHome
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(86, 242)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(107, 21)
+        Me.Label3.Size = New System.Drawing.Size(106, 21)
         Me.Label3.TabIndex = 16
         Me.Label3.Text = "Prelim Weight:"
         '
@@ -155,7 +156,7 @@ Partial Class ClassCreateHome
         Me.Label4.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(86, 282)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(122, 21)
+        Me.Label4.Size = New System.Drawing.Size(121, 21)
         Me.Label4.TabIndex = 17
         Me.Label4.Text = "Midterm Weight:"
         '
@@ -165,7 +166,7 @@ Partial Class ClassCreateHome
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(86, 320)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(102, 21)
+        Me.Label5.Size = New System.Drawing.Size(101, 21)
         Me.Label5.TabIndex = 18
         Me.Label5.Text = "Finals Weight:"
         '
@@ -184,7 +185,7 @@ Partial Class ClassCreateHome
         Me.Label6.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(86, 360)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(105, 21)
+        Me.Label6.Size = New System.Drawing.Size(104, 21)
         Me.Label6.TabIndex = 20
         Me.Label6.Text = "Passing Score:"
         '
@@ -240,7 +241,7 @@ Partial Class ClassCreateHome
         Me.Label8.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(86, 402)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(97, 21)
+        Me.Label8.Size = New System.Drawing.Size(96, 21)
         Me.Label8.TabIndex = 26
         Me.Label8.Text = "Quiz Weight:"
         '
@@ -250,7 +251,7 @@ Partial Class ClassCreateHome
         Me.Label9.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.Location = New System.Drawing.Point(86, 441)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(163, 21)
+        Me.Label9.Size = New System.Drawing.Size(162, 21)
         Me.Label9.TabIndex = 27
         Me.Label9.Text = "Class Standing Weight:"
         '
@@ -260,7 +261,7 @@ Partial Class ClassCreateHome
         Me.Label10.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(86, 484)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(144, 21)
+        Me.Label10.Size = New System.Drawing.Size(143, 21)
         Me.Label10.TabIndex = 28
         Me.Label10.Text = "Attendance Weight:"
         '
@@ -270,7 +271,7 @@ Partial Class ClassCreateHome
         Me.Label11.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.Location = New System.Drawing.Point(86, 526)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(170, 21)
+        Me.Label11.Size = New System.Drawing.Size(168, 21)
         Me.Label11.TabIndex = 29
         Me.Label11.Text = "Periodical Exam Weight:"
         '

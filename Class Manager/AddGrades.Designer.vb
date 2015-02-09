@@ -114,6 +114,7 @@ Partial Class AddGrades
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(10, 20)
         Me.TextBox1.TabIndex = 1
+        Me.TextBox1.Visible = False
         '
         'DataGridView1
         '
@@ -173,7 +174,7 @@ Partial Class AddGrades
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(1086, 93)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(103, 21)
+        Me.Label1.Size = New System.Drawing.Size(102, 21)
         Me.Label1.TabIndex = 7
         Me.Label1.Text = "Prelim Weight"
         '
@@ -183,7 +184,7 @@ Partial Class AddGrades
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(1083, 156)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(118, 21)
+        Me.Label2.Size = New System.Drawing.Size(117, 21)
         Me.Label2.TabIndex = 8
         Me.Label2.Text = "Midterm Weight"
         '
@@ -193,7 +194,7 @@ Partial Class AddGrades
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(1092, 220)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(92, 21)
+        Me.Label3.Size = New System.Drawing.Size(91, 21)
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Final Weight"
         '
@@ -211,7 +212,7 @@ Partial Class AddGrades
         Me.Label4.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.Location = New System.Drawing.Point(1093, 278)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(97, 21)
+        Me.Label4.Size = New System.Drawing.Size(96, 21)
         Me.Label4.TabIndex = 11
         Me.Label4.Text = "Passing Mark"
         '
@@ -401,7 +402,7 @@ Partial Class AddGrades
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(16, 38)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(53, 21)
+        Me.Label6.Size = New System.Drawing.Size(51, 21)
         Me.Label6.TabIndex = 20
         Me.Label6.Text = "Quiz 1"
         '
@@ -443,7 +444,7 @@ Partial Class AddGrades
         Me.Label13.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.Location = New System.Drawing.Point(1092, 345)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(93, 21)
+        Me.Label13.Size = New System.Drawing.Size(92, 21)
         Me.Label13.TabIndex = 25
         Me.Label13.Text = "Quiz Weight"
         '
@@ -551,7 +552,7 @@ Partial Class AddGrades
         Me.CMidterm.Name = "CMidterm"
         Me.CMidterm.Size = New System.Drawing.Size(204, 47)
         Me.CMidterm.TabIndex = 32
-        Me.CMidterm.Text = "Computer Midterm"
+        Me.CMidterm.Text = "Compute Midterm"
         Me.CMidterm.UseVisualStyleBackColor = True
         '
         'Label20
@@ -636,7 +637,7 @@ Partial Class AddGrades
         Me.Label26.AutoSize = True
         Me.Label26.Location = New System.Drawing.Point(16, 45)
         Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(53, 21)
+        Me.Label26.Size = New System.Drawing.Size(51, 21)
         Me.Label26.TabIndex = 20
         Me.Label26.Text = "Quiz 1"
         '
@@ -786,7 +787,7 @@ Partial Class AddGrades
         Me.Label33.AutoSize = True
         Me.Label33.Location = New System.Drawing.Point(16, 51)
         Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(53, 21)
+        Me.Label33.Size = New System.Drawing.Size(51, 21)
         Me.Label33.TabIndex = 20
         Me.Label33.Text = "Quiz 1"
         '

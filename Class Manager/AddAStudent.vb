@@ -64,7 +64,7 @@ Public Class AddAStudent
                 SQLCONN.Close()
                 SQLCMD.Parameters.Clear()
                 PictureBox1.ImageLocation = "Default.png"
-                TextBox6.Text = "C:\Users\Mico\Desktop\Class Manager\Class Manager\Resources\Default.png"
+                TextBox6.Text = "C:\Users\Miguel\Desktop\Class Manager\Class Manager\Resources\Default.png"
             End If
         End If
     End Sub

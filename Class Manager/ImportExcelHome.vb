@@ -80,7 +80,7 @@ Public Class ImportExcelHome
             Dim StudentID As Integer : StudentID = CInt(item.Cells(0).Value)
             Dim FirstName As String : FirstName = item.Cells(1).Value
             Dim LastName As String : LastName = item.Cells(2).Value
-            Dim DefaultPhoto As String = "C:\Users\Mico\Desktop\Class Manager\Class Manager\Resources\Default.jpg"
+            Dim DefaultPhoto As String = "C:\Users\Miguel\Desktop\Class Manager\Class Manager\Resources\Default.png"
             Dim DefaultEmail As String = "temp@temp.com"
             ExcelString = "INSERT INTO MasterStudents (StudentID, FirstName, LastName, ContactNumber, EmailAddress, Path) VALUES ('" & StudentID & "', '" & FirstName & "', '" & LastName & "', 0, '" & DefaultEmail & "', '" & DefaultPhoto & "')"
             ExcelConn.Open()
