@@ -29,6 +29,7 @@ Partial Class ClassHome
         Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StudentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Close = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -104,12 +105,29 @@ Partial Class ClassHome
         Me.Close.TabIndex = 24
         Me.Close.UseVisualStyleBackColor = False
         '
+        'Button1
+        '
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Location = New System.Drawing.Point(41, 237)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(201, 66)
+        Me.Button1.TabIndex = 25
+        Me.Button1.Text = "Grading Settings"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'ClassHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(283, 315)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Close)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Update)
@@ -131,4 +149,5 @@ Partial Class ClassHome
     Friend WithEvents HomeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents StudentToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Close As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

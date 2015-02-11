@@ -3,6 +3,14 @@ Imports System.Data.SQLite
 
 Public Class AddAStudent
 
+    Private Sub TextBox_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox1.KeyPress, TextBox4.KeyPress
+        If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
+            MessageBox.Show("Please enter numbers only")
+            e.Handled = True
+        End If
+    End Sub
+
+
     Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Me.Hide()
         Home.Show()
@@ -64,7 +72,8 @@ Public Class AddAStudent
                 SQLCONN.Close()
                 SQLCMD.Parameters.Clear()
                 PictureBox1.ImageLocation = "Default.png"
-                TextBox6.Text = "C:\Users\Mico\Desktop\Class Manager\Class Manager\Resources\Default.png"
+                Dim thepath As String = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
+                TextBox6.Text = thepath + "\Class Manager\Class Manager\Resources\Default.png"
             End If
         End If
     End Sub

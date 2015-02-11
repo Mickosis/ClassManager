@@ -62,6 +62,7 @@ Partial Class AddAStudent
         '
         'TextBox1
         '
+        Me.TextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TextBox1.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.Location = New System.Drawing.Point(157, 83)
         Me.TextBox1.Name = "TextBox1"
@@ -70,6 +71,7 @@ Partial Class AddAStudent
         '
         'TextBox2
         '
+        Me.TextBox2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TextBox2.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox2.Location = New System.Drawing.Point(156, 131)
         Me.TextBox2.Name = "TextBox2"
@@ -78,6 +80,7 @@ Partial Class AddAStudent
         '
         'TextBox3
         '
+        Me.TextBox3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TextBox3.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox3.Location = New System.Drawing.Point(156, 173)
         Me.TextBox3.Name = "TextBox3"

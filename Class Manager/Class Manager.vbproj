@@ -159,6 +159,24 @@
     <Compile Include="AddGrades.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AddPrelimGrades.Designer.vb">
+      <DependentUpon>AddPrelimGrades.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddPrelimGrades.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminControlLogin.Designer.vb">
+      <DependentUpon>AdminControlLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminControlLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSettings.Designer.vb">
+      <DependentUpon>AdminSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSettings.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ClassCreateHome.Designer.vb">
       <DependentUpon>ClassCreateHome.vb</DependentUpon>
     </Compile>
@@ -249,6 +267,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddGrades.resx">
       <DependentUpon>AddGrades.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPrelimGrades.resx">
+      <DependentUpon>AddPrelimGrades.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminControlLogin.resx">
+      <DependentUpon>AdminControlLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminSettings.resx">
+      <DependentUpon>AdminSettings.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClassCreateHome.resx">
       <DependentUpon>ClassCreateHome.vb</DependentUpon>

@@ -5,6 +5,13 @@ Imports System.Data.SQLite
 
 Public Class StudentsHome
 
+    Private Sub TextBox_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox2.KeyPress
+        If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
+            MessageBox.Show("Please enter numbers only")
+            e.Handled = True
+        End If
+    End Sub
+
     Private Sub ImportExcelFileToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Me.Hide()
         ImportExcelHome.Show()
@@ -216,4 +223,7 @@ Public Class StudentsHome
     End Sub
 
 
+    Private Sub StudentsHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class

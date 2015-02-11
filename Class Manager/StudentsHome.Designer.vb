@@ -145,6 +145,7 @@ Partial Class StudentsHome
         '
         'TextBox3
         '
+        Me.TextBox3.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TextBox3.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox3.Location = New System.Drawing.Point(195, 113)
         Me.TextBox3.Name = "TextBox3"
@@ -153,6 +154,7 @@ Partial Class StudentsHome
         '
         'TextBox4
         '
+        Me.TextBox4.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TextBox4.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox4.Location = New System.Drawing.Point(195, 154)
         Me.TextBox4.Name = "TextBox4"

@@ -1,8 +1,6 @@
-﻿Imports System.Data.SQLite
+﻿Public Class AddPrelimGrades
 
-Public Class AddGrades
-
-    Private Sub AddGrades_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub AddPrelimGrades_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim ClassIntl = TextBox1.Text
         DBConn()
         SQLSTR = "SELECT * FROM '" & ClassIntl & "'"
@@ -15,8 +13,8 @@ Public Class AddGrades
         ListView1.Columns.Add("StudentID", 80)
         ListView1.Columns.Add("First Name", 80)
         ListView1.Columns.Add("Last Name", 80)
-        ListView1.Columns.Add("Prelim", 50)
-        ListView1.Columns.Add("Midterm", 50)
+        ListView1.Columns.Add("Quiz", 50)
+        ListView1.Columns.Add("Midt", 50)
         ListView1.Columns.Add("Final", 50)
         ListView1.Columns.Add("Semestral", 80)
         While (SQLDR.Read())
@@ -32,22 +30,4 @@ Public Class AddGrades
         SQLDR.Dispose()
         SQLCONN.Close()
     End Sub
-
-    Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
-        Me.Hide()
-        UpdateClassInitialList.Show()
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim ClassIntl = TextBox1.Text
-        AddPrelimGrades.TextBox1.Text = ClassIntl
-        Me.Hide()
-        AddPrelimGrades.Show()
-
-    End Sub
 End Class
-
-
-
-
-

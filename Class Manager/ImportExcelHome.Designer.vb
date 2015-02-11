@@ -41,16 +41,16 @@ Partial Class ImportExcelHome
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(25, 76)
+        Me.Label1.Location = New System.Drawing.Point(24, 65)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(155, 21)
+        Me.Label1.Size = New System.Drawing.Size(215, 21)
         Me.Label1.TabIndex = 9
-        Me.Label1.Text = "Import your Excel File:"
+        Me.Label1.Text = "Step 1: Choose your Excel File :"
         '
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(28, 117)
+        Me.TextBox1.Location = New System.Drawing.Point(28, 89)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(169, 29)
         Me.TextBox1.TabIndex = 10
@@ -64,7 +64,7 @@ Partial Class ImportExcelHome
         Me.Browse.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Browse.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Browse.Image = CType(resources.GetObject("Browse.Image"), System.Drawing.Image)
-        Me.Browse.Location = New System.Drawing.Point(225, 110)
+        Me.Browse.Location = New System.Drawing.Point(203, 83)
         Me.Browse.Name = "Browse"
         Me.Browse.Size = New System.Drawing.Size(91, 38)
         Me.Browse.TabIndex = 11
@@ -78,7 +78,7 @@ Partial Class ImportExcelHome
         Me.DataGridView1.AllowUserToResizeColumns = False
         Me.DataGridView1.AllowUserToResizeRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(28, 201)
+        Me.DataGridView1.Location = New System.Drawing.Point(28, 168)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.Size = New System.Drawing.Size(280, 158)
@@ -93,9 +93,9 @@ Partial Class ImportExcelHome
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(225, 154)
+        Me.Button2.Location = New System.Drawing.Point(12, 124)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(91, 38)
+        Me.Button2.Size = New System.Drawing.Size(106, 38)
         Me.Button2.TabIndex = 13
         Me.Button2.Text = "Import"
         Me.Button2.UseVisualStyleBackColor = True
@@ -108,11 +108,11 @@ Partial Class ImportExcelHome
         Me.ImportDbase.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ImportDbase.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ImportDbase.Image = Global.Class_Manager.My.Resources.Resources.importdbase
-        Me.ImportDbase.Location = New System.Drawing.Point(65, 365)
+        Me.ImportDbase.Location = New System.Drawing.Point(62, 364)
         Me.ImportDbase.Name = "ImportDbase"
         Me.ImportDbase.Size = New System.Drawing.Size(213, 49)
         Me.ImportDbase.TabIndex = 14
-        Me.ImportDbase.Text = "Import to Database"
+        Me.ImportDbase.Text = "Import"
         Me.ImportDbase.UseVisualStyleBackColor = True
         '
         'StudentToolStripMenuItem
@@ -160,7 +160,7 @@ Partial Class ImportExcelHome
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(338, 426)
+        Me.ClientSize = New System.Drawing.Size(338, 513)
         Me.Controls.Add(Me.Close)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.ImportDbase)

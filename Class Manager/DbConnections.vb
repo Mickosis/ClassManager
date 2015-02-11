@@ -14,7 +14,7 @@ Module DbConnections
         If SQLCONN.State = ConnectionState.Open Then SQLCONN.Close()
 
         Try
-            SQLCONN = New SQLiteConnection("Data Source=ClassRecords.db")
+            SQLCONN = New SQLiteConnection("Data Source=C:\Mickosis\Class Manager\ClassRecords.db")
             SQLCONN.Open()
         Catch ex As SQLiteException
             MsgBox("An exception occurred:" & ex.Message)

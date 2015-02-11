@@ -29,23 +29,6 @@ Partial Class ClassCreateHome
         Me.Label2 = New System.Windows.Forms.Label()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StudentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -61,7 +44,7 @@ Partial Class ClassCreateHome
         Me.Create.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Create.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Create.Image = Global.Class_Manager.My.Resources.Resources.Browse_and_Update
-        Me.Create.Location = New System.Drawing.Point(276, 579)
+        Me.Create.Location = New System.Drawing.Point(271, 212)
         Me.Create.Name = "Create"
         Me.Create.Size = New System.Drawing.Size(104, 40)
         Me.Create.TabIndex = 0
@@ -107,172 +90,11 @@ Partial Class ClassCreateHome
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(12, 560)
+        Me.TextBox2.Location = New System.Drawing.Point(21, 232)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(34, 20)
         Me.TextBox2.TabIndex = 12
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(275, 239)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 29)
-        Me.TextBox3.TabIndex = 13
-        Me.TextBox3.Text = "30"
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(275, 279)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 29)
-        Me.TextBox4.TabIndex = 14
-        Me.TextBox4.Text = "30"
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(276, 317)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(100, 29)
-        Me.TextBox5.TabIndex = 15
-        Me.TextBox5.Text = "40"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(86, 242)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(107, 21)
-        Me.Label3.TabIndex = 16
-        Me.Label3.Text = "Prelim Weight:"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(86, 282)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(122, 21)
-        Me.Label4.TabIndex = 17
-        Me.Label4.Text = "Midterm Weight:"
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(86, 320)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(102, 21)
-        Me.Label5.TabIndex = 18
-        Me.Label5.Text = "Finals Weight:"
-        '
-        'TextBox6
-        '
-        Me.TextBox6.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(275, 357)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(100, 29)
-        Me.TextBox6.TabIndex = 19
-        Me.TextBox6.Text = "70"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(86, 360)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(105, 21)
-        Me.Label6.TabIndex = 20
-        Me.Label6.Text = "Passing Score:"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(17, 205)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(176, 21)
-        Me.Label7.TabIndex = 21
-        Me.Label7.Text = "General Subject Settings:"
-        '
-        'TextBox7
-        '
-        Me.TextBox7.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox7.Location = New System.Drawing.Point(275, 399)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(100, 29)
-        Me.TextBox7.TabIndex = 22
-        Me.TextBox7.Text = "40"
-        '
-        'TextBox8
-        '
-        Me.TextBox8.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox8.Location = New System.Drawing.Point(275, 441)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(100, 29)
-        Me.TextBox8.TabIndex = 23
-        Me.TextBox8.Text = "10"
-        '
-        'TextBox9
-        '
-        Me.TextBox9.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox9.Location = New System.Drawing.Point(275, 481)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(100, 29)
-        Me.TextBox9.TabIndex = 24
-        Me.TextBox9.Text = "10"
-        '
-        'TextBox10
-        '
-        Me.TextBox10.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox10.Location = New System.Drawing.Point(275, 523)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(100, 29)
-        Me.TextBox10.TabIndex = 25
-        Me.TextBox10.Text = "40"
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(86, 402)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(97, 21)
-        Me.Label8.TabIndex = 26
-        Me.Label8.Text = "Quiz Weight:"
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(86, 441)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(163, 21)
-        Me.Label9.TabIndex = 27
-        Me.Label9.Text = "Class Standing Weight:"
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(86, 484)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(144, 21)
-        Me.Label10.TabIndex = 28
-        Me.Label10.Text = "Attendance Weight:"
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(86, 526)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(170, 21)
-        Me.Label11.TabIndex = 29
-        Me.Label11.Text = "Periodical Exam Weight:"
+        Me.TextBox2.Visible = False
         '
         'MenuStrip1
         '
@@ -319,26 +141,9 @@ Partial Class ClassCreateHome
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(403, 631)
+        Me.ClientSize = New System.Drawing.Size(403, 264)
         Me.Controls.Add(Me.Close)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.Label11)
-        Me.Controls.Add(Me.Label10)
-        Me.Controls.Add(Me.Label9)
-        Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.TextBox10)
-        Me.Controls.Add(Me.TextBox9)
-        Me.Controls.Add(Me.TextBox8)
-        Me.Controls.Add(Me.TextBox7)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.Label2)
@@ -362,23 +167,6 @@ Partial Class ClassCreateHome
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
-    Friend WithEvents Label6 As System.Windows.Forms.Label
-    Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox9 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
-    Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents Label9 As System.Windows.Forms.Label
-    Friend WithEvents Label10 As System.Windows.Forms.Label
-    Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents HomeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents StudentToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

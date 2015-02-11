@@ -49,18 +49,18 @@ Public Class UpdateClass
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles DelClass.Click
-
-        Dim confirm As DialogResult = MsgBox("Are you sure you want to delete this class?", MsgBoxStyle.YesNo, msgboxtitle)
-        If confirm = Windows.Forms.DialogResult.Yes Then
-            DBConn()
+        If Not ListView1.SelectedItems.Count = 0 Then
             With ListView1.SelectedItems.Item(0)
-                SQLSTR = "DELETE FROM MasterClasslist WHERE ClassID = '" & .SubItems(0).Text & "'"
+                Dim DeleteNumber As String = .SubItems(0).Text
+                Dim Result = MsgBox("Are you sure you want to delete class?", MessageBoxButtons.YesNo, msgboxtitle)
+                DBConn()
+                If Result = DialogResult.Yes Then
+                    SQLSTR = "DELETE FROM MasterClasslist WHERE ClassID = '" & DeleteNumber & "'"
+                    alterDB()
+                    MsgBox("Class deleted succesfully!", , msgboxtitle)
+                    ListView1.Refresh()
+                End If
             End With
-            alterDB()
-            MsgBox("Class deleted succesfully!", , msgboxtitle)
-            Me.Hide()
-            ClassHome.Show()
-
         End If
 
     End Sub
