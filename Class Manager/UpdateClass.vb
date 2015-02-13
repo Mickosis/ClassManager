@@ -30,10 +30,22 @@ Public Class UpdateClass
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Selected.Click
         If Not ListView1.SelectedItems.Count = 0 Then
             With ListView1.SelectedItems.Item(0)
-                UpdateClassInitialList.TextBox1.Text = .SubItems(0).Text
+                AddGrades.TextBox1.Text = .SubItems(0).Text
+                AddGrades.StudentToolStripMenuItem.Text = .SubItems(1).Text
             End With
             Me.Hide()
-            UpdateClassInitialList.Show()
+            AddGrades.Show()
+        End If
+    End Sub
+
+    Private Sub ListView1_DoubleClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListView1.DoubleClick
+        If Not ListView1.SelectedItems.Count = 0 Then
+            With ListView1.SelectedItems.Item(0)
+                AddGrades.TextBox1.Text = .SubItems(0).Text
+                AddGrades.StudentToolStripMenuItem.Text = .SubItems(1).Text
+            End With
+            Me.Hide()
+            AddGrades.Show()
         End If
     End Sub
 

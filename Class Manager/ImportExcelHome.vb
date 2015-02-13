@@ -71,7 +71,7 @@ Public Class ImportExcelHome
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles ImportDbase.Click
         Dim ExcelString As String
-        Dim ExcelConn As SQLiteConnection = New SQLiteConnection("Data Source=ClassRecords.db")
+        Dim ExcelConn As SQLiteConnection = New SQLiteConnection("Data Source=C:\Mickosis\Class Manager\ClassRecords.db")
         Dim Ex As New SQLiteCommand
 
         Dim thepath As String = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
@@ -89,8 +89,35 @@ Public Class ImportExcelHome
             Ex.ExecuteNonQuery()
             ExcelConn.Close()
         Next
-        MsgBox("Students added!", , msgboxtitle)
         ExcelConn.Close()
+
+        DBConn()
+        SQLSTR = "INSERT INTO MasterClasslist (Name, Desc) VALUES ('" & TextBox2.Text & "', '" & RichTextBox1.Text & "')"
+        alterDB()
+        Dim querystring As String = "SELECT ClassID FROM MasterClasslist WHERE Name = ('" & TextBox2.Text & "')"
+        Dim command As New SQLiteCommand(querystring, SQLCONN)
+        Dim reader As SQLiteDataReader = command.ExecuteReader
+        While reader.Read
+            TextBox3.Text = reader.GetValue(0)
+        End While
+        reader.Close()
+        SQLSTR = "CREATE TABLE '" & TextBox3.Text & "' (StudentID INTEGER NOT NULL UNIQUE, FirstName TEXT, LastName TEXT, pQuiz INTEGER DEFAULT 0, pAttend INTEGER DEFAULT 0, pRecite INTEGER DEFAULT 0, pProject INTEGER DEFAULT 0, pHomework INTEGER DEFAULT 0, pOthers INTEGER DEFAULT 0, mQuiz INTEGER DEFAULT 0, mAttend INTEGER DEFAULT 0, mRecite INTEGER DEFAULT 0, mProject INTEGER DEFAULT 0, mHomework INTEGER DEFAULT 0, mOthers INTEGER DEFAULT 0, fQuiz INTEGER DEFAULT 0, fAttend INTEGER DEFAULT 0, fRecite INTEGER DEFAULT 0, fProject INTEGER DEFAULT 0, fHomework INTEGER DEFAULT 0, fOthers INTEGER DEFAULT 0, pGrade INTEGER DEFAULT 0, mGrade INTEGER DEFAULT 0, fGrade  INTEGER DEFAULT 0, semGrade INTEGER DEFAULT 0)"
+        alterDB()
+
+        For Each item As DataGridViewRow In DataGridView1.Rows
+            Dim StudentID As Integer : StudentID = CInt(item.Cells(0).Value)
+            Dim FirstName As String : FirstName = item.Cells(1).Value
+            Dim LastName As String : LastName = item.Cells(2).Value
+            ExcelString = "INSERT INTO '" & TextBox3.Text & "' (StudentID, FirstName, LastName) VALUES ('" & StudentID & "', '" & FirstName & "', '" & LastName & "')"
+            ExcelConn.Open()
+            Ex.CommandText = ExcelString
+            Ex.Connection = ExcelConn
+            Ex.ExecuteNonQuery()
+            ExcelConn.Close()
+        Next
+        MsgBox("Success!")
+        SQLDR.Dispose()
+        SQLCONN.Close()
     End Sub
 
     Private Sub Add_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles ImportDbase.MouseHover

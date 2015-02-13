@@ -37,9 +37,9 @@ Partial Class UpdateClass
         'ListView1
         '
         Me.ListView1.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ListView1.Location = New System.Drawing.Point(24, 104)
+        Me.ListView1.Location = New System.Drawing.Point(40, 106)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(328, 252)
+        Me.ListView1.Size = New System.Drawing.Size(288, 252)
         Me.ListView1.TabIndex = 0
         Me.ListView1.UseCompatibleStateImageBehavior = False
         '

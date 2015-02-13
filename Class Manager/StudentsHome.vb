@@ -138,6 +138,7 @@ Public Class StudentsHome
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Search.Click
+
         DBConn()
         SQLSTR = "SELECT * FROM MasterStudents WHERE StudentID LIKE '%" & TextBox2.Text & "%' AND FirstName LIKE '" & TextBox3.Text & "%' AND LastName LIKE '" & TextBox4.Text & "%' "
         readDB()
@@ -163,6 +164,7 @@ Public Class StudentsHome
         End While
         SQLDR.Dispose()
         SQLCONN.Close()
+
     End Sub
 
     Private Sub Search_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Search.MouseHover
@@ -173,7 +175,6 @@ Public Class StudentsHome
     Private Sub Search_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Search.MouseLeave
 
         Search.Image = My.Resources.okay
-
 
     End Sub
 
@@ -225,5 +226,21 @@ Public Class StudentsHome
 
     Private Sub StudentsHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        If Not ListView1.SelectedItems.Count = 0 Then
+            With ListView1.SelectedItems.Item(0)
+                Dim DeleteNumber As String = .SubItems(0).Text
+                Dim Result = MsgBox("Are you sure you want to delete student?", MessageBoxButtons.YesNo, msgboxtitle)
+                DBConn()
+                If Result = DialogResult.Yes Then
+                    SQLSTR = "DELETE FROM MasterStudents WHERE StudentID = '" & DeleteNumber & "'"
+                    alterDB()
+                    MsgBox("Student deleted succesfully!", , msgboxtitle)
+                    ListView1.Refresh()
+                End If
+            End With
+        End If
     End Sub
 End Class

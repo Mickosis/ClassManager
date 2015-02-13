@@ -153,10 +153,22 @@
     <Compile Include="AddAStudent.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AddFinalGrades.Designer.vb">
+      <DependentUpon>AddFinalGrades.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddFinalGrades.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AddGrades.Designer.vb">
       <DependentUpon>AddGrades.vb</DependentUpon>
     </Compile>
     <Compile Include="AddGrades.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMidtermGrades.Designer.vb">
+      <DependentUpon>AddMidtermGrades.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddMidtermGrades.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddPrelimGrades.Designer.vb">
@@ -200,6 +212,12 @@
       <DependentUpon>EmailStudent.vb</DependentUpon>
     </Compile>
     <Compile Include="EmailStudent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GradeMe.Designer.vb">
+      <DependentUpon>GradeMe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GradeMe.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Home.vb">
@@ -248,12 +266,6 @@
     <Compile Include="UpdateClass.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateClassInitialList.Designer.vb">
-      <DependentUpon>UpdateClassInitialList.vb</DependentUpon>
-    </Compile>
-    <Compile Include="UpdateClassInitialList.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="UpdateStudent.Designer.vb">
       <DependentUpon>UpdateStudent.vb</DependentUpon>
     </Compile>
@@ -265,8 +277,14 @@
     <EmbeddedResource Include="AddAStudent.resx">
       <DependentUpon>AddAStudent.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddFinalGrades.resx">
+      <DependentUpon>AddFinalGrades.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddGrades.resx">
       <DependentUpon>AddGrades.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddMidtermGrades.resx">
+      <DependentUpon>AddMidtermGrades.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddPrelimGrades.resx">
       <DependentUpon>AddPrelimGrades.vb</DependentUpon>
@@ -289,6 +307,9 @@
     <EmbeddedResource Include="EmailStudent.resx">
       <DependentUpon>EmailStudent.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GradeMe.resx">
+      <DependentUpon>GradeMe.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.vb</DependentUpon>
     </EmbeddedResource>
@@ -309,9 +330,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateClass.resx">
       <DependentUpon>UpdateClass.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UpdateClassInitialList.resx">
-      <DependentUpon>UpdateClassInitialList.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateStudent.resx">
       <DependentUpon>UpdateStudent.vb</DependentUpon>

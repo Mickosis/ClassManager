@@ -2,6 +2,8 @@
 
 Public Class AddGrades
 
+
+
     Private Sub AddGrades_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim ClassIntl = TextBox1.Text
         DBConn()
@@ -35,7 +37,7 @@ Public Class AddGrades
 
     Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
         Me.Hide()
-        UpdateClassInitialList.Show()
+        UpdateClass.Show()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -44,6 +46,28 @@ Public Class AddGrades
         Me.Hide()
         AddPrelimGrades.Show()
 
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim ClassIntl = TextBox1.Text
+        AddMidtermGrades.TextBox1.Text = ClassIntl
+        Me.Hide()
+        AddMidtermGrades.Show()
+
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim ClassIntl = TextBox1.Text
+        AddFinalGrades.TextBox1.Text = ClassIntl
+        Me.Hide()
+        AddFinalGrades.Show()
+    End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Dim ClassIntl = TextBox1.Text
+        Me.Hide()
+        ClassCreateHomeAddStudents.TextBox4.Text = ClassIntl
+        ClassCreateHomeAddStudents.Show()
     End Sub
 End Class
 

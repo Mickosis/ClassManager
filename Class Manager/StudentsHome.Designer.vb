@@ -43,6 +43,7 @@ Partial Class StudentsHome
         Me.Close = New System.Windows.Forms.Button()
         Me.Import = New System.Windows.Forms.Button()
         Me.AddStudent = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -115,7 +116,7 @@ Partial Class StudentsHome
         Me.Email.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Email.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Email.Image = CType(resources.GetObject("Email.Image"), System.Drawing.Image)
-        Me.Email.Location = New System.Drawing.Point(597, 325)
+        Me.Email.Location = New System.Drawing.Point(597, 365)
         Me.Email.Name = "Email"
         Me.Email.Size = New System.Drawing.Size(209, 39)
         Me.Email.TabIndex = 11
@@ -229,7 +230,7 @@ Partial Class StudentsHome
         Me.Import.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Import.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Import.Image = CType(resources.GetObject("Import.Image"), System.Drawing.Image)
-        Me.Import.Location = New System.Drawing.Point(597, 370)
+        Me.Import.Location = New System.Drawing.Point(597, 410)
         Me.Import.Name = "Import"
         Me.Import.Size = New System.Drawing.Size(209, 39)
         Me.Import.TabIndex = 23
@@ -252,12 +253,29 @@ Partial Class StudentsHome
         Me.AddStudent.Text = "Add Student"
         Me.AddStudent.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Location = New System.Drawing.Point(597, 320)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(209, 39)
+        Me.Button1.TabIndex = 25
+        Me.Button1.Text = "Delete"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'StudentsHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(834, 480)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.AddStudent)
         Me.Controls.Add(Me.Import)
         Me.Controls.Add(Me.Close)
@@ -305,4 +323,5 @@ Partial Class StudentsHome
     Friend WithEvents Close As System.Windows.Forms.Button
     Friend WithEvents Import As System.Windows.Forms.Button
     Friend WithEvents AddStudent As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

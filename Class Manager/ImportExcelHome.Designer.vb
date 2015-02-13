@@ -33,6 +33,11 @@ Partial Class ImportExcelHome
         Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.Close = New System.Windows.Forms.Button()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -108,7 +113,7 @@ Partial Class ImportExcelHome
         Me.ImportDbase.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ImportDbase.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ImportDbase.Image = Global.Class_Manager.My.Resources.Resources.importdbase
-        Me.ImportDbase.Location = New System.Drawing.Point(62, 364)
+        Me.ImportDbase.Location = New System.Drawing.Point(59, 535)
         Me.ImportDbase.Name = "ImportDbase"
         Me.ImportDbase.Size = New System.Drawing.Size(213, 49)
         Me.ImportDbase.TabIndex = 14
@@ -155,12 +160,59 @@ Partial Class ImportExcelHome
         Me.Close.TabIndex = 23
         Me.Close.UseVisualStyleBackColor = False
         '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(28, 358)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(169, 20)
+        Me.TextBox2.TabIndex = 24
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(24, 334)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(191, 21)
+        Me.Label2.TabIndex = 25
+        Me.Label2.Text = "Step 2: Name your Subject:"
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Location = New System.Drawing.Point(28, 405)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(266, 96)
+        Me.RichTextBox1.TabIndex = 26
+        Me.RichTextBox1.Text = ""
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(24, 381)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(250, 21)
+        Me.Label3.TabIndex = 27
+        Me.Label3.Text = "Step 3: Add a descritpion (optional):"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(187, 136)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(10, 20)
+        Me.TextBox3.TabIndex = 28
+        '
         'ImportExcelHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(338, 513)
+        Me.ClientSize = New System.Drawing.Size(338, 610)
+        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.RichTextBox1)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Close)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.ImportDbase)
@@ -191,4 +243,9 @@ Partial Class ImportExcelHome
     Friend WithEvents HomeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents Close As System.Windows.Forms.Button
+    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
 End Class
