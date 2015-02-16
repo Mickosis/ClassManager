@@ -15,13 +15,14 @@ Public Class AddFinalGrades
         ListView1.Columns.Add("StudentID", 80)
         ListView1.Columns.Add("First Name", 80)
         ListView1.Columns.Add("Last Name", 80)
-        ListView1.Columns.Add("Quizzes", 80)
-        ListView1.Columns.Add("Attendance", 80)
-        ListView1.Columns.Add("Recitation", 80)
-        ListView1.Columns.Add("Projects", 80)
-        ListView1.Columns.Add("Homework", 80)
-        ListView1.Columns.Add("Others", 80)
-        ListView1.Columns.Add("Final", 80)
+        ListView1.Columns.Add("Quizzes", 50)
+        ListView1.Columns.Add("Attendance", 50)
+        ListView1.Columns.Add("Recitation", 50)
+        ListView1.Columns.Add("Projects", 50)
+        ListView1.Columns.Add("Homework", 50)
+        ListView1.Columns.Add("Others", 50)
+        ListView1.Columns.Add("Exam", 50)
+        ListView1.Columns.Add("Finals", 50)
         While (SQLDR.Read())
             With ListView1.Items.Add(SQLDR("StudentID"))
                 .subitems.add(SQLDR("FirstName"))
@@ -32,6 +33,7 @@ Public Class AddFinalGrades
                 .subitems.add(SQLDR("fProject"))
                 .subitems.add(SQLDR("fHomework"))
                 .subitems.add(SQLDR("fOthers"))
+                .subitems.add(SQLDR("fExam"))
                 .subitems.add(SQLDR("fGrade"))
             End With
         End While
@@ -70,4 +72,67 @@ Public Class AddFinalGrades
         End If
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim C1 As Integer = TextBox2.Text
+        Dim C2 As Integer = TextBox3.Text
+        Dim C3 As Integer = TextBox4.Text
+        Dim C4 As Integer = TextBox5.Text
+        Dim C5 As Integer = TextBox6.Text
+        Dim C6 As Integer = TextBox7.Text
+        Dim ComputeCheck = C1 + C2 + C3 + C4 + C5 + C6
+        Dim ClassIntl = TextBox1.Text
+
+        'Get Admin weights first!!
+        Dim PmTotalCS As Integer
+        Dim PmExam As Integer
+        Dim FTotalCS As Integer
+        Dim FExam As Integer
+        Dim PassMark As Integer
+        DBConn()
+        Dim querystring As String = "SELECT PMTotalCS, PMEXam, FTotalCS, FExam, PassingMark FROM GlobalGrades"
+        Dim command As New SQLiteCommand(querystring, SQLCONN)
+        Dim reader As SQLiteDataReader = command.ExecuteReader
+        While reader.Read
+            PmTotalCS = reader.GetValue(0)
+            PmExam = reader.GetValue(1)
+            FTotalCS = reader.GetValue(2)
+            FExam = reader.GetValue(3)
+            PassMark = reader.GetValue(4)
+        End While
+        reader.Close()
+
+
+        If ComputeCheck > 100 Then
+            MsgBox("Criteria must not exceed 100, current is " & ComputeCheck)
+        ElseIf ComputeCheck < 100 Then
+            MsgBox("Criteria must be equal to 100, current is " & ComputeCheck)
+        Else
+            DBConn()
+            SQLSTR = "UPDATE MasterClasslist SET fQuiz = '" & TextBox2.Text & "', fAttend = '" & TextBox3.Text & "', fRecite = '" & TextBox4.Text & "', fProject = '" & TextBox5.Text & "', fHomework = '" & TextBox6.Text & "', fOthers = '" & TextBox7.Text & "' WHERE ClassID = '" & ClassIntl & "'"
+            alterDB()
+            SQLDR.Dispose()
+            SQLCONN.Close()
+
+            Dim lv As ListViewItem
+            For Each lv In ListView1.Items
+                Dim Quiz As Integer = lv.SubItems(3).Text * C1 / 100
+                Dim Attend As Integer = lv.SubItems(4).Text * C2 / 100
+                Dim Recite As Integer = lv.SubItems(5).Text * C3 / 100
+                Dim Project As Integer = lv.SubItems(6).Text * C4 / 100
+                Dim Homework As Integer = lv.SubItems(7).Text * C5 / 100
+                Dim Others As Integer = lv.SubItems(8).Text * C6 / 100
+                Dim Exam As Integer = lv.SubItems(9).Text * FExam / 100
+
+                Dim TotalCS As Integer = Quiz + Attend + Recite + Project + Homework + Others
+                Dim TotalCSWeighted As Integer = TotalCS * FTotalCS / 100
+                lv.SubItems(10).Text = TotalCSWeighted
+
+                DBConn()
+                SQLSTR = "UPDATE '" & ClassIntl & "' SET fGrade = '" & TotalCSWeighted & "' WHERE StudentID = '" & lv.SubItems(0).Text & "'"
+                alterDB()
+            Next
+            SQLDR.Dispose()
+            SQLCONN.Close()
+        End If
+    End Sub
 End Class

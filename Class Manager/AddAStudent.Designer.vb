@@ -65,6 +65,7 @@ Partial Class AddAStudent
         Me.TextBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
         Me.TextBox1.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.Location = New System.Drawing.Point(157, 83)
+        Me.TextBox1.MaxLength = 9
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(183, 29)
         Me.TextBox1.TabIndex = 10

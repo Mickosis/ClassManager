@@ -62,7 +62,7 @@ Partial Class ImportExport
         Me.Export.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Export.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Export.Image = Global.Class_Manager.My.Resources.Resources.addbrowse
-        Me.Export.Location = New System.Drawing.Point(288, 128)
+        Me.Export.Location = New System.Drawing.Point(288, 131)
         Me.Export.Name = "Export"
         Me.Export.Size = New System.Drawing.Size(111, 34)
         Me.Export.TabIndex = 1

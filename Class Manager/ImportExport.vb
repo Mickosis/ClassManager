@@ -12,7 +12,7 @@ Microsoft.VisualBasic.FileIO.UICancelOption.DoNothing)
             MsgBox("Export Success!")
             Process.Start(thepath)
         Else
-            My.Computer.FileSystem.CopyFile("ClassRecords.db", "C:\Mickosis\Class Manager\" + TextBox2.Text + ".db",
+            My.Computer.FileSystem.CopyFile("ClassRecords.db", thepath + "\" + TextBox2.Text + ".db",
 Microsoft.VisualBasic.FileIO.UIOption.AllDialogs,
 Microsoft.VisualBasic.FileIO.UICancelOption.DoNothing)
             MsgBox("Export Success!")
@@ -40,7 +40,9 @@ Microsoft.VisualBasic.FileIO.UICancelOption.DoNothing)
     Microsoft.VisualBasic.FileIO.UIOption.AllDialogs,
     Microsoft.VisualBasic.FileIO.UICancelOption.DoNothing)
         MsgBox("Import Success!")
-        Process.Start("C:\Mickosis\Class Manager\")
+        Me.Hide()
+        Home.Show()
+
     End Sub
 
 
@@ -94,7 +96,6 @@ Microsoft.VisualBasic.FileIO.UICancelOption.DoNothing)
     End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
-
         Dim SQLitecreate As New SQLiteConnection
         Dim SQLitecommand As New SQLiteCommand
         SQLiteConnection.CreateFile(thepath + "\ClassRecords.db")
@@ -104,11 +105,20 @@ Microsoft.VisualBasic.FileIO.UICancelOption.DoNothing)
         Dim TableCreate As String = "CREATE TABLE MasterStudents (StudentID INTEGER NOT NULL UNIQUE PRIMARY KEY, FirstName TEXT NOT NULL, LastName TEXT NOT NULL, ContactNumber INTEGER, EmailAddress TEXT, Path TEXT)"
         SQLitecommand.CommandText = TableCreate
         SQLitecommand.ExecuteNonQuery()
-        Dim TableCreate2 As String = "CREATE TABLE MasterClasslist (ClassID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, Name NOT NULL, Desc TEXT, PrelimWeight INTEGER, MidtermWeight INTEGER, FinalWeight INTEGER, PassingMark INTEGER, QuizWeight INTEGER, ClassStandingWeight INTEGER, AttendanceWeight INTEGER, PeriodicalExamWeight INTEGER)"
+        Dim TableCreate2 As String = "CREATE TABLE MasterClasslist (ClassID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, Name TEXT NOT NULL, Desc TEXT NOT NULL, pQuiz INTEGER DEFAULT 40, pAttend INTEGER DEFAULT 5, pRecite INTEGER DEFAULT 10, pProject INTEGER DEFAULT 20, pHomework INTEGER DEFAULT 20, pOthers INTEGER DEFAULT 5, mQuiz INTEGER DEFAULT 40, mAttend INTEGER DEFAULT 5, mRecite INTEGER DEFAULT 10, mProject INTEGER DEFAULT 20, mHomework INTEGER DEFAULT 20, mOthers INTEGER DEFAULT 5, fQuiz INTEGER DEFAULT 40, fAttend INTEGER DEFAULT 5, fRecite INTEGER DEFAULT 10, fProject INTEGER DEFAULT 20, fHomework INTEGER DEFAULT 20, fOthers INTEGER DEFAULT 5)"
         SQLitecommand.CommandText = TableCreate2
         SQLitecommand.ExecuteNonQuery()
-        Dim TableCreate3 As String = "CREATE TABLE LoginCredentials (username TEXT, password TEXT)"
+        Dim TableCreate3 As String = "CREATE TABLE LoginCredentials (username TEXT DEFAULT adamson, password TEXT DEFAULT adamson)"
         SQLitecommand.CommandText = TableCreate3
+        SQLitecommand.ExecuteNonQuery()
+        Dim TableCreate4 As String = "CREATE TABLE GlobalGrades (PMTotalCS INTEGER DEFAULT 60, PMExam INTEGER DEFAULT 40, FTotalCS INTEGER DEFAULT 50, FExam INTEGER DEFAULT 50, PrelimWeight INTEGER DEFAULT 30, MidtermWeight INTEGER DEFAULT 30, FinalWeight INTEGER DEFAULT 40, PassingMark INTEGER DEFAULT 70)"
+        SQLitecommand.CommandText = TableCreate4
+        SQLitecommand.ExecuteNonQuery()
+        Dim TableCreate5 As String = "INSERT INTO LoginCredentials (username, password) VALUES ('adamson', 'adamson')"
+        SQLitecommand.CommandText = TableCreate5
+        SQLitecommand.ExecuteNonQuery()
+        Dim TableCreate6 As String = "INSERT INTO GlobalGrades VALUES (60, 40, 50, 50, 30 ,30 ,40, 70)"
+        SQLitecommand.CommandText = TableCreate6
         SQLitecommand.ExecuteNonQuery()
         SQLitecreate.Close()
         Dim confirm As DialogResult = MsgBox("Would you like to import new database?", MsgBoxStyle.YesNo, msgboxtitle)
@@ -119,6 +129,8 @@ thepath + "\ClassRecords.db",
 Microsoft.VisualBasic.FileIO.UIOption.AllDialogs,
 Microsoft.VisualBasic.FileIO.UICancelOption.DoNothing)
             MsgBox("Import Success!")
+            SQLitecreate.Close()
+            SQLitecreate.Dispose()
         End If
     End Sub
 End Class

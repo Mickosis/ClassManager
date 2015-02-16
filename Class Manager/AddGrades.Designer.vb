@@ -30,11 +30,14 @@ Partial Class AddGrades
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'TextBox1
@@ -100,41 +103,62 @@ Partial Class AddGrades
         Me.TextBox2.Size = New System.Drawing.Size(10, 20)
         Me.TextBox2.TabIndex = 40
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(519, 71)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(143, 23)
-        Me.Button1.TabIndex = 41
-        Me.Button1.Text = "Add Prelim Grade"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(519, 100)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(143, 23)
-        Me.Button2.TabIndex = 42
-        Me.Button2.Text = "Add Midterm Grade"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(519, 129)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(143, 23)
-        Me.Button3.TabIndex = 43
-        Me.Button3.Text = "Add Final Grade"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(519, 246)
+        Me.Button4.Location = New System.Drawing.Point(510, 302)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(143, 23)
         Me.Button4.TabIndex = 44
         Me.Button4.Text = "Add Students"
         Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Location = New System.Drawing.Point(510, 241)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(143, 23)
+        Me.Button5.TabIndex = 45
+        Me.Button5.Text = "Calculate Sem Grade"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.Button3)
+        Me.GroupBox1.Controls.Add(Me.Button2)
+        Me.GroupBox1.Controls.Add(Me.Button1)
+        Me.GroupBox1.Location = New System.Drawing.Point(504, 71)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(166, 127)
+        Me.GroupBox1.TabIndex = 46
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Grading Period"
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(6, 77)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(143, 23)
+        Me.Button3.TabIndex = 46
+        Me.Button3.Text = "Add Final Grade"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(6, 48)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(143, 23)
+        Me.Button2.TabIndex = 45
+        Me.Button2.Text = "Add Midterm Grade"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(6, 19)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(143, 23)
+        Me.Button1.TabIndex = 44
+        Me.Button1.Text = "Add Prelim Grade"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'AddGrades
         '
@@ -142,10 +166,9 @@ Partial Class AddGrades
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(682, 417)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.Close)
@@ -158,6 +181,7 @@ Partial Class AddGrades
         Me.Text = "AddGrades"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -169,8 +193,10 @@ Partial Class AddGrades
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents ListView1 As System.Windows.Forms.ListView
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents Button5 As System.Windows.Forms.Button
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

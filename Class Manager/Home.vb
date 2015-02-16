@@ -67,4 +67,9 @@
         End If
     End Sub
 
+    Private Sub Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        SQLDR.Dispose()
+        SQLCONN.Close()
+
+    End Sub
 End Class

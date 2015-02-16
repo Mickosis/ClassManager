@@ -40,15 +40,22 @@ Public Class StudentsHome
         ByVal e As MouseEventArgs) Handles ListView1.MouseDown
 
         Dim selection As ListViewItem = ListView1.GetItemAt(e.X, e.Y)
-
         If Not (selection Is Nothing) Then
-            PictureBox1.Image = System.Drawing.Image.FromFile _
-                (selection.SubItems(5).Text)
-
-            TextBox1.Text = (selection.SubItems(4).Text)
+            Dim curFile As String = selection.SubItems(5).Text
+            If (File.Exists(curFile)) Then
+                PictureBox1.Image = System.Drawing.Image.FromFile _
+                    (selection.SubItems(5).Text)
+                TextBox1.Text = (selection.SubItems(5).Text)
+                AddStudent.Enabled = True
+            Else
+                PictureBox1.Image = System.Drawing.Image.FromFile _
+    ("Default.png")
+                Dim thepath As String = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
+                TextBox1.Text = thepath + "\Class Manager\Class Manager\Resources\Default.png"
+                AddStudent.Enabled = True
+                selection.SubItems(5).Text = thepath + "\Class Manager\Class Manager\Resources\Default.png"
+            End If
         End If
-
-        AddStudent.Enabled = True
     End Sub
 
     Private Sub Update_Click(sender As Object, e As EventArgs) Handles Update.Click
@@ -223,10 +230,6 @@ Public Class StudentsHome
 
     End Sub
 
-
-    Private Sub StudentsHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If Not ListView1.SelectedItems.Count = 0 Then

@@ -140,6 +140,7 @@ Partial Class StudentsHome
         '
         Me.TextBox2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox2.Location = New System.Drawing.Point(195, 70)
+        Me.TextBox2.MaxLength = 9
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(166, 29)
         Me.TextBox2.TabIndex = 15
