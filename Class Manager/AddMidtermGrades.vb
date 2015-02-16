@@ -125,7 +125,8 @@ Public Class AddMidtermGrades
 
                 Dim TotalCS As Integer = Quiz + Attend + Recite + Project + Homework + Others
                 Dim TotalCSWeighted As Integer = TotalCS * PmTotalCS / 100
-                lv.SubItems(10).Text = TotalCSWeighted
+                Dim TotalGrade As Integer = TotalCSWeighted + Exam
+                lv.SubItems(10).Text = TotalGrade
 
                 DBConn()
                 SQLSTR = "UPDATE '" & ClassIntl & "' SET mGrade = '" & TotalCSWeighted & "' WHERE StudentID = '" & lv.SubItems(0).Text & "'"

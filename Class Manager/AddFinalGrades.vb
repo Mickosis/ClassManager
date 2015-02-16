@@ -124,8 +124,9 @@ Public Class AddFinalGrades
                 Dim Exam As Integer = lv.SubItems(9).Text * FExam / 100
 
                 Dim TotalCS As Integer = Quiz + Attend + Recite + Project + Homework + Others
-                Dim TotalCSWeighted As Integer = TotalCS * FTotalCS / 100
-                lv.SubItems(10).Text = TotalCSWeighted
+                Dim TotalCSWeighted As Integer = TotalCS * PmTotalCS / 100
+                Dim TotalGrade As Integer = TotalCSWeighted + Exam
+                lv.SubItems(10).Text = TotalGrade
 
                 DBConn()
                 SQLSTR = "UPDATE '" & ClassIntl & "' SET fGrade = '" & TotalCSWeighted & "' WHERE StudentID = '" & lv.SubItems(0).Text & "'"
