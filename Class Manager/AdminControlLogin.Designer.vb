@@ -48,6 +48,7 @@ Partial Class AdminControlLogin
         Me.TextBox2.Font = New System.Drawing.Font("Segoe UI Light", 13.0!)
         Me.TextBox2.Location = New System.Drawing.Point(157, 146)
         Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBox2.Size = New System.Drawing.Size(138, 31)
         Me.TextBox2.TabIndex = 1
         '

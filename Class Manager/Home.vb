@@ -2,6 +2,9 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Students.Click
         Me.Hide()
         StudentsHome.LoadGrades()
+        StudentsHome.ClearShitOut()
+        StudentsHome.Update.Enabled = False
+        StudentsHome.Button1.Enabled = False
         StudentsHome.Show()
     End Sub
 

@@ -5,7 +5,7 @@ Public Class AddGrades
     Public Sub AddGrades()
         Dim ClassIntl = TextBox1.Text
         DBConn()
-        SQLSTR = "SELECT * FROM '" & ClassIntl & "'"
+        SQLSTR = "SELECT * FROM '" & ClassIntl & "' ORDER BY LastName, StudentID"
         readDB()
         ListView1.Clear()
         ListView1.GridLines = True

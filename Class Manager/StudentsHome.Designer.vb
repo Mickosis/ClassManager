@@ -197,6 +197,7 @@ Partial Class StudentsHome
         '
         'Search
         '
+        Me.Search.Enabled = False
         Me.Search.FlatAppearance.BorderSize = 0
         Me.Search.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.Search.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent

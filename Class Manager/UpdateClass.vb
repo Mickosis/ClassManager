@@ -34,6 +34,7 @@ Public Class UpdateClass
                 AddGrades.StudentToolStripMenuItem.Text = .SubItems(1).Text
             End With
             Me.Hide()
+            AddGrades.AddGrades()
             AddGrades.Show()
         End If
     End Sub
@@ -45,6 +46,7 @@ Public Class UpdateClass
                 AddGrades.StudentToolStripMenuItem.Text = .SubItems(1).Text
             End With
             Me.Hide()
+            AddGrades.AddGrades()
             AddGrades.Show()
         End If
     End Sub

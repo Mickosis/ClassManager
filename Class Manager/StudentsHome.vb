@@ -12,6 +12,13 @@ Public Class StudentsHome
         End If
     End Sub
 
+    Public Sub ClearShitOut()
+        TextBox1.Clear()
+        TextBox2.Clear()
+        TextBox3.Clear()
+
+    End Sub
+
     Private Sub ImportExcelFileToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Me.Hide()
         ImportExcelHome.Show()
@@ -59,6 +66,9 @@ ByVal e As MouseEventArgs) Handles ListView1.MouseDown
             Update.Enabled = False
             Button1.Enabled = False
         End If
+
+
+
     End Sub
 
     Private Sub Update_Click(sender As Object, e As EventArgs) Handles Update.Click
@@ -123,7 +133,7 @@ ByVal e As MouseEventArgs) Handles ListView1.MouseDown
 
     Public Sub LoadGrades()
         DBConn()
-        SQLSTR = "SELECT * FROM MasterStudents"
+        SQLSTR = "SELECT * FROM MasterStudents ORDER BY LastName, StudentID"
         readDB()
         ListView1.Clear()
         ListView1.GridLines = True
@@ -147,15 +157,26 @@ ByVal e As MouseEventArgs) Handles ListView1.MouseDown
         End While
         SQLDR.Dispose()
         SQLCONN.Close()
+
+    End Sub
+
+    Public Sub CheckText(ByVal sender As Object, e As EventArgs) Handles TextBox2.TextChanged, TextBox3.TextChanged, TextBox4.TextChanged
+
+        If TextBox2.Text = "" And TextBox3.Text = "" And TextBox4.Text = "" Then
+            Search.Enabled = False
+        Else
+            Search.Enabled = True
+        End If
+
     End Sub
 
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Search.Click
 
-        DBConn()
-        SQLSTR = "SELECT * FROM MasterStudents WHERE StudentID LIKE '%" & TextBox2.Text & "%' AND FirstName LIKE '" & TextBox3.Text & "%' AND LastName LIKE '" & TextBox4.Text & "%' "
-        readDB()
         ListView1.Clear()
+        DBConn()
+        SQLSTR = "SELECT * FROM MasterStudents WHERE StudentID LIKE '%" & TextBox2.Text & "%' AND FirstName LIKE '" & TextBox3.Text & "%' AND LastName LIKE '" & TextBox4.Text & "%' ORDER BY LastName, StudentID"
+        readDB()
         ListView1.GridLines = True
         ListView1.FullRowSelect = True
         ListView1.View = View.Details
@@ -217,12 +238,10 @@ ByVal e As MouseEventArgs) Handles ListView1.MouseDown
 
     End Sub
 
-    Private Sub ViewStudentsListToolStripMenuItem_Click(sender As Object, e As EventArgs)
-
-    End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles AddStudent.Click
         Me.Hide()
+        AddAStudent.ClearShitOut()
         AddAStudent.Show()
     End Sub
     Private Sub Add_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles AddStudent.MouseHover

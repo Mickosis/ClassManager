@@ -77,6 +77,15 @@ Public Class AddAStudent
         End If
     End Sub
 
+    Public Sub ClearShitOut()
+        TextBox1.Clear()
+        TextBox2.Clear()
+        TextBox3.Clear()
+        TextBox4.Clear()
+        TextBox5.Clear()
+
+    End Sub
+
     Private Sub Add_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Add.MouseHover
 
         Add.Image = My.Resources.addbrowsepressed

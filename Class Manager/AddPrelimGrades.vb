@@ -23,7 +23,7 @@ Public Class AddPrelimGrades
     Private Sub AddPrelimGrades_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim ClassIntl = TextBox1.Text
         DBConn()
-        SQLSTR = "SELECT * FROM '" & ClassIntl & "'"
+        SQLSTR = "SELECT * FROM '" & ClassIntl & "' ORDER BY LastName, StudentID"
         readDB()
         ListView1.Clear()
         ListView1.GridLines = True
@@ -170,6 +170,7 @@ Public Class AddPrelimGrades
 
     Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
         Me.Hide()
+        AddGrades.AddGrades()
         AddGrades.Show()
     End Sub
 End Class

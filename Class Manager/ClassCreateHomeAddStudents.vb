@@ -6,7 +6,7 @@ Public Class ClassCreateHomeAddStudents
     Private Sub ClassCreateHomeAddStudents_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
 
         DBConn()
-        SQLSTR = "SELECT * FROM MasterStudents"
+        SQLSTR = "SELECT * FROM MasterStudents ORDER BY LastName, StudentID"
         readDB()
         ListView1.GridLines = True
         ListView1.FullRowSelect = True
@@ -35,7 +35,7 @@ Public Class ClassCreateHomeAddStudents
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Search.Click
         ListView1.Clear()
         DBConn()
-        SQLSTR = "SELECT * FROM MasterStudents WHERE StudentID LIKE '%" & TextBox1.Text & "%' AND FirstName LIKE '" & TextBox2.Text & "%' AND LastName LIKE '" & TextBox3.Text & "%' "
+        SQLSTR = "SELECT * FROM MasterStudents WHERE StudentID LIKE '%" & TextBox1.Text & "%' AND FirstName LIKE '" & TextBox2.Text & "%' AND LastName LIKE '" & TextBox3.Text & "%' ORDER BY LastName, StudentID"
         readDB()
         ListView1.GridLines = True
         ListView1.FullRowSelect = True
@@ -92,17 +92,22 @@ ByVal e As MouseEventArgs) Handles ListView1.MouseDown
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Add.Click
-        For Each item As ListViewItem In ListView1.SelectedItems
-            Dim StudentID As Integer : StudentID = CInt(item.SubItems(0).Text)
-            Dim FirstName As String : FirstName = item.SubItems(1).Text
-            Dim LastName As String : LastName = item.SubItems(2).Text
-            SQLSTR = "INSERT INTO '" & TextBox4.Text & "' (StudentID, FirstName, LastName) VALUES ('" & StudentID & "', '" & FirstName & "', '" & LastName & "')"
-            DBConn()
-            alterDB()
-        Next
-        MsgBox("Students added!", , msgboxtitle)
-        SQLDR.Dispose()
-        SQLCONN.Close()
+        Try
+            For Each item As ListViewItem In ListView1.SelectedItems
+                Dim StudentID As Integer : StudentID = CInt(item.SubItems(0).Text)
+                Dim FirstName As String : FirstName = item.SubItems(1).Text
+                Dim LastName As String : LastName = item.SubItems(2).Text
+                SQLSTR = "INSERT INTO '" & TextBox4.Text & "' (StudentID, FirstName, LastName) VALUES ('" & StudentID & "', '" & FirstName & "', '" & LastName & "')"
+                DBConn()
+                alterDB()
+            Next
+            MsgBox("Students added!", , msgboxtitle)
+            SQLDR.Dispose()
+            SQLCONN.Close()
+        Catch ex As SQLiteException
+            MsgBox("Student already added into the class.")
+        End Try
+
     End Sub
 
 
