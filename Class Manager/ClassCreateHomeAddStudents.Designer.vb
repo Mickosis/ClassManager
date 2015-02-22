@@ -44,6 +44,7 @@ Partial Class ClassCreateHomeAddStudents
         '
         'ListView1
         '
+        Me.ListView1.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ListView1.Location = New System.Drawing.Point(26, 282)
         Me.ListView1.Name = "ListView1"
         Me.ListView1.Size = New System.Drawing.Size(471, 312)
@@ -72,7 +73,7 @@ Partial Class ClassCreateHomeAddStudents
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(22, 89)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(127, 21)
+        Me.Label1.Size = New System.Drawing.Size(126, 21)
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "Student Number:"
         '

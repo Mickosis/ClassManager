@@ -1,6 +1,7 @@
 ﻿Public Class Home
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Students.Click
         Me.Hide()
+        StudentsHome.LoadGrades()
         StudentsHome.Show()
     End Sub
 
@@ -67,4 +68,8 @@
         End If
     End Sub
 
+    Private Sub Home_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        
+
+    End Sub
 End Class

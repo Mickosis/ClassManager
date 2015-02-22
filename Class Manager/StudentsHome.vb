@@ -37,24 +37,27 @@ Public Class StudentsHome
     End Sub
 
     Private Sub ListView1_MouseDown(ByVal sender As Object, _
-        ByVal e As MouseEventArgs) Handles ListView1.MouseDown
-
+ByVal e As MouseEventArgs) Handles ListView1.MouseDown
         Dim selection As ListViewItem = ListView1.GetItemAt(e.X, e.Y)
         If Not (selection Is Nothing) Then
             Dim curFile As String = selection.SubItems(5).Text
             If (File.Exists(curFile)) Then
                 PictureBox1.Image = System.Drawing.Image.FromFile _
-                    (selection.SubItems(5).Text)
+                (selection.SubItems(5).Text)
                 TextBox1.Text = (selection.SubItems(5).Text)
-                AddStudent.Enabled = True
+                Update.Enabled = True
+                Button1.Enabled = True
             Else
                 PictureBox1.Image = System.Drawing.Image.FromFile _
-    ("Default.png")
-                Dim thepath As String = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
-                TextBox1.Text = thepath + "\Class Manager\Class Manager\Resources\Default.png"
-                AddStudent.Enabled = True
-                selection.SubItems(5).Text = thepath + "\Class Manager\Class Manager\Resources\Default.png"
+                ("C:\Mickosis\Class Manager\Default.png")
+                TextBox1.Text = "C:\Mickosis\Class Manager\Default.png"
+                Update.Enabled = True
+                Button1.Enabled = True
+                selection.SubItems(5).Text = "C:\Mickosis\Class Manager\Default.png"
             End If
+        Else
+            Update.Enabled = False
+            Button1.Enabled = False
         End If
     End Sub
 
@@ -74,6 +77,9 @@ Public Class StudentsHome
                 Me.Hide()
             End With
         End If
+
+        SQLDR.Dispose()
+        SQLCONN.Close()
     End Sub
 
     Private Sub Update_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Update.MouseHover
@@ -115,7 +121,7 @@ Public Class StudentsHome
 
     End Sub
 
-    Private Sub StudentsHome_Activate(sender As Object, e As EventArgs) Handles MyBase.Activated
+    Public Sub LoadGrades()
         DBConn()
         SQLSTR = "SELECT * FROM MasterStudents"
         readDB()
@@ -136,13 +142,13 @@ Public Class StudentsHome
                 .subitems.add(SQLDR("LastName"))
                 .subitems.add(SQLDR("ContactNumber"))
                 .subitems.add(SQLDR("EmailAddress"))
-                .subitems.add(SQLDR("path"))
+                .subitems.add(SQLDR("Path"))
             End With
         End While
         SQLDR.Dispose()
         SQLCONN.Close()
-
     End Sub
+
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Search.Click
 
@@ -195,6 +201,7 @@ Public Class StudentsHome
 
     Private Sub Import_Click(sender As Object, e As EventArgs) Handles Import.Click
         Me.Hide()
+        ImportExcelHome.ClearShitOut()
         ImportExcelHome.Show()
     End Sub
 
@@ -241,9 +248,25 @@ Public Class StudentsHome
                     SQLSTR = "DELETE FROM MasterStudents WHERE StudentID = '" & DeleteNumber & "'"
                     alterDB()
                     MsgBox("Student deleted succesfully!", , msgboxtitle)
-                    ListView1.Refresh()
+                    LoadGrades()
                 End If
             End With
         End If
+    End Sub
+
+    Private Sub Delete_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.MouseHover
+
+        Button1.Image = My.Resources.Students_Update_and_Contact_pressed
+
+    End Sub
+    Private Sub Delete_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.MouseLeave
+
+        Button1.Image = My.Resources.Students_Update_and_Contact
+
+
+    End Sub
+
+    Private Sub StudentsHome_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

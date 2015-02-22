@@ -38,9 +38,8 @@ Public Class AddAStudent
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Add.Click
+   Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Add.Click
         Dim confirm As DialogResult = MsgBox("Are all information correct?", MsgBoxStyle.YesNo, msgboxtitle)
-
         If confirm = Windows.Forms.DialogResult.Yes Then
             If TextBox1.Text = "" Then
                 MsgBox("Student Number Missing", MsgBoxStyle.OkOnly, msgboxtitle)
@@ -71,9 +70,9 @@ Public Class AddAStudent
                 MsgBox("Input successful!", , msgboxtitle)
                 SQLCONN.Close()
                 SQLCMD.Parameters.Clear()
-                PictureBox1.ImageLocation = "Default.png"
+                PictureBox1.ImageLocation = "C:\Mickosis\Class Manager\Default.png"
                 Dim thepath As String = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
-                TextBox6.Text = thepath + "\Class Manager\Class Manager\Resources\Default.png"
+                TextBox6.Text = "C:\Mickosis\Class Manager\Default.png"
             End If
         End If
     End Sub

@@ -26,7 +26,6 @@ Partial Class ImportExport
         Me.Import = New System.Windows.Forms.Button()
         Me.Export = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Browse = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -46,9 +45,9 @@ Partial Class ImportExport
         Me.Import.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Import.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Import.Image = Global.Class_Manager.My.Resources.Resources.addbrowse
-        Me.Import.Location = New System.Drawing.Point(304, 93)
+        Me.Import.Location = New System.Drawing.Point(310, 73)
         Me.Import.Name = "Import"
-        Me.Import.Size = New System.Drawing.Size(95, 32)
+        Me.Import.Size = New System.Drawing.Size(111, 57)
         Me.Import.TabIndex = 0
         Me.Import.Text = "Import DB"
         Me.Import.UseVisualStyleBackColor = True
@@ -62,9 +61,9 @@ Partial Class ImportExport
         Me.Export.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Export.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Export.Image = Global.Class_Manager.My.Resources.Resources.addbrowse
-        Me.Export.Location = New System.Drawing.Point(288, 131)
+        Me.Export.Location = New System.Drawing.Point(113, 150)
         Me.Export.Name = "Export"
-        Me.Export.Size = New System.Drawing.Size(111, 34)
+        Me.Export.Size = New System.Drawing.Size(111, 50)
         Me.Export.TabIndex = 1
         Me.Export.Text = "Export DB"
         Me.Export.UseVisualStyleBackColor = True
@@ -72,18 +71,10 @@ Partial Class ImportExport
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(103, 93)
+        Me.TextBox1.Location = New System.Drawing.Point(126, 88)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(178, 29)
         Me.TextBox1.TabIndex = 2
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(103, 128)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(178, 29)
-        Me.TextBox2.TabIndex = 3
         '
         'Browse
         '
@@ -94,9 +85,9 @@ Partial Class ImportExport
         Me.Browse.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Browse.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Browse.Image = Global.Class_Manager.My.Resources.Resources.addbrowse
-        Me.Browse.Location = New System.Drawing.Point(12, 90)
+        Me.Browse.Location = New System.Drawing.Point(12, 75)
         Me.Browse.Name = "Browse"
-        Me.Browse.Size = New System.Drawing.Size(75, 32)
+        Me.Browse.Size = New System.Drawing.Size(87, 53)
         Me.Browse.TabIndex = 4
         Me.Browse.Text = "Browse"
         Me.Browse.UseVisualStyleBackColor = True
@@ -108,7 +99,7 @@ Partial Class ImportExport
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HomeToolStripMenuItem, Me.StudentToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(427, 53)
+        Me.MenuStrip1.Size = New System.Drawing.Size(447, 53)
         Me.MenuStrip1.TabIndex = 16
         Me.MenuStrip1.Text = "Student"
         '
@@ -135,7 +126,7 @@ Partial Class ImportExport
         Me.Close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Close.Image = Global.Class_Manager.My.Resources.Resources.CloseButton
-        Me.Close.Location = New System.Drawing.Point(372, 0)
+        Me.Close.Location = New System.Drawing.Point(392, 0)
         Me.Close.Name = "Close"
         Me.Close.Size = New System.Drawing.Size(55, 53)
         Me.Close.TabIndex = 24
@@ -150,11 +141,11 @@ Partial Class ImportExport
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Image = Global.Class_Manager.My.Resources.Resources.addbrowse
-        Me.Button1.Location = New System.Drawing.Point(144, 163)
+        Me.Button1.Location = New System.Drawing.Point(218, 147)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(107, 34)
+        Me.Button1.Size = New System.Drawing.Size(107, 56)
         Me.Button1.TabIndex = 25
-        Me.Button1.Text = "Create DB"
+        Me.Button1.Text = "Reset DB"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'ImportExport
@@ -162,12 +153,11 @@ Partial Class ImportExport
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(427, 205)
+        Me.ClientSize = New System.Drawing.Size(447, 223)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Close)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Browse)
-        Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Export)
         Me.Controls.Add(Me.Import)
@@ -185,7 +175,6 @@ Partial Class ImportExport
     Friend WithEvents Import As System.Windows.Forms.Button
     Friend WithEvents Export As System.Windows.Forms.Button
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents Browse As System.Windows.Forms.Button
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents HomeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

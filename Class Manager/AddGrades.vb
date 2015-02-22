@@ -2,7 +2,7 @@
 
 Public Class AddGrades
 
-    Private Sub AddGrades_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Public Sub AddGrades()
         Dim ClassIntl = TextBox1.Text
         DBConn()
         SQLSTR = "SELECT * FROM '" & ClassIntl & "'"
@@ -79,6 +79,17 @@ Public Class AddGrades
         ClassCreateHomeAddStudents.Show()
     End Sub
 
+    Private Sub Add_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button4.MouseHover
+
+        Button4.Image = My.Resources.importdbasepressed
+
+    End Sub
+
+    Private Sub Add_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button4.MouseLeave
+
+        Button4.Image = My.Resources.importdbase
+    End Sub
+
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         Dim ClassIntl = TextBox1.Text
         'Get Admin weights first!!
@@ -116,13 +127,33 @@ Public Class AddGrades
         SQLCONN.Close()
     End Sub
 
+    Private Sub Calculate_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button5.MouseHover
 
+        Button5.Image = My.Resources.importdbasepressed
+
+    End Sub
+
+    Private Sub Calculate_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button5.MouseLeave
+
+        Button5.Image = My.Resources.importdbase
+    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim ClassIntl = TextBox1.Text
         AddPrelimGrades.TextBox1.Text = ClassIntl
         Me.Hide()
         AddPrelimGrades.Show()
+    End Sub
+
+    Private Sub Prelim_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.MouseHover
+
+        Button1.Image = My.Resources.importdbasepressed
+
+    End Sub
+
+    Private Sub Prelim_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.MouseLeave
+
+        Button1.Image = My.Resources.importdbase
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
@@ -132,11 +163,45 @@ Public Class AddGrades
         AddMidtermGrades.Show()
     End Sub
 
+    Private Sub Nidterm_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button2.MouseHover
+
+        Button2.Image = My.Resources.importdbasepressed
+
+    End Sub
+
+    Private Sub Midterm_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button2.MouseLeave
+
+        Button2.Image = My.Resources.importdbase
+    End Sub
+
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Dim ClassIntl = TextBox1.Text
         AddFinalGrades.TextBox1.Text = ClassIntl
         Me.Hide()
         AddFinalGrades.Show()
+    End Sub
+
+    Private Sub Finals_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button3.MouseHover
+
+        Button3.Image = My.Resources.importdbasepressed
+
+    End Sub
+
+    Private Sub Finals_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button3.MouseLeave
+
+        Button3.Image = My.Resources.importdbase
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        If MessageBox.Show("Do you want to exit?", "Class Manager", _
+       MessageBoxButtons.YesNo, MessageBoxIcon.Warning) _
+       = DialogResult.Yes Then
+            Application.Exit()
+        End If
+    End Sub
+
+    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
+
     End Sub
 End Class
 

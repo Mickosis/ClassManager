@@ -1,34 +1,35 @@
 ﻿Imports System.Data.SQLite
+Imports System.IO
 
 Public Class ClassCreateHomeAddStudents
 
     Private Sub ClassCreateHomeAddStudents_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
 
-            DBConn()
-            SQLSTR = "SELECT * FROM MasterStudents"
-            readDB()
-            ListView1.GridLines = True
-            ListView1.FullRowSelect = True
-            ListView1.View = View.Details
+        DBConn()
+        SQLSTR = "SELECT * FROM MasterStudents"
+        readDB()
+        ListView1.GridLines = True
+        ListView1.FullRowSelect = True
+        ListView1.View = View.Details
         ListView1.MultiSelect = True
         ListView1.Clear()
-            ListView1.Columns.Add("StudentID", 80)
-            ListView1.Columns.Add("First Name", 80)
-            ListView1.Columns.Add("Last Name", 80)
-            ListView1.Columns.Add("Contact Number", 80)
-            ListView1.Columns.Add("E-mail", 80)
-            ListView1.Columns.Add("Path", 50)
-            While (SQLDR.Read())
-                With ListView1.Items.Add(SQLDR("StudentID"))
-                    .subitems.add(SQLDR("FirstName"))
-                    .subitems.add(SQLDR("LastName"))
-                    .subitems.add(SQLDR("ContactNumber"))
-                    .subitems.add(SQLDR("EmailAddress"))
-                    .subitems.add(SQLDR("path"))
-                End With
-            End While
-            SQLDR.Dispose()
-            SQLCONN.Close()
+        ListView1.Columns.Add("StudentID", 80)
+        ListView1.Columns.Add("First Name", 80)
+        ListView1.Columns.Add("Last Name", 80)
+        ListView1.Columns.Add("Contact Number", 80)
+        ListView1.Columns.Add("E-mail", 80)
+        ListView1.Columns.Add("Path", 50)
+        While (SQLDR.Read())
+            With ListView1.Items.Add(SQLDR("StudentID"))
+                .subitems.add(SQLDR("FirstName"))
+                .subitems.add(SQLDR("LastName"))
+                .subitems.add(SQLDR("ContactNumber"))
+                .subitems.add(SQLDR("EmailAddress"))
+                .subitems.add(SQLDR("path"))
+            End With
+        End While
+        SQLDR.Dispose()
+        SQLCONN.Close()
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Search.Click
@@ -73,16 +74,21 @@ Public Class ClassCreateHomeAddStudents
     End Sub
 
     Public Sub ListView1_MouseDown(ByVal sender As Object, _
-    ByVal e As MouseEventArgs) Handles ListView1.MouseDown
+ByVal e As MouseEventArgs) Handles ListView1.MouseDown
 
         Dim selection As ListViewItem = ListView1.GetItemAt(e.X, e.Y)
-
         If Not (selection Is Nothing) Then
-            PictureBox1.Image = System.Drawing.Image.FromFile _
+            Dim curFile As String = selection.SubItems(5).Text
+            If (File.Exists(curFile)) Then
+                PictureBox1.Image = System.Drawing.Image.FromFile _
                 (selection.SubItems(5).Text)
+            Else
+                PictureBox1.Image = System.Drawing.Image.FromFile _
+                ("C:\Mickosis\Class Manager\Default.png")
+            End If
         End If
-
         Search.Enabled = True
+
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Add.Click
@@ -95,6 +101,8 @@ Public Class ClassCreateHomeAddStudents
             alterDB()
         Next
         MsgBox("Students added!", , msgboxtitle)
+        SQLDR.Dispose()
+        SQLCONN.Close()
     End Sub
 
 
@@ -125,7 +133,9 @@ Public Class ClassCreateHomeAddStudents
     End Sub
 
     Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
+        AddGrades.TextBox1.Text = TextBox4.Text
         Me.Hide()
-        ClassHome.Show()
+        AddGrades.AddGrades()
+        AddGrades.Show()
     End Sub
 End Class

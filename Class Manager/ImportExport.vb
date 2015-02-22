@@ -5,19 +5,11 @@ Public Class ImportExport
     Public thepath As String = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Export.Click
-        If TextBox2.Text = "" Then
-            My.Computer.FileSystem.CopyFile("ClassRecords.db", thepath + "\ClassRecords.db",
+        My.Computer.FileSystem.CopyFile("C:\Mickosis\Class Manager\ClassRecords.db", thepath + "\ClassRecords.db",
 Microsoft.VisualBasic.FileIO.UIOption.AllDialogs,
 Microsoft.VisualBasic.FileIO.UICancelOption.DoNothing)
-            MsgBox("Export Success!")
-            Process.Start(thepath)
-        Else
-            My.Computer.FileSystem.CopyFile("ClassRecords.db", thepath + "\" + TextBox2.Text + ".db",
-Microsoft.VisualBasic.FileIO.UIOption.AllDialogs,
-Microsoft.VisualBasic.FileIO.UICancelOption.DoNothing)
-            MsgBox("Export Success!")
-            Process.Start(thepath)
-        End If
+        MsgBox("Export Success!")
+        Process.Start(thepath)
 
     End Sub
 
@@ -132,5 +124,17 @@ Microsoft.VisualBasic.FileIO.UICancelOption.DoNothing)
             SQLitecreate.Close()
             SQLitecreate.Dispose()
         End If
+    End Sub
+
+    Private Sub Create_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.MouseHover
+
+        Button1.Image = My.Resources.addbrowsepressed
+
+    End Sub
+    Private Sub Create_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.MouseLeave
+
+        Button1.Image = My.Resources.addbrowse
+
+
     End Sub
 End Class

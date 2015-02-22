@@ -69,6 +69,8 @@ Public Class UpdateClass
                 If Result = DialogResult.Yes Then
                     SQLSTR = "DELETE FROM MasterClasslist WHERE ClassID = '" & DeleteNumber & "'"
                     alterDB()
+                    SQLSTR = "DROP TABLE '" & DeleteNumber & "'"
+                    alterDB()
                     MsgBox("Class deleted succesfully!", , msgboxtitle)
                     ListView1.Refresh()
                 End If

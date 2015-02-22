@@ -162,9 +162,10 @@ Partial Class ImportExcelHome
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(28, 358)
+        Me.TextBox2.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(28, 364)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(169, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(169, 29)
         Me.TextBox2.TabIndex = 24
         '
         'Label2
@@ -179,9 +180,10 @@ Partial Class ImportExcelHome
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(28, 405)
+        Me.RichTextBox1.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox1.Location = New System.Drawing.Point(28, 433)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(266, 96)
+        Me.RichTextBox1.Size = New System.Drawing.Size(280, 96)
         Me.RichTextBox1.TabIndex = 26
         Me.RichTextBox1.Text = ""
         '
@@ -189,11 +191,11 @@ Partial Class ImportExcelHome
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(24, 381)
+        Me.Label3.Location = New System.Drawing.Point(24, 396)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(250, 21)
+        Me.Label3.Size = New System.Drawing.Size(177, 21)
         Me.Label3.TabIndex = 27
-        Me.Label3.Text = "Step 3: Add a descritpion (optional):"
+        Me.Label3.Text = "Step 3: Add a descritpion"
         '
         'TextBox3
         '
@@ -201,6 +203,7 @@ Partial Class ImportExcelHome
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(10, 20)
         Me.TextBox3.TabIndex = 28
+        Me.TextBox3.Visible = False
         '
         'ImportExcelHome
         '

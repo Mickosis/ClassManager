@@ -124,9 +124,8 @@ Public Class AddFinalGrades
                 Dim Exam As Integer = lv.SubItems(9).Text * FExam / 100
 
                 Dim TotalCS As Integer = Quiz + Attend + Recite + Project + Homework + Others
-                Dim TotalCSWeighted As Integer = TotalCS * PmTotalCS / 100
-                Dim TotalGrade As Integer = TotalCSWeighted + Exam
-                lv.SubItems(10).Text = TotalGrade
+                Dim TotalCSWeighted As Integer = TotalCS * FTotalCS / 100
+                lv.SubItems(10).Text = TotalCSWeighted
 
                 DBConn()
                 SQLSTR = "UPDATE '" & ClassIntl & "' SET fGrade = '" & TotalCSWeighted & "' WHERE StudentID = '" & lv.SubItems(0).Text & "'"
@@ -135,5 +134,29 @@ Public Class AddFinalGrades
             SQLDR.Dispose()
             SQLCONN.Close()
         End If
+    End Sub
+
+    Private Sub Finals_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.MouseHover
+
+        Button1.Image = My.Resources.importdbasepressed
+
+    End Sub
+
+    Private Sub Finals_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.MouseLeave
+
+        Button1.Image = My.Resources.importdbase
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        If MessageBox.Show("Do you want to exit?", "Class Manager", _
+       MessageBoxButtons.YesNo, MessageBoxIcon.Warning) _
+       = DialogResult.Yes Then
+            Application.Exit()
+        End If
+    End Sub
+
+    Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
+        Me.Hide()
+        AddGrades.Show()
     End Sub
 End Class

@@ -92,4 +92,17 @@ Public Class AdminSettings
         End If
 
     End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        If MessageBox.Show("Do you want to exit?", "Class Manager", _
+       MessageBoxButtons.YesNo, MessageBoxIcon.Warning) _
+       = DialogResult.Yes Then
+            Application.Exit()
+        End If
+    End Sub
+
+    Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
+        Me.Hide()
+        ClassHome.Show()
+    End Sub
 End Class

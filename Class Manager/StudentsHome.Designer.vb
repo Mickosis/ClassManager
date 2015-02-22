@@ -76,6 +76,7 @@ Partial Class StudentsHome
         '
         'ListView1
         '
+        Me.ListView1.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ListView1.Location = New System.Drawing.Point(28, 209)
         Me.ListView1.Name = "ListView1"
         Me.ListView1.Size = New System.Drawing.Size(536, 259)
@@ -93,6 +94,7 @@ Partial Class StudentsHome
         '
         'Update
         '
+        Me.Update.Enabled = False
         Me.Update.FlatAppearance.BorderSize = 0
         Me.Update.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
         Me.Update.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
@@ -100,7 +102,7 @@ Partial Class StudentsHome
         Me.Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Update.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Update.Image = CType(resources.GetObject("Update.Image"), System.Drawing.Image)
-        Me.Update.Location = New System.Drawing.Point(597, 280)
+        Me.Update.Location = New System.Drawing.Point(597, 284)
         Me.Update.Name = "Update"
         Me.Update.Size = New System.Drawing.Size(209, 39)
         Me.Update.TabIndex = 10
@@ -116,7 +118,7 @@ Partial Class StudentsHome
         Me.Email.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Email.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Email.Image = CType(resources.GetObject("Email.Image"), System.Drawing.Image)
-        Me.Email.Location = New System.Drawing.Point(597, 365)
+        Me.Email.Location = New System.Drawing.Point(597, 374)
         Me.Email.Name = "Email"
         Me.Email.Size = New System.Drawing.Size(209, 39)
         Me.Email.TabIndex = 11
@@ -231,7 +233,7 @@ Partial Class StudentsHome
         Me.Import.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Import.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Import.Image = CType(resources.GetObject("Import.Image"), System.Drawing.Image)
-        Me.Import.Location = New System.Drawing.Point(597, 410)
+        Me.Import.Location = New System.Drawing.Point(597, 419)
         Me.Import.Name = "Import"
         Me.Import.Size = New System.Drawing.Size(209, 39)
         Me.Import.TabIndex = 23
@@ -247,7 +249,7 @@ Partial Class StudentsHome
         Me.AddStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.AddStudent.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AddStudent.Image = CType(resources.GetObject("AddStudent.Image"), System.Drawing.Image)
-        Me.AddStudent.Location = New System.Drawing.Point(597, 235)
+        Me.AddStudent.Location = New System.Drawing.Point(597, 239)
         Me.AddStudent.Name = "AddStudent"
         Me.AddStudent.Size = New System.Drawing.Size(209, 39)
         Me.AddStudent.TabIndex = 24
@@ -256,6 +258,7 @@ Partial Class StudentsHome
         '
         'Button1
         '
+        Me.Button1.Enabled = False
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
         Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
@@ -263,7 +266,7 @@ Partial Class StudentsHome
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(597, 320)
+        Me.Button1.Location = New System.Drawing.Point(597, 329)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(209, 39)
         Me.Button1.TabIndex = 25

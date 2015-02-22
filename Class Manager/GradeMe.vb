@@ -279,5 +279,23 @@ Public Class GradeMe
 
     End Sub
 
+    Private Sub Grade_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.MouseHover
 
+        Button1.Image = My.Resources.importdbasepressed
+
+    End Sub
+
+    Private Sub Grade_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.MouseLeave
+
+        Button1.Image = My.Resources.importdbase
+    End Sub
+
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        If MessageBox.Show("Do you want to exit?", "Class Manager", _
+      MessageBoxButtons.YesNo, MessageBoxIcon.Warning) _
+      = DialogResult.Yes Then
+            Application.Exit()
+        End If
+    End Sub
 End Class

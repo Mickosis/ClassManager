@@ -89,9 +89,9 @@ Partial Class Home
         Me.Close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Close.Image = Global.Class_Manager.My.Resources.Resources.CloseButton
-        Me.Close.Location = New System.Drawing.Point(980, 12)
+        Me.Close.Location = New System.Drawing.Point(978, -1)
         Me.Close.Name = "Close"
-        Me.Close.Size = New System.Drawing.Size(32, 36)
+        Me.Close.Size = New System.Drawing.Size(47, 52)
         Me.Close.TabIndex = 4
         Me.Close.UseVisualStyleBackColor = True
         '

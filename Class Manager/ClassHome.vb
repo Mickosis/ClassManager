@@ -56,4 +56,14 @@
         AdminControlLogin.Show()
 
     End Sub
+
+    Private Sub Settings_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.MouseHover
+
+        Button1.Image = My.Resources.importdbasepressed
+
+    End Sub
+    Private Sub Settings_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.MouseLeave
+
+        Button1.Image = My.Resources.importdbase
+    End Sub
 End Class
