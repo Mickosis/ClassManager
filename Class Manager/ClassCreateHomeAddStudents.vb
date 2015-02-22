@@ -3,6 +3,24 @@ Imports System.IO
 
 Public Class ClassCreateHomeAddStudents
 
+
+    Public Sub CheckText(ByVal sender As Object, e As EventArgs) Handles TextBox2.TextChanged, TextBox3.TextChanged, TextBox4.TextChanged
+
+        If TextBox1.Text = "" And TextBox2.Text = "" And TextBox3.Text = "" Then
+            Search.Enabled = False
+        Else
+            Search.Enabled = True
+        End If
+
+    End Sub
+
+    Private Sub TextBox_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox1.KeyPress
+        If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
+            MessageBox.Show("Please enter numbers only")
+            e.Handled = True
+        End If
+    End Sub
+
     Private Sub ClassCreateHomeAddStudents_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
 
         DBConn()
@@ -92,21 +110,25 @@ ByVal e As MouseEventArgs) Handles ListView1.MouseDown
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Add.Click
-        Try
-            For Each item As ListViewItem In ListView1.SelectedItems
-                Dim StudentID As Integer : StudentID = CInt(item.SubItems(0).Text)
-                Dim FirstName As String : FirstName = item.SubItems(1).Text
-                Dim LastName As String : LastName = item.SubItems(2).Text
-                SQLSTR = "INSERT INTO '" & TextBox4.Text & "' (StudentID, FirstName, LastName) VALUES ('" & StudentID & "', '" & FirstName & "', '" & LastName & "')"
-                DBConn()
-                alterDB()
-            Next
-            MsgBox("Students added!", , msgboxtitle)
-            SQLDR.Dispose()
-            SQLCONN.Close()
-        Catch ex As SQLiteException
-            MsgBox("Student already added into the class.")
-        End Try
+        If ListView1.SelectedItems.Count = 1 Then
+            Try
+                For Each item As ListViewItem In ListView1.SelectedItems
+                    Dim StudentID As Integer : StudentID = CInt(item.SubItems(0).Text)
+                    Dim FirstName As String : FirstName = item.SubItems(1).Text
+                    Dim LastName As String : LastName = item.SubItems(2).Text
+                    SQLSTR = "INSERT INTO '" & TextBox4.Text & "' (StudentID, FirstName, LastName) VALUES ('" & StudentID & "', '" & FirstName & "', '" & LastName & "')"
+                    DBConn()
+                    alterDB()
+                Next
+                MsgBox("Students added!", , msgboxtitle)
+                SQLDR.Dispose()
+                SQLCONN.Close()
+            Catch ex As SQLiteException
+                MsgBox("Student already added into the class.")
+            End Try
+        Else
+            MsgBox("Please select a student.", , msgboxtitle)
+        End If
 
     End Sub
 

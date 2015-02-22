@@ -107,6 +107,7 @@ Partial Class ClassCreateHomeAddStudents
         '
         'Search
         '
+        Me.Search.Enabled = False
         Me.Search.FlatAppearance.BorderSize = 0
         Me.Search.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
         Me.Search.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
