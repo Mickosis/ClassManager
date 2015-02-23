@@ -1,4 +1,8 @@
 ﻿Imports System.Data.SQLite
+Imports iTextSharp.text.pdf
+Imports iTextSharp.text
+Imports System.IO
+
 
 Public Class AddGrades
 
@@ -201,6 +205,16 @@ Public Class AddGrades
     End Sub
 
     Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
+
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        ExportPDF.Label1.Text = StudentToolStripMenuItem.Text
+        ExportPDF.TextBox1.Text = TextBox1.Text
+        ExportPDF.Show()
+        ExportPDF.LoadGrades()
+        Me.Hide()
+
 
     End Sub
 End Class
