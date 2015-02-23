@@ -20,7 +20,7 @@ Public Class AddPrelimGrades
         End If
     End Sub
 
-    Private Sub AddPrelimGrades_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Public Sub LoadGrades()
         Dim ClassIntl = TextBox1.Text
         DBConn()
         SQLSTR = "SELECT * FROM '" & ClassIntl & "' ORDER BY LastName, StudentID"
@@ -73,7 +73,6 @@ Public Class AddPrelimGrades
         reader.Close()
         SQLDR.Dispose()
         SQLCONN.Close()
-
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

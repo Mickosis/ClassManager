@@ -5,6 +5,7 @@ Imports System.IO
 
 
 Public Class AddGrades
+    Dim DS As New DataSet()
 
     Public Sub AddGrades()
         Dim ClassIntl = TextBox1.Text
@@ -69,6 +70,47 @@ Public Class AddGrades
         Next
         SQLDR.Dispose()
         SQLCONN.Close()
+
+        DS.Clear()
+        Dim con = New SQLiteConnection("Data Source = C:\Mickosis\Class Manager\ClassRecords.db")
+        con.Open()
+        Dim Sql As String = "SELECT * FROM '" & ClassIntl & "' ORDER BY LastName"
+        Dim da = New SQLiteDataAdapter(Sql, con)
+        da.Fill(DS, "SubjectsList")
+        DataGridView1.DataSource = DS.Tables("SubjectsList").DefaultView
+        With DataGridView1
+            .RowHeadersVisible = False
+            .Columns(0).HeaderCell.Value = "Student ID"
+            .Columns(1).HeaderCell.Value = "First Name"
+            .Columns(2).HeaderCell.Value = "Last Name"
+            .Columns(3).HeaderCell.Value = "Prelim Quiz"
+            .Columns(4).HeaderCell.Value = "Prelim Attendance"
+            .Columns(5).HeaderCell.Value = "Prelim Recitation"
+            .Columns(6).HeaderCell.Value = "Prelim Project"
+            .Columns(7).HeaderCell.Value = "Prelim Homework"
+            .Columns(8).HeaderCell.Value = "Prelim Others"
+            .Columns(9).HeaderCell.Value = "Prelim Exam"
+            .Columns(10).HeaderCell.Value = "Midterm Quiz"
+            .Columns(11).HeaderCell.Value = "Midterm Attendance"
+            .Columns(12).HeaderCell.Value = "Midterm Recitation"
+            .Columns(13).HeaderCell.Value = "Midterm Project"
+            .Columns(14).HeaderCell.Value = "Midterm Homework"
+            .Columns(15).HeaderCell.Value = "Midterm Others"
+            .Columns(16).HeaderCell.Value = "Midterm Exam"
+            .Columns(17).HeaderCell.Value = "Final Quiz"
+            .Columns(18).HeaderCell.Value = "Final Attendance"
+            .Columns(19).HeaderCell.Value = "Final Recitation"
+            .Columns(20).HeaderCell.Value = "Final Project"
+            .Columns(21).HeaderCell.Value = "Final Homework"
+            .Columns(22).HeaderCell.Value = "Final Others"
+            .Columns(23).HeaderCell.Value = "Final Exam"
+            .Columns(24).HeaderCell.Value = "Prelim Grade"
+            .Columns(25).HeaderCell.Value = "Midterm Grade"
+            .Columns(26).HeaderCell.Value = "Final Grade"
+            .Columns(27).HeaderCell.Value = "Semestral Grade"
+        End With
+        DataGridView1.Sort(DataGridView1.Columns(0), System.ComponentModel.ListSortDirection.Ascending)
+        con.Close()
     End Sub
 
     Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
@@ -146,6 +188,7 @@ Public Class AddGrades
         Dim ClassIntl = TextBox1.Text
         AddPrelimGrades.TextBox1.Text = ClassIntl
         Me.Hide()
+        AddPrelimGrades.LoadGrades()
         AddPrelimGrades.Show()
     End Sub
 
@@ -164,6 +207,7 @@ Public Class AddGrades
         Dim ClassIntl = TextBox1.Text
         AddMidtermGrades.TextBox1.Text = ClassIntl
         Me.Hide()
+        AddMidtermGrades.LoadGrades()
         AddMidtermGrades.Show()
     End Sub
 
@@ -182,6 +226,7 @@ Public Class AddGrades
         Dim ClassIntl = TextBox1.Text
         AddFinalGrades.TextBox1.Text = ClassIntl
         Me.Hide()
+        AddFinalGrades.LoadGrades()
         AddFinalGrades.Show()
     End Sub
 
@@ -209,12 +254,64 @@ Public Class AddGrades
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
-        ExportPDF.Label1.Text = StudentToolStripMenuItem.Text
-        ExportPDF.TextBox1.Text = TextBox1.Text
-        ExportPDF.Show()
-        ExportPDF.LoadGrades()
-        Me.Hide()
+        'ExportPDF.Label1.Text = StudentToolStripMenuItem.Text
+        'ExportPDF.TextBox1.Text = TextBox1.Text
+        'ExportPDF.Show()
+        'ExportPDF.LoadGrades()
+        'Me.Hide()
 
+        Dim pdfTable As New PdfPTable(DataGridView1.ColumnCount)
+
+        'Add Title of PDF
+        Dim cell1 As New PdfPCell(New Phrase(StudentToolStripMenuItem.Text))
+        cell1.Colspan = 28
+        cell1.Border = 0
+        cell1.HorizontalAlignment = 1
+        pdfTable.AddCell(cell1)
+
+        'Creating iTextSharp Table from the DataTable data
+        pdfTable.DefaultCell.Padding = 3
+        pdfTable.WidthPercentage = 100
+        pdfTable.HorizontalAlignment = Element.ALIGN_LEFT
+        pdfTable.DefaultCell.BorderWidth = 1
+
+
+        'Adding Header row
+        For Each column As DataGridViewColumn In DataGridView1.Columns
+            Dim cell As New PdfPCell(New Phrase(column.HeaderText))
+            cell.BackgroundColor = New iTextSharp.text.BaseColor(240, 240, 240)
+            pdfTable.AddCell(cell)
+        Next
+
+        'Adding DataRow
+        For Each row As DataGridViewRow In DataGridView1.Rows
+            If row.IsNewRow = False Then
+                For Each cell As DataGridViewCell In row.Cells
+                    pdfTable.AddCell(cell.Value.ToString())
+                Next
+            End If
+        Next
+
+        'Exporting to PDF
+        Dim folderPath As String = "C:\Mickosis\Class Manager\PDFs\"
+        If Not Directory.Exists(folderPath) Then
+            Directory.CreateDirectory(folderPath)
+        End If
+        Using stream As New FileStream(folderPath & StudentToolStripMenuItem.Text & ".pdf", FileMode.Create)
+            Dim pdfDoc As New Document(PageSize.A4.Rotate, 5.0F, 5.0F, 5.0F, 5.0F)
+            PdfWriter.GetInstance(pdfDoc, stream)
+            pdfDoc.Open()
+            pdfDoc.Add(pdfTable)
+            pdfDoc.Close()
+            stream.Close()
+        End Using
+
+        MsgBox("PDF Created", , msgboxtitle)
+
+
+    End Sub
+
+    Private Sub AddGrades_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

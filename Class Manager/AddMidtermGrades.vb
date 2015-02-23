@@ -3,6 +3,10 @@
 Public Class AddMidtermGrades
 
     Private Sub AddMidtermGrades_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Public Sub LoadGrades()
         Dim ClassIntl = TextBox1.Text
         DBConn()
         SQLSTR = "SELECT * FROM '" & ClassIntl & "' ORDER BY LastName, StudentID"
