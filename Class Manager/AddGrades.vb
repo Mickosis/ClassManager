@@ -298,7 +298,7 @@ Public Class AddGrades
             Directory.CreateDirectory(folderPath)
         End If
         Using stream As New FileStream(folderPath & StudentToolStripMenuItem.Text & ".pdf", FileMode.Create)
-            Dim pdfDoc As New Document(PageSize.A4.Rotate, 5.0F, 5.0F, 5.0F, 5.0F)
+            Dim pdfDoc As New Document(PageSize.A10.Rotate, 5.0F, 5.0F, 5.0F, 5.0F)
             PdfWriter.GetInstance(pdfDoc, stream)
             pdfDoc.Open()
             pdfDoc.Add(pdfTable)
