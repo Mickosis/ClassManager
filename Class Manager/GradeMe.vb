@@ -34,11 +34,11 @@ Public Class GradeMe
             TextBox6.Clear()
         Else
             'Get Admin weights first!!
-            Dim PmTotalCS As Integer
-            Dim PmExam As Integer
-            Dim FTotalCS As Integer
-            Dim FExam As Integer
-            Dim PassMark As Integer
+            Dim PmTotalCS As Double
+            Dim PmExam As Double
+            Dim FTotalCS As Double
+            Dim FExam As Double
+            Dim PassMark As Double
             DBConn()
             Dim querystring As String = "SELECT PMTotalCS, PMEXam, FTotalCS, FExam, PassingMark FROM GlobalGrades"
             Dim command As New SQLiteCommand(querystring, SQLCONN)
@@ -96,9 +96,9 @@ Public Class GradeMe
                     Label20.Text = ExamFinal
 
                     'Compute final grade
-                    Dim FinalFinalGrade As Integer = QuizFinal + AttnFinal + ReciFinal + ProjFinal + HomeFinal + OthrFinal
-                    Dim CSFinal As Integer = FinalFinalGrade * TotalCSWeight
-                    Dim PeriodGrade As Integer = CSFinal + ExamFinal
+                    Dim FinalFinalGrade As Double = QuizFinal + AttnFinal + ReciFinal + ProjFinal + HomeFinal + OthrFinal
+                    Dim CSFinal As Double = FinalFinalGrade * TotalCSWeight
+                    Dim PeriodGrade As Double = CSFinal + ExamFinal
                     Label4.Text = PeriodGrade
 
                     'Display pass or fail
@@ -169,9 +169,9 @@ Public Class GradeMe
                     Label20.Text = ExamFinal
 
                     'Compute final grade
-                    Dim FinalFinalGrade As Integer = QuizFinal + AttnFinal + ReciFinal + ProjFinal + HomeFinal + OthrFinal
-                    Dim CSFinal As Integer = FinalFinalGrade * TotalCSWeight
-                    Dim PeriodGrade As Integer = CSFinal + ExamFinal
+                    Dim FinalFinalGrade As Double = QuizFinal + AttnFinal + ReciFinal + ProjFinal + HomeFinal + OthrFinal
+                    Dim CSFinal As Double = FinalFinalGrade * TotalCSWeight
+                    Dim PeriodGrade As Double = CSFinal + ExamFinal
                     Label4.Text = PeriodGrade
 
                     'Display pass or fail
@@ -242,9 +242,9 @@ Public Class GradeMe
                     Label20.Text = ExamFinal
 
                     'Compute final grade
-                    Dim FinalFinalGrade As Integer = QuizFinal + AttnFinal + ReciFinal + ProjFinal + HomeFinal + OthrFinal
-                    Dim CSFinal As Integer = FinalFinalGrade * TotalCSWeight
-                    Dim PeriodGrade As Integer = CSFinal + ExamFinal
+                    Dim FinalFinalGrade As Double = QuizFinal + AttnFinal + ReciFinal + ProjFinal + HomeFinal + OthrFinal
+                    Dim CSFinal As Double = FinalFinalGrade * TotalCSWeight
+                    Dim PeriodGrade As Double = CSFinal + ExamFinal
                     Label4.Text = PeriodGrade
 
                     'Display pass or fail

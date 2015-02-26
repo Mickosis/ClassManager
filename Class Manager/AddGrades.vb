@@ -37,9 +37,9 @@ Public Class AddGrades
         SQLCONN.Close()
 
         'Get Admin weights first!!
-        Dim pWeight As Integer
-        Dim mWeight As Integer
-        Dim fWeight As Integer
+        Dim pWeight As Double
+        Dim mWeight As Double
+        Dim fWeight As Double
         DBConn()
         Dim querystring As String = "SELECT PrelimWeight, MidtermWeight, FinalWeight FROM GlobalGrades"
         Dim command As New SQLiteCommand(querystring, SQLCONN)
@@ -60,7 +60,7 @@ Public Class AddGrades
             Dim mGrade As Double = lv.SubItems(4).Text * mWeighted
             Dim fGrade As Double = lv.SubItems(5).Text * fWeighted
 
-            Dim semGrade As Integer = pGrade + mGrade + fGrade
+            Dim semGrade As Double = pGrade + mGrade + fGrade
             lv.SubItems(6).Text = semGrade
 
             DBConn()
@@ -185,7 +185,7 @@ Public Class AddGrades
         Button4.Image = My.Resources.importdbase
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+    Private Sub Button5_Click(sender As Object, e As EventArgs)
         Dim ClassIntl = TextBox1.Text
         'Get Admin weights first!!
         Dim pWeight As Double
@@ -211,7 +211,7 @@ Public Class AddGrades
             Dim mGrade As Double = lv.SubItems(4).Text * mWeighted
             Dim fGrade As Double = lv.SubItems(5).Text * fWeighted
 
-            Dim semGrade As Integer = pGrade + mGrade + fGrade
+            Dim semGrade As Double = pGrade + mGrade + fGrade
             lv.SubItems(6).Text = semGrade
 
             DBConn()
@@ -220,17 +220,6 @@ Public Class AddGrades
         Next
         SQLDR.Dispose()
         SQLCONN.Close()
-    End Sub
-
-    Private Sub Calculate_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button5.MouseHover
-
-        Button5.Image = My.Resources.importdbasepressed
-
-    End Sub
-
-    Private Sub Calculate_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button5.MouseLeave
-
-        Button5.Image = My.Resources.importdbase
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click

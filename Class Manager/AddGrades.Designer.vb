@@ -32,7 +32,6 @@ Partial Class AddGrades
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -130,27 +129,12 @@ Partial Class AddGrades
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Font = New System.Drawing.Font("Segoe UI Light", 11.0!)
         Me.Button4.Image = CType(resources.GetObject("Button4.Image"), System.Drawing.Image)
-        Me.Button4.Location = New System.Drawing.Point(523, 368)
+        Me.Button4.Location = New System.Drawing.Point(519, 324)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(206, 51)
         Me.Button4.TabIndex = 44
         Me.Button4.Text = "Add Students"
         Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        Me.Button5.FlatAppearance.BorderSize = 0
-        Me.Button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Font = New System.Drawing.Font("Segoe UI Light", 11.0!)
-        Me.Button5.Image = CType(resources.GetObject("Button5.Image"), System.Drawing.Image)
-        Me.Button5.Location = New System.Drawing.Point(523, 301)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(206, 62)
-        Me.Button5.TabIndex = 45
-        Me.Button5.Text = "Calculate Sem Grade"
-        Me.Button5.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
@@ -226,7 +210,7 @@ Partial Class AddGrades
         '
         'Button8
         '
-        Me.Button8.Location = New System.Drawing.Point(533, 425)
+        Me.Button8.Location = New System.Drawing.Point(532, 381)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(184, 23)
         Me.Button8.TabIndex = 49
@@ -282,7 +266,6 @@ Partial Class AddGrades
         Me.Controls.Add(Me.Button8)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.ListView1)
@@ -313,7 +296,6 @@ Partial Class AddGrades
     Friend WithEvents ListView1 As System.Windows.Forms.ListView
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
