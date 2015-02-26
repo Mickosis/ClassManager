@@ -162,6 +162,7 @@ Public Class ImportExcelHome
                     MsgBox("Import and Class Creation Succesful!")
                     AddGrades.TextBox1.Text = TextBox3.Text
                     AddGrades.StudentToolStripMenuItem.Text = TextBox2.Text
+                    AddGrades.ToolStripMenuItem1.Text = RichTextBox1.Text
                     SQLDR.Dispose()
                     SQLCONN.Close()
                     Me.Hide()
@@ -170,7 +171,9 @@ Public Class ImportExcelHome
                 End If
             End If
         Catch ex As SQLiteException
-            MsgBox("A student in the Excel file is already in our database. Please add them to the class manually.")
+            If ex.ErrorCode = 2627 Then
+                MsgBox("A student in the Excel file is already in our database. Please add them to the class manually.")
+            End If
         End Try
 
     End Sub

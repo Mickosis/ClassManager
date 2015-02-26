@@ -32,6 +32,7 @@ Public Class UpdateClass
             With ListView1.SelectedItems.Item(0)
                 AddGrades.TextBox1.Text = .SubItems(0).Text
                 AddGrades.StudentToolStripMenuItem.Text = .SubItems(1).Text
+                AddGrades.ToolStripMenuItem1.Text = .SubItems(2).Text
             End With
             Me.Hide()
             AddGrades.AddGrades()
@@ -44,6 +45,7 @@ Public Class UpdateClass
             With ListView1.SelectedItems.Item(0)
                 AddGrades.TextBox1.Text = .SubItems(0).Text
                 AddGrades.StudentToolStripMenuItem.Text = .SubItems(1).Text
+                AddGrades.ToolStripMenuItem1.Text = .SubItems(2).Text
             End With
             Me.Hide()
             AddGrades.AddGrades()

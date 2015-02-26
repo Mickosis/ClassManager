@@ -28,6 +28,7 @@ Partial Class AddGrades
         Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StudentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Button4 = New System.Windows.Forms.Button()
@@ -37,7 +38,6 @@ Partial Class AddGrades
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.MenuStrip1.SuspendLayout()
@@ -86,12 +86,18 @@ Partial Class AddGrades
         '
         Me.MenuStrip1.BackColor = System.Drawing.Color.Firebrick
         Me.MenuStrip1.Font = New System.Drawing.Font("Segoe UI", 16.0!)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HomeToolStripMenuItem, Me.StudentToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HomeToolStripMenuItem, Me.StudentToolStripMenuItem, Me.ToolStripMenuItem1})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(759, 53)
         Me.MenuStrip1.TabIndex = 37
         Me.MenuStrip1.Text = "Student"
+        '
+        'ToolStripMenuItem1
+        '
+        Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
+        Me.ToolStripMenuItem1.Size = New System.Drawing.Size(134, 49)
+        Me.ToolStripMenuItem1.Text = "Description"
         '
         'ListView1
         '
@@ -212,32 +218,22 @@ Partial Class AddGrades
         Me.Button6.TabIndex = 47
         Me.Button6.UseVisualStyleBackColor = False
         '
-        'Button7
-        '
-        Me.Button7.Location = New System.Drawing.Point(-15, -15)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(75, 23)
-        Me.Button7.TabIndex = 48
-        Me.Button7.Text = "Button7"
-        Me.Button7.UseVisualStyleBackColor = True
-        '
         'Button8
         '
-        Me.Button8.Location = New System.Drawing.Point(523, 426)
+        Me.Button8.Location = New System.Drawing.Point(533, 425)
         Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(75, 23)
+        Me.Button8.Size = New System.Drawing.Size(184, 23)
         Me.Button8.TabIndex = 49
-        Me.Button8.Text = "Test"
+        Me.Button8.Text = "Generate Report"
         Me.Button8.UseVisualStyleBackColor = True
         '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(319, 4)
+        Me.DataGridView1.Location = New System.Drawing.Point(384, 0)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(75, 49)
+        Me.DataGridView1.Size = New System.Drawing.Size(82, 53)
         Me.DataGridView1.TabIndex = 50
-        Me.DataGridView1.Visible = False
         '
         'AddGrades
         '
@@ -247,7 +243,6 @@ Partial Class AddGrades
         Me.ClientSize = New System.Drawing.Size(759, 451)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Button8)
-        Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Button5)
@@ -284,7 +279,7 @@ Partial Class AddGrades
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button6 As System.Windows.Forms.Button
-    Friend WithEvents Button7 As System.Windows.Forms.Button
     Friend WithEvents Button8 As System.Windows.Forms.Button
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents ToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
 End Class

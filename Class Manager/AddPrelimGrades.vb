@@ -1,4 +1,7 @@
 ﻿Imports System.Data.SQLite
+Imports iTextSharp.text.pdf
+Imports iTextSharp.text
+Imports System.IO
 
 Public Class AddPrelimGrades
 
@@ -73,24 +76,25 @@ Public Class AddPrelimGrades
         reader.Close()
         SQLDR.Dispose()
         SQLCONN.Close()
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Dim C1 As Integer = TextBox2.Text
-        Dim C2 As Integer = TextBox3.Text
-        Dim C3 As Integer = TextBox4.Text
-        Dim C4 As Integer = TextBox5.Text
-        Dim C5 As Integer = TextBox6.Text
-        Dim C6 As Integer = TextBox7.Text
+        Dim C1 As Double = TextBox2.Text
+        Dim C2 As Double = TextBox3.Text
+        Dim C3 As Double = TextBox4.Text
+        Dim C4 As Double = TextBox5.Text
+        Dim C5 As Double = TextBox6.Text
+        Dim C6 As Double = TextBox7.Text
         Dim ComputeCheck = C1 + C2 + C3 + C4 + C5 + C6
         Dim ClassIntl = TextBox1.Text
 
         'Get Admin weights first!!
-        Dim PmTotalCS As Integer
-        Dim PmExam As Integer
-        Dim FTotalCS As Integer
-        Dim FExam As Integer
-        Dim PassMark As Integer
+        Dim PmTotalCS As Double
+        Dim PmExam As Double
+        Dim FTotalCS As Double
+        Dim FExam As Double
+        Dim PassMark As Double
         DBConn()
         Dim querystring As String = "SELECT PMTotalCS, PMEXam, FTotalCS, FExam, PassingMark FROM GlobalGrades"
         Dim command As New SQLiteCommand(querystring, SQLCONN)
@@ -118,16 +122,16 @@ Public Class AddPrelimGrades
 
             Dim lv As ListViewItem
             For Each lv In ListView1.Items
-                Dim Quiz As Integer = lv.SubItems(3).Text * C1 / 100
-                Dim Attend As Integer = lv.SubItems(4).Text * C2 / 100
-                Dim Recite As Integer = lv.SubItems(5).Text * C3 / 100
-                Dim Project As Integer = lv.SubItems(6).Text * C4 / 100
-                Dim Homework As Integer = lv.SubItems(7).Text * C5 / 100
-                Dim Others As Integer = lv.SubItems(8).Text * C6 / 100
-                Dim Exam As Integer = lv.SubItems(9).Text * PmExam / 100
+                Dim Quiz As Double = lv.SubItems(3).Text * C1 / 100
+                Dim Attend As Double = lv.SubItems(4).Text * C2 / 100
+                Dim Recite As Double = lv.SubItems(5).Text * C3 / 100
+                Dim Project As Double = lv.SubItems(6).Text * C4 / 100
+                Dim Homework As Double = lv.SubItems(7).Text * C5 / 100
+                Dim Others As Double = lv.SubItems(8).Text * C6 / 100
+                Dim Exam As Double = lv.SubItems(9).Text * PmExam / 100
 
-                Dim TotalCS As Integer = Quiz + Attend + Recite + Project + Homework + Others
-                Dim TotalCSWeighted As Integer = TotalCS * PmTotalCS / 100
+                Dim TotalCS As Double = Quiz + Attend + Recite + Project + Homework + Others
+                Dim TotalCSWeighted As Double = TotalCS * PmTotalCS / 100
                 lv.SubItems(10).Text = TotalCSWeighted
 
                 DBConn()
@@ -172,4 +176,6 @@ Public Class AddPrelimGrades
         AddGrades.AddGrades()
         AddGrades.Show()
     End Sub
+
+
 End Class

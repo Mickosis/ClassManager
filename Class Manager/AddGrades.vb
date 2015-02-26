@@ -5,12 +5,11 @@ Imports System.IO
 
 
 Public Class AddGrades
-    Dim DS As New DataSet()
 
     Public Sub AddGrades()
         Dim ClassIntl = TextBox1.Text
         DBConn()
-        SQLSTR = "SELECT * FROM '" & ClassIntl & "' ORDER BY LastName, StudentID"
+        SQLSTR = "SELECT StudentID, FirstName, LastName, pGrade, mGrade, fGrade, semGrade FROM '" & ClassIntl & "' ORDER BY LastName, StudentID"
         readDB()
         ListView1.Clear()
         ListView1.GridLines = True
@@ -71,46 +70,26 @@ Public Class AddGrades
         SQLDR.Dispose()
         SQLCONN.Close()
 
+        Dim DS As New DataSet()
         DS.Clear()
         Dim con = New SQLiteConnection("Data Source = C:\Mickosis\Class Manager\ClassRecords.db")
         con.Open()
-        Dim Sql As String = "SELECT * FROM '" & ClassIntl & "' ORDER BY LastName"
+        Dim Sql As String = "SELECT StudentID, FirstName, LastName, pGrade, mGrade, fGrade, semGrade FROM '" & ClassIntl & "' ORDER BY LastName, StudentID"
         Dim da = New SQLiteDataAdapter(Sql, con)
-        da.Fill(DS, "SubjectsList")
-        DataGridView1.DataSource = DS.Tables("SubjectsList").DefaultView
+        da.Fill(DS, "GeneralGrades")
+        DataGridView1.DataSource = DS.Tables("GeneralGrades").DefaultView
         With DataGridView1
             .RowHeadersVisible = False
             .Columns(0).HeaderCell.Value = "Student ID"
             .Columns(1).HeaderCell.Value = "First Name"
             .Columns(2).HeaderCell.Value = "Last Name"
-            .Columns(3).HeaderCell.Value = "Prelim Quiz"
-            .Columns(4).HeaderCell.Value = "Prelim Attendance"
-            .Columns(5).HeaderCell.Value = "Prelim Recitation"
-            .Columns(6).HeaderCell.Value = "Prelim Project"
-            .Columns(7).HeaderCell.Value = "Prelim Homework"
-            .Columns(8).HeaderCell.Value = "Prelim Others"
-            .Columns(9).HeaderCell.Value = "Prelim Exam"
-            .Columns(10).HeaderCell.Value = "Midterm Quiz"
-            .Columns(11).HeaderCell.Value = "Midterm Attendance"
-            .Columns(12).HeaderCell.Value = "Midterm Recitation"
-            .Columns(13).HeaderCell.Value = "Midterm Project"
-            .Columns(14).HeaderCell.Value = "Midterm Homework"
-            .Columns(15).HeaderCell.Value = "Midterm Others"
-            .Columns(16).HeaderCell.Value = "Midterm Exam"
-            .Columns(17).HeaderCell.Value = "Final Quiz"
-            .Columns(18).HeaderCell.Value = "Final Attendance"
-            .Columns(19).HeaderCell.Value = "Final Recitation"
-            .Columns(20).HeaderCell.Value = "Final Project"
-            .Columns(21).HeaderCell.Value = "Final Homework"
-            .Columns(22).HeaderCell.Value = "Final Others"
-            .Columns(23).HeaderCell.Value = "Final Exam"
-            .Columns(24).HeaderCell.Value = "Prelim Grade"
-            .Columns(25).HeaderCell.Value = "Midterm Grade"
-            .Columns(26).HeaderCell.Value = "Final Grade"
-            .Columns(27).HeaderCell.Value = "Semestral Grade"
+            .Columns(3).HeaderCell.Value = "Prelim Grade"
+            .Columns(4).HeaderCell.Value = "Midterm Grade"
+            .Columns(5).HeaderCell.Value = "Final Grade"
+            .Columns(6).HeaderCell.Value = "Semestral Grade"
         End With
-        DataGridView1.Sort(DataGridView1.Columns(0), System.ComponentModel.ListSortDirection.Ascending)
         con.Close()
+
     End Sub
 
     Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
@@ -139,9 +118,9 @@ Public Class AddGrades
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         Dim ClassIntl = TextBox1.Text
         'Get Admin weights first!!
-        Dim pWeight As Integer
-        Dim mWeight As Integer
-        Dim fWeight As Integer
+        Dim pWeight As Double
+        Dim mWeight As Double
+        Dim fWeight As Double
         DBConn()
         Dim querystring As String = "SELECT PrelimWeight, MidtermWeight, FinalWeight FROM GlobalGrades"
         Dim command As New SQLiteCommand(querystring, SQLCONN)
@@ -253,7 +232,7 @@ Public Class AddGrades
 
     End Sub
 
-    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+       Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
         'ExportPDF.Label1.Text = StudentToolStripMenuItem.Text
         'ExportPDF.TextBox1.Text = TextBox1.Text
         'ExportPDF.Show()
