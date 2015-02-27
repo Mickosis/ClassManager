@@ -130,10 +130,10 @@ Public Class AddMidtermGrades
 
                 Dim TotalCS As Double = Quiz + Attend + Recite + Project + Homework + Others
                 Dim TotalCSWeighted As Double = TotalCS * PmTotalCS / 100
-                lv.SubItems(10).Text = TotalCSWeighted
+                lv.SubItems(10).Text = TotalCSWeighted + Exam
 
                 DBConn()
-                SQLSTR = "UPDATE '" & ClassIntl & "' SET mGrade = '" & TotalCSWeighted & "' WHERE StudentID = '" & lv.SubItems(0).Text & "'"
+                SQLSTR = "UPDATE '" & ClassIntl & "' SET mGrade = '" & lv.SubItems(10).Text & "' WHERE StudentID = '" & lv.SubItems(0).Text & "'"
                 alterDB()
             Next
             SQLDR.Dispose()

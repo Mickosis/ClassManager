@@ -132,10 +132,10 @@ Public Class AddPrelimGrades
 
                 Dim TotalCS As Double = Quiz + Attend + Recite + Project + Homework + Others
                 Dim TotalCSWeighted As Double = TotalCS * PmTotalCS / 100
-                lv.SubItems(10).Text = TotalCSWeighted
+                lv.SubItems(10).Text = TotalCSWeighted + Exam
 
                 DBConn()
-                SQLSTR = "UPDATE '" & ClassIntl & "' SET pGrade = '" & TotalCSWeighted & "' WHERE StudentID = '" & lv.SubItems(0).Text & "'"
+                SQLSTR = "UPDATE '" & ClassIntl & "' SET pGrade = '" & lv.SubItems(10).Text & "' WHERE StudentID = '" & lv.SubItems(0).Text & "'"
                 alterDB()
             Next
             SQLDR.Dispose()
