@@ -99,7 +99,7 @@ Public Class GradeMe
                     Dim FinalFinalGrade As Double = QuizFinal + AttnFinal + ReciFinal + ProjFinal + HomeFinal + OthrFinal
                     Dim CSFinal As Double = FinalFinalGrade * TotalCSWeight
                     Dim PeriodGrade As Double = CSFinal + ExamFinal
-                    Label4.Text = PeriodGrade
+                    Label4.Text = Math.Round(PeriodGrade, MidpointRounding.AwayFromZero)
 
                     'Display pass or fail
                     If PeriodGrade >= PassMark Then
@@ -172,7 +172,7 @@ Public Class GradeMe
                     Dim FinalFinalGrade As Double = QuizFinal + AttnFinal + ReciFinal + ProjFinal + HomeFinal + OthrFinal
                     Dim CSFinal As Double = FinalFinalGrade * TotalCSWeight
                     Dim PeriodGrade As Double = CSFinal + ExamFinal
-                    Label4.Text = PeriodGrade
+                    Label4.Text = Math.Round(PeriodGrade, MidpointRounding.AwayFromZero)
 
                     'Display pass or fail
                     If PeriodGrade >= PassMark Then
@@ -245,7 +245,7 @@ Public Class GradeMe
                     Dim FinalFinalGrade As Double = QuizFinal + AttnFinal + ReciFinal + ProjFinal + HomeFinal + OthrFinal
                     Dim CSFinal As Double = FinalFinalGrade * TotalCSWeight
                     Dim PeriodGrade As Double = CSFinal + ExamFinal
-                    Label4.Text = PeriodGrade
+                    Label4.Text = Math.Round(PeriodGrade, MidpointRounding.AwayFromZero)
 
                     'Display pass or fail
                     If PeriodGrade >= PassMark Then
