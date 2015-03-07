@@ -253,6 +253,46 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property Seat() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Seat", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Seat1() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Seat1", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property Seatlab() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("Seatlab", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property SeatNotCorner() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("SeatNotCorner", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property Students_Update_and_Contact() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Students Update and Contact", resourceCulture)
@@ -306,6 +346,16 @@ Namespace My.Resources
         Friend ReadOnly Property syncbuttonpressed() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("syncbuttonpressed", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property teacher() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("teacher", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

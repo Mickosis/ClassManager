@@ -73,6 +73,9 @@ Public Class AddAStudent
                 PictureBox1.ImageLocation = "C:\Mickosis\Class Manager\Default.png"
                 Dim thepath As String = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
                 TextBox6.Text = "C:\Mickosis\Class Manager\Default.png"
+                Me.Hide()
+                StudentsHome.LoadGrades()
+                StudentsHome.Show()
             End If
         End If
     End Sub

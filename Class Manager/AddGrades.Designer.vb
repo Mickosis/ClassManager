@@ -42,6 +42,8 @@ Partial Class AddGrades
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
         Me.DataGridView3 = New System.Windows.Forms.DataGridView()
         Me.DataGridView4 = New System.Windows.Forms.DataGridView()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -109,7 +111,7 @@ Partial Class AddGrades
         Me.ListView1.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ListView1.Location = New System.Drawing.Point(12, 71)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(478, 348)
+        Me.ListView1.Size = New System.Drawing.Size(478, 368)
         Me.ListView1.TabIndex = 39
         Me.ListView1.UseCompatibleStateImageBehavior = False
         '
@@ -117,7 +119,7 @@ Partial Class AddGrades
         '
         Me.TextBox2.Location = New System.Drawing.Point(496, 355)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(10, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(24, 20)
         Me.TextBox2.TabIndex = 40
         Me.TextBox2.Visible = False
         '
@@ -129,7 +131,7 @@ Partial Class AddGrades
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Font = New System.Drawing.Font("Segoe UI Light", 11.0!)
         Me.Button4.Image = CType(resources.GetObject("Button4.Image"), System.Drawing.Image)
-        Me.Button4.Location = New System.Drawing.Point(519, 324)
+        Me.Button4.Location = New System.Drawing.Point(522, 296)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(206, 51)
         Me.Button4.TabIndex = 44
@@ -142,7 +144,7 @@ Partial Class AddGrades
         Me.GroupBox1.Controls.Add(Me.Button2)
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(504, 71)
+        Me.GroupBox1.Location = New System.Drawing.Point(504, 65)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(243, 223)
         Me.GroupBox1.TabIndex = 46
@@ -210,9 +212,15 @@ Partial Class AddGrades
         '
         'Button8
         '
-        Me.Button8.Location = New System.Drawing.Point(532, 381)
+        Me.Button8.FlatAppearance.BorderSize = 0
+        Me.Button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button8.Font = New System.Drawing.Font("Segoe UI Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button8.Image = Global.Class_Manager.My.Resources.Resources.importdbase
+        Me.Button8.Location = New System.Drawing.Point(526, 403)
         Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(184, 23)
+        Me.Button8.Size = New System.Drawing.Size(196, 44)
         Me.Button8.TabIndex = 49
         Me.Button8.Text = "Generate Report"
         Me.Button8.UseVisualStyleBackColor = True
@@ -253,12 +261,40 @@ Partial Class AddGrades
         Me.DataGridView4.TabIndex = 53
         Me.DataGridView4.Visible = False
         '
+        'Button5
+        '
+        Me.Button5.FlatAppearance.BorderSize = 0
+        Me.Button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button5.Font = New System.Drawing.Font("Segoe UI Light", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.Image = Global.Class_Manager.My.Resources.Resources.importdbase
+        Me.Button5.Location = New System.Drawing.Point(526, 353)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(196, 44)
+        Me.Button5.TabIndex = 54
+        Me.Button5.Text = "Seat Plan"
+        Me.Button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Lec", "Lab"})
+        Me.ComboBox1.Location = New System.Drawing.Point(540, 367)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(101, 21)
+        Me.ComboBox1.TabIndex = 55
+        '
         'AddGrades
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(759, 451)
+        Me.ClientSize = New System.Drawing.Size(759, 461)
+        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.DataGridView4)
         Me.Controls.Add(Me.DataGridView3)
         Me.Controls.Add(Me.DataGridView2)
@@ -307,4 +343,6 @@ Partial Class AddGrades
     Friend WithEvents DataGridView2 As System.Windows.Forms.DataGridView
     Friend WithEvents DataGridView3 As System.Windows.Forms.DataGridView
     Friend WithEvents DataGridView4 As System.Windows.Forms.DataGridView
+    Friend WithEvents Button5 As System.Windows.Forms.Button
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
 End Class

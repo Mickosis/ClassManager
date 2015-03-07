@@ -83,6 +83,7 @@ Microsoft.VisualBasic.FileIO.UICancelOption.DoNothing)
 
     Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
         Me.Hide()
+        TextBox1.Clear()
         Home.Show()
 
     End Sub
@@ -97,7 +98,7 @@ Microsoft.VisualBasic.FileIO.UICancelOption.DoNothing)
         Dim TableCreate As String = "CREATE TABLE MasterStudents (StudentID INTEGER NOT NULL UNIQUE PRIMARY KEY, FirstName TEXT NOT NULL, LastName TEXT NOT NULL, ContactNumber INTEGER, EmailAddress TEXT, Path TEXT)"
         SQLitecommand.CommandText = TableCreate
         SQLitecommand.ExecuteNonQuery()
-        Dim TableCreate2 As String = "CREATE TABLE MasterClasslist (ClassID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, Name TEXT NOT NULL, Desc TEXT NOT NULL, pQuiz INTEGER DEFAULT 30, pAttend INTEGER DEFAULT 5, pRecite INTEGER DEFAULT 5, pProject INTEGER DEFAULT 20, pHomework INTEGER DEFAULT 10, pOthers INTEGER DEFAULT 30, mQuiz INTEGER DEFAULT 30, mAttend INTEGER DEFAULT 5, mRecite INTEGER DEFAULT 5, mProject INTEGER DEFAULT 20, mHomework INTEGER DEFAULT 10, mOthers INTEGER DEFAULT 30, fQuiz INTEGER DEFAULT 30, fAttend INTEGER DEFAULT 5, fRecite INTEGER DEFAULT 5, fProject INTEGER DEFAULT 20, fHomework INTEGER DEFAULT 10, fOthers INTEGER DEFAULT 30)"
+        Dim TableCreate2 As String = "CREATE TABLE MasterClasslist (ClassID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, Name TEXT NOT NULL, Desc TEXT NOT NULL, pQuiz INTEGER DEFAULT 30, pQuizTotal INTEGER DEFAULT 0, pAttend INTEGER DEFAULT 5, pAttendTotal INTEGER DEFAULT 0, pRecite INTEGER DEFAULT 5, pReciteTotal INTEGER DEFAULT 0, pProject INTEGER DEFAULT 20, pProjectTotal INTEGER DEFAULT 0, pHomework INTEGER DEFAULT 10, pHomeworkTotal INTEGER DEFAULT 0, pOthers INTEGER DEFAULT 30, pOthersTotal INTEGER DEFAULT 0, pExamTotal INTEGER DEFAULT 0, mQuiz INTEGER DEFAULT 30, mQuizTotal INTEGER DEFAULT 0, mAttend INTEGER DEFAULT 5, mAttendTotal INTEGER DEFAULT 0, mRecite INTEGER DEFAULT 5, mReciteTotal INTEGER DEFAULT 0, mProject INTEGER DEFAULT 20, mProjectTotal INTEGER DEFAULT 0, mHomework INTEGER DEFAULT 10, mHomeworkTotal INTEGER DEFAULT 0, mOthers INTEGER DEFAULT 30, mOthersTotal INTEGER DEFAULT 0, mExamTotal INTEGER DEFAULT 0, fQuiz INTEGER DEFAULT 30, fQuizTotal INTEGER DEFAULT 0, fAttend INTEGER DEFAULT 5, fAttendTotal INTEGER DEFAULT 0, fRecite INTEGER DEFAULT 5, fReciteTotal INTEGER DEFAULT 0, fProject INTEGER DEFAULT 20, fProjectTotal INTEGER DEFAULT 0, fHomework INTEGER DEFAULT 10, fHomeworkTotal INTEGER DEFAULT 0, fOthers INTEGER DEFAULT 30, fOthersTotal INTEGER DEFAULT 0, fExamTotal INTEGER DEFAULT 0, SeatPlan TEXT, Lab TEXT)"
         SQLitecommand.CommandText = TableCreate2
         SQLitecommand.ExecuteNonQuery()
         Dim TableCreate3 As String = "CREATE TABLE LoginCredentials (username TEXT DEFAULT adamson, password TEXT DEFAULT adamson)"

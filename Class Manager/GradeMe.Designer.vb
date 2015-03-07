@@ -55,6 +55,13 @@ Partial Class GradeMe
         Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StudentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button6 = New System.Windows.Forms.Button()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.Label27 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -173,7 +180,7 @@ Partial Class GradeMe
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.Location = New System.Drawing.Point(146, 371)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(82, 21)
+        Me.Label5.Size = New System.Drawing.Size(80, 21)
         Me.Label5.TabIndex = 11
         Me.Label5.Text = "Pass or Fail"
         Me.Label5.Visible = False
@@ -234,75 +241,69 @@ Partial Class GradeMe
         Me.Label11.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.Location = New System.Drawing.Point(324, 260)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(55, 21)
+        Me.Label11.Size = New System.Drawing.Size(67, 21)
         Me.Label11.TabIndex = 17
-        Me.Label11.Text = "Others"
+        Me.Label11.Text = "Activities"
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(242, 126)
+        Me.Label12.Font = New System.Drawing.Font("Segoe UI Semibold", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(220, 112)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(61, 21)
+        Me.Label12.Size = New System.Drawing.Size(28, 37)
         Me.Label12.TabIndex = 18
-        Me.Label12.Text = "Label12"
-        Me.Label12.Visible = False
+        Me.Label12.Text = "/"
         '
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(242, 193)
+        Me.Label13.Font = New System.Drawing.Font("Segoe UI Semibold", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(220, 180)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(61, 21)
+        Me.Label13.Size = New System.Drawing.Size(28, 37)
         Me.Label13.TabIndex = 19
-        Me.Label13.Text = "Label13"
-        Me.Label13.Visible = False
+        Me.Label13.Text = "/"
         '
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(242, 265)
+        Me.Label14.Font = New System.Drawing.Font("Segoe UI Semibold", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(220, 249)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(61, 21)
+        Me.Label14.Size = New System.Drawing.Size(28, 37)
         Me.Label14.TabIndex = 20
-        Me.Label14.Text = "Label14"
-        Me.Label14.Visible = False
+        Me.Label14.Text = "/"
         '
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(487, 123)
+        Me.Label15.Font = New System.Drawing.Font("Segoe UI Semibold", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(476, 109)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(61, 21)
+        Me.Label15.Size = New System.Drawing.Size(28, 37)
         Me.Label15.TabIndex = 21
-        Me.Label15.Text = "Label15"
-        Me.Label15.Visible = False
+        Me.Label15.Text = "/"
         '
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(487, 192)
+        Me.Label16.Font = New System.Drawing.Font("Segoe UI Semibold", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(476, 172)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(61, 21)
+        Me.Label16.Size = New System.Drawing.Size(28, 37)
         Me.Label16.TabIndex = 22
-        Me.Label16.Text = "Label16"
-        Me.Label16.Visible = False
+        Me.Label16.Text = "/"
         '
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(487, 265)
+        Me.Label17.Font = New System.Drawing.Font("Segoe UI Semibold", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(476, 246)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(61, 21)
+        Me.Label17.Size = New System.Drawing.Size(28, 37)
         Me.Label17.TabIndex = 23
-        Me.Label17.Text = "Label17"
-        Me.Label17.Visible = False
+        Me.Label17.Text = "/"
         '
         'Label18
         '
@@ -320,29 +321,28 @@ Partial Class GradeMe
         Me.Label19.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label19.Location = New System.Drawing.Point(23, 337)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(120, 21)
+        Me.Label19.Size = New System.Drawing.Size(119, 21)
         Me.Label19.TabIndex = 25
         Me.Label19.Text = "Periodical Exams"
         '
         'TextBox7
         '
         Me.TextBox7.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox7.Location = New System.Drawing.Point(160, 329)
+        Me.TextBox7.Location = New System.Drawing.Point(160, 334)
         Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(100, 29)
+        Me.TextBox7.Size = New System.Drawing.Size(54, 29)
         Me.TextBox7.TabIndex = 26
         Me.TextBox7.Text = "0"
         '
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(279, 337)
+        Me.Label20.Font = New System.Drawing.Font("Segoe UI Semibold", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(220, 321)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(61, 21)
+        Me.Label20.Size = New System.Drawing.Size(28, 37)
         Me.Label20.TabIndex = 27
-        Me.Label20.Text = "Label20"
-        Me.Label20.Visible = False
+        Me.Label20.Text = "/"
         '
         'MenuStrip1
         '
@@ -384,12 +384,89 @@ Partial Class GradeMe
         Me.Button6.TabIndex = 50
         Me.Button6.UseVisualStyleBackColor = False
         '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(242, 125)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(16, 21)
+        Me.Label21.TabIndex = 51
+        Me.Label21.Text = "-"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Location = New System.Drawing.Point(242, 193)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(16, 21)
+        Me.Label22.TabIndex = 52
+        Me.Label22.Text = "-"
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.Location = New System.Drawing.Point(242, 262)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(16, 21)
+        Me.Label23.TabIndex = 53
+        Me.Label23.Text = "-"
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.Location = New System.Drawing.Point(499, 122)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(16, 21)
+        Me.Label24.TabIndex = 54
+        Me.Label24.Text = "-"
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Location = New System.Drawing.Point(499, 187)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(16, 21)
+        Me.Label25.TabIndex = 55
+        Me.Label25.Text = "-"
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.Location = New System.Drawing.Point(499, 259)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(16, 21)
+        Me.Label26.TabIndex = 56
+        Me.Label26.Text = "-"
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.Location = New System.Drawing.Point(242, 334)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(16, 21)
+        Me.Label27.TabIndex = 57
+        Me.Label27.Text = "-"
+        '
         'GradeMe
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(569, 418)
+        Me.Controls.Add(Me.Label27)
+        Me.Controls.Add(Me.Label26)
+        Me.Controls.Add(Me.Label25)
+        Me.Controls.Add(Me.Label24)
+        Me.Controls.Add(Me.Label23)
+        Me.Controls.Add(Me.Label22)
+        Me.Controls.Add(Me.Label21)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Label20)
@@ -463,4 +540,11 @@ Partial Class GradeMe
     Friend WithEvents HomeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents StudentToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Button6 As System.Windows.Forms.Button
+    Friend WithEvents Label21 As System.Windows.Forms.Label
+    Friend WithEvents Label22 As System.Windows.Forms.Label
+    Friend WithEvents Label23 As System.Windows.Forms.Label
+    Friend WithEvents Label24 As System.Windows.Forms.Label
+    Friend WithEvents Label25 As System.Windows.Forms.Label
+    Friend WithEvents Label26 As System.Windows.Forms.Label
+    Friend WithEvents Label27 As System.Windows.Forms.Label
 End Class

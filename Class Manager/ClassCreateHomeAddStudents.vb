@@ -123,11 +123,30 @@ ByVal e As MouseEventArgs) Handles ListView1.MouseDown
                 MsgBox("Students added!", , msgboxtitle)
                 SQLDR.Dispose()
                 SQLCONN.Close()
+                Me.Hide()
+                AddGrades.TextBox1.Text = TextBox4.Text
+                AddGrades.AddGrades()
+                AddGrades.Show()
             Catch ex As SQLiteException
                 MsgBox("Student already added into the class.")
             End Try
         Else
-            MsgBox("Please select a student.", , msgboxtitle)
+            For Each item As ListViewItem In ListView1.SelectedItems
+                Dim StudentID As Integer : StudentID = CInt(item.SubItems(0).Text)
+                Dim FirstName As String : FirstName = item.SubItems(1).Text
+                Dim LastName As String : LastName = item.SubItems(2).Text
+                SQLSTR = "INSERT INTO '" & TextBox4.Text & "' (StudentID, FirstName, LastName) VALUES ('" & StudentID & "', '" & FirstName & "', '" & LastName & "')"
+                DBConn()
+                alterDB()
+            Next
+            MsgBox("Students added!", , msgboxtitle)
+            SQLDR.Dispose()
+            SQLCONN.Close()
+            Me.Hide()
+            AddGrades.TextBox1.Text = TextBox4.Text
+            AddGrades.AddGrades()
+            AddGrades.Show()
+
         End If
 
     End Sub

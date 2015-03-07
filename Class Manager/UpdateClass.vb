@@ -44,6 +44,7 @@ Public Class UpdateClass
         If Not ListView1.SelectedItems.Count = 0 Then
             With ListView1.SelectedItems.Item(0)
                 AddGrades.TextBox1.Text = .SubItems(0).Text
+                AddGrades.TextBox2.Text = .SubItems(0).Text
                 AddGrades.StudentToolStripMenuItem.Text = .SubItems(1).Text
                 AddGrades.ToolStripMenuItem1.Text = .SubItems(2).Text
             End With
@@ -123,6 +124,10 @@ Public Class UpdateClass
         Me.Hide()
 
         ClassHome.Show()
+
+    End Sub
+
+    Private Sub UpdateClass_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

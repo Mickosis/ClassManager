@@ -5,7 +5,7 @@ Imports System.IO
 
 
 Public Class AddGrades
-
+    Dim Checker2 As String
     Public Sub AddGrades()
         Dim ClassIntl = TextBox1.Text
         DBConn()
@@ -18,11 +18,11 @@ Public Class AddGrades
         ListView1.MultiSelect = False
         ListView1.Columns.Add("StudentID", 80)
         ListView1.Columns.Add("First Name", 80)
-        ListView1.Columns.Add("Last Name", 80)
-        ListView1.Columns.Add("Prelim", 50)
-        ListView1.Columns.Add("Midterm", 50)
-        ListView1.Columns.Add("Final", 50)
-        ListView1.Columns.Add("Semestral", 80)
+        ListView1.Columns.Add("Last Name", 90)
+        ListView1.Columns.Add("Prelim", 45)
+        ListView1.Columns.Add("Midterm", 55)
+        ListView1.Columns.Add("Final", 40)
+        ListView1.Columns.Add("Semestral", 65)
         While (SQLDR.Read())
             With ListView1.Items.Add(SQLDR("StudentID"))
                 .subitems.add(SQLDR("FirstName"))
@@ -160,6 +160,26 @@ Public Class AddGrades
         End With
         con.Close()
 
+        'Check Seat Plan
+        Dim checker As String
+        DBConn()
+        Dim querystringseat As String = "SELECT Lab, SeatPlan FROM MasterClasslist WHERE ClassID = '" & ClassIntl & "'"
+        Dim commandseat As New SQLiteCommand(querystringseat, SQLCONN)
+        Dim readerseat As SQLiteDataReader = commandseat.ExecuteReader
+        While readerseat.Read
+            checker = readerseat.GetValue(0)
+            Checker2 = readerseat.GetValue(1)
+            If checker = "withlab" Then
+                ComboBox1.Enabled = True
+            Else
+                ComboBox1.SelectedIndex = 0
+                ComboBox1.Enabled = False
+            End If
+        End While
+        readerseat.Close()
+        SQLDR.Dispose()
+        SQLCONN.Close()
+
     End Sub
 
     Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
@@ -185,42 +205,7 @@ Public Class AddGrades
         Button4.Image = My.Resources.importdbase
     End Sub
 
-    Private Sub Button5_Click(sender As Object, e As EventArgs)
-        Dim ClassIntl = TextBox1.Text
-        'Get Admin weights first!!
-        Dim pWeight As Double
-        Dim mWeight As Double
-        Dim fWeight As Double
-        DBConn()
-        Dim querystring As String = "SELECT PrelimWeight, MidtermWeight, FinalWeight FROM GlobalGrades"
-        Dim command As New SQLiteCommand(querystring, SQLCONN)
-        Dim reader As SQLiteDataReader = command.ExecuteReader
-        While reader.Read
-            pWeight = reader.GetValue(0)
-            mWeight = reader.GetValue(1)
-            fWeight = reader.GetValue(2)
-        End While
-        reader.Close()
 
-        Dim lv As ListViewItem
-        For Each lv In ListView1.Items
-            Dim pWeighted As Double = pWeight / 100
-            Dim mWeighted As Double = mWeight / 100
-            Dim fWeighted As Double = fWeight / 100
-            Dim pGrade As Double = lv.SubItems(3).Text * pWeighted
-            Dim mGrade As Double = lv.SubItems(4).Text * mWeighted
-            Dim fGrade As Double = lv.SubItems(5).Text * fWeighted
-
-            Dim semGrade As Double = pGrade + mGrade + fGrade
-            lv.SubItems(6).Text = semGrade
-
-            DBConn()
-            SQLSTR = "UPDATE '" & ClassIntl & "' SET semGrade = '" & semGrade & "' WHERE StudentID = '" & lv.SubItems(0).Text & "'"
-            alterDB()
-        Next
-        SQLDR.Dispose()
-        SQLCONN.Close()
-    End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim ClassIntl = TextBox1.Text
@@ -291,7 +276,7 @@ Public Class AddGrades
 
     End Sub
 
-       Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
         Try
             Dim pdfTable As New PdfPTable(DataGridView1.ColumnCount)
 
@@ -452,8 +437,71 @@ Public Class AddGrades
 
     End Sub
 
-    Private Sub AddGrades_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Add8_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button8.MouseHover
 
+        Button8.Image = My.Resources.importdbasepressed
+
+    End Sub
+
+    Private Sub Add8_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button8.MouseLeave
+
+        Button8.Image = My.Resources.importdbase
+    End Sub
+
+    Private Sub AddGrades_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If ComboBox1.Items.Count > 0 Then
+            ComboBox1.SelectedIndex = 0
+        End If
+    End Sub
+
+    Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView1.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Dim Checker As String
+        Dim ClassIntl = TextBox1.Text
+        SeatPlanLab.TextBox1.Text = ClassIntl
+        SeatPlanCorner.TextBox1.Text = ClassIntl
+        SeatPlanNotCorner.TextBox1.Text = ClassIntl
+        Me.Hide()
+        Checker = ComboBox1.SelectedItem.ToString
+        'MessageBox.Show(Checker)
+        'DBConn()
+        'SQLSTR = "SELECT SeatPlan FROM MasterClasslist WHERE ClassID = '" & ClassIntl & "'"
+        'readDB()
+        'While (SQLDR.Read())
+        'Checker2 = SQLDR("SeatPlan")
+        If Checker = "Lab" Then
+            SeatPlanLab.Arrangement()
+            SeatPlanLab.Show()
+        Else
+            If Checker2 = "corner" Then
+                SeatPlanCorner.Arrangement()
+                SeatPlanCorner.Show()
+            Else
+                SeatPlanNotCorner.Arrangement()
+                SeatPlanNotCorner.Show()
+            End If
+        End If
+        'End While
+        'SQLDR.Dispose()
+        'SQLCONN.Close()
+    End Sub
+
+    Private Sub Add9_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button5.MouseHover
+
+        Button5.Image = My.Resources.importdbasepressed
+
+    End Sub
+
+    Private Sub Add9_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button5.MouseLeave
+
+        Button5.Image = My.Resources.importdbase
+    End Sub
+
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
     End Sub
 End Class
 

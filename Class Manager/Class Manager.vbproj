@@ -74,6 +74,9 @@
   <PropertyGroup>
     <SignManifests>true</SignManifests>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo1.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="itextsharp">
       <HintPath>..\packages\iTextSharp.5.5.5\lib\itextsharp.dll</HintPath>
@@ -163,6 +166,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DbConnections.vb" />
+    <Compile Include="Edit Total Scores.Designer.vb">
+      <DependentUpon>Edit Total Scores.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Edit Total Scores.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="EmailStudent.Designer.vb">
       <DependentUpon>EmailStudent.vb</DependentUpon>
     </Compile>
@@ -173,6 +182,12 @@
       <DependentUpon>GradeMe.vb</DependentUpon>
     </Compile>
     <Compile Include="GradeMe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GradingSettings.Designer.vb">
+      <DependentUpon>GradingSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="GradingSettings.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Home.vb">
@@ -202,6 +217,24 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SeatPlanCorner.Designer.vb">
+      <DependentUpon>SeatPlanCorner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SeatPlanCorner.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeatPlanLab.Designer.vb">
+      <DependentUpon>SeatPlanLab.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SeatPlanLab.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SeatPlanNotCorner.Designer.vb">
+      <DependentUpon>SeatPlanNotCorner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SeatPlanNotCorner.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="StudentsHome.Designer.vb">
       <DependentUpon>StudentsHome.vb</DependentUpon>
@@ -259,11 +292,17 @@
     <EmbeddedResource Include="ClassHome.resx">
       <DependentUpon>ClassHome.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Edit Total Scores.resx">
+      <DependentUpon>Edit Total Scores.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EmailStudent.resx">
       <DependentUpon>EmailStudent.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GradeMe.resx">
       <DependentUpon>GradeMe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GradingSettings.resx">
+      <DependentUpon>GradingSettings.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.vb</DependentUpon>
@@ -279,6 +318,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ImportExcelHome.resx">
       <DependentUpon>ImportExcelHome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeatPlanCorner.resx">
+      <DependentUpon>SeatPlanCorner.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeatPlanLab.resx">
+      <DependentUpon>SeatPlanLab.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SeatPlanNotCorner.resx">
+      <DependentUpon>SeatPlanNotCorner.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentsHome.resx">
       <DependentUpon>StudentsHome.vb</DependentUpon>
@@ -348,6 +396,21 @@
     <None Include="Resources\classesbuttonpressed.png" />
     <None Include="Resources\CloseButton.png" />
     <None Include="Resources\closebuttonpressed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Seat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teacher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SeatNotCorner.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Seatlab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="logo1.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
