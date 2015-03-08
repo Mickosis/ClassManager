@@ -1,6 +1,7 @@
 ﻿Imports System.Data.OleDb
 Imports System.Data.SqlClient
 Imports System.Data.SQLite
+Imports Microsoft.Office.Interop
 
 Public Class ImportExcelHome
 
@@ -19,7 +20,7 @@ Public Class ImportExcelHome
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Browse.Click
         Using FileDialog As New OpenFileDialog
             FileDialog.Title = "Select your Excel file"
-            FileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm"
+            FileDialog.Filter = "Excel Files|*.xls;*.xlsx;*.xlsm;*.csv"
             If FileDialog.ShowDialog() = DialogResult.OK Then
                 TextBox1.Text = FileDialog.FileName()
                 Button2.Enabled = True
@@ -48,6 +49,8 @@ Public Class ImportExcelHome
         Dim OpenFileDialog As New OpenFileDialog
         excel = TextBox1.Text
 
+        'For TextBox and RichTextBox
+
         conn = New OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" + excel + ";Extended Properties=Excel 12.0;")
         dta = New OleDbDataAdapter("Select * From [Sheet1$]", conn)
         dts = New DataSet
@@ -62,6 +65,28 @@ Public Class ImportExcelHome
             .Columns(1).HeaderCell.Value = "First Name"
             .Columns(2).HeaderCell.Value = "Last Name"
         End With
+
+        Try
+            Using conn
+                conn.Open()
+                Using cmd = New OleDbCommand
+                    cmd.Connection = conn
+                    cmd.CommandText = "SELECT * FROM [Sheet1$A1:A1]"
+                    Using oRDR As OleDbDataReader = cmd.ExecuteReader
+                        While (oRDR.Read)
+                            MsgBox(oRDR.GetValue(0)) 'gets the first returned column
+                        End While
+                    End Using
+                    conn.Close()
+                End Using
+            End Using
+        Catch ex As Exception
+            Throw New Exception(ex.Message)
+        Finally
+            conn.Close()
+        End Try
+
+
 
     End Sub
 

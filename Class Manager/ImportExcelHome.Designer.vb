@@ -52,7 +52,7 @@ Partial Class ImportExcelHome
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(25, 61)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(215, 21)
+        Me.Label1.Size = New System.Drawing.Size(213, 21)
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "Step 1: Choose your Excel File :"
         '

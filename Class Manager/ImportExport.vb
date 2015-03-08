@@ -16,65 +16,6 @@ Microsoft.VisualBasic.FileIO.UICancelOption.DoNothing)
 
     End Sub
 
-    Private Sub Export_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs)
-
-        Export.Image = My.Resources.addbrowsepressed
-
-    End Sub
-    Private Sub Export_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs)
-
-        Export.Image = My.Resources.addbrowse
-
-
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-        My.Computer.FileSystem.CopyFile(
-    TextBox1.Text,
-    "C:\Mickosis\ClassRecords",
-    Microsoft.VisualBasic.FileIO.UIOption.AllDialogs,
-    Microsoft.VisualBasic.FileIO.UICancelOption.DoNothing)
-        MsgBox("Import Success!")
-        Me.Hide()
-        Home.Show()
-
-    End Sub
-
-
-    Private Sub Import_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs)
-
-        Import.Image = My.Resources.addbrowsepressed
-
-    End Sub
-    Private Sub Import_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs)
-
-        Import.Image = My.Resources.addbrowse
-
-
-    End Sub
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs)
-        Using FileDialog As New OpenFileDialog
-            FileDialog.Title = "Select database to import"
-            FileDialog.Filter = "Class Manager Files"
-            If FileDialog.ShowDialog() = DialogResult.OK Then
-                TextBox1.Text = FileDialog.FileName()
-                Import.Enabled = True
-            End If
-        End Using
-    End Sub
-
-    Private Sub Browse_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs)
-
-        Browse.Image = My.Resources.addbrowsepressed
-
-    End Sub
-    Private Sub Browse_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs)
-
-        Browse.Image = My.Resources.addbrowse
-
-
-    End Sub
 
     Private Sub Close_Click(sender As Object, e As EventArgs) Handles Close.Click
         If MessageBox.Show("Do you want to exit?", "Class Manager", _
@@ -84,12 +25,6 @@ Microsoft.VisualBasic.FileIO.UICancelOption.DoNothing)
         End If
     End Sub
 
-    Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
-        Me.Hide()
-        TextBox1.Clear()
-        Home.Show()
-
-    End Sub
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles Button1.Click
         Dim SQLitecreate As New SQLiteConnection
@@ -178,4 +113,8 @@ Microsoft.VisualBasic.FileIO.UICancelOption.DoNothing)
 
     End Sub
 
+    Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
+        Me.Hide()
+        Home.Show()
+    End Sub
 End Class
