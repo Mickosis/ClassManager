@@ -9,7 +9,7 @@ Public Class AddGrades
     Public Sub AddGrades()
         Dim ClassIntl = TextBox1.Text
         DBConn()
-        SQLSTR = "SELECT StudentID, FirstName, LastName, pGrade, mGrade, fGrade, semGrade FROM '" & ClassIntl & "' ORDER BY LastName, StudentID"
+        SQLSTR = "SELECT StudentID, FirstName, LastName, pGrade, mGrade, fGrade, semGrade, remarks FROM '" & ClassIntl & "' ORDER BY LastName, StudentID"
         readDB()
         ListView1.Clear()
         ListView1.GridLines = True
@@ -19,10 +19,11 @@ Public Class AddGrades
         ListView1.Columns.Add("StudentID", 80)
         ListView1.Columns.Add("First Name", 80)
         ListView1.Columns.Add("Last Name", 90)
-        ListView1.Columns.Add("Prelim", 45)
-        ListView1.Columns.Add("Midterm", 55)
+        ListView1.Columns.Add("Prelim", 40)
+        ListView1.Columns.Add("Midterm", 40)
         ListView1.Columns.Add("Final", 40)
-        ListView1.Columns.Add("Semestral", 65)
+        ListView1.Columns.Add("Semestral", 40)
+        ListView1.Columns.Add("Remarks", 45)
         While (SQLDR.Read())
             With ListView1.Items.Add(SQLDR("StudentID"))
                 .subitems.add(SQLDR("FirstName"))
@@ -31,6 +32,7 @@ Public Class AddGrades
                 .subitems.add(SQLDR("mGrade"))
                 .subitems.add(SQLDR("fGrade"))
                 .subitems.add(SQLDR("semGrade"))
+                .subitems.add(SQLDR("remarks"))
             End With
         End While
         SQLDR.Dispose()
@@ -40,14 +42,16 @@ Public Class AddGrades
         Dim pWeight As Double
         Dim mWeight As Double
         Dim fWeight As Double
+        Dim passMark As Double
         DBConn()
-        Dim querystring As String = "SELECT PrelimWeight, MidtermWeight, FinalWeight FROM GlobalGrades"
+        Dim querystring As String = "SELECT PrelimWeight, MidtermWeight, FinalWeight, PassingMark FROM GlobalGrades"
         Dim command As New SQLiteCommand(querystring, SQLCONN)
         Dim reader As SQLiteDataReader = command.ExecuteReader
         While reader.Read
             pWeight = reader.GetValue(0)
             mWeight = reader.GetValue(1)
             fWeight = reader.GetValue(2)
+            passMark = reader.GetValue(3)
         End While
         reader.Close()
 
@@ -63,102 +67,24 @@ Public Class AddGrades
             Dim semGrade As Double = pGrade + mGrade + fGrade
             lv.SubItems(6).Text = semGrade
 
+            If lv.SubItems(6).Text >= passMark Then
+                lv.SubItems(7).Text = "PASSED"
+            Else
+                lv.SubItems(7).Text = "FAILED"
+            End If
+
             DBConn()
-            SQLSTR = "UPDATE '" & ClassIntl & "' SET semGrade = '" & semGrade & "' WHERE StudentID = '" & lv.SubItems(0).Text & "'"
+            SQLSTR = "UPDATE '" & ClassIntl & "' SET semGrade = '" & semGrade & "', remarks = '" & lv.SubItems(7).Text & "' WHERE StudentID = '" & lv.SubItems(0).Text & "'"
             alterDB()
+
+            If (lv.SubItems(7).Text = "FAILED") Then
+                lv.UseItemStyleForSubItems = False
+                lv.SubItems(7).ForeColor = Color.Red
+            End If
+
         Next
         SQLDR.Dispose()
         SQLCONN.Close()
-
-        'Semestral Grades
-        Dim DS As New DataSet()
-        DS.Clear()
-        Dim con = New SQLiteConnection("Data Source = C:\Mickosis\Class Manager\ClassRecords.db")
-        con.Open()
-        Dim Sql As String = "SELECT StudentID, LastName, FirstName, pGrade, mGrade, fGrade, semGrade FROM '" & ClassIntl & "' ORDER BY LastName, StudentID"
-        Dim da = New SQLiteDataAdapter(Sql, con)
-        da.Fill(DS, "GeneralGrades")
-        DataGridView1.DataSource = DS.Tables("GeneralGrades").DefaultView
-        With DataGridView1
-            .RowHeadersVisible = False
-            .Columns(0).HeaderCell.Value = "Student ID"
-            .Columns(1).HeaderCell.Value = "Last Name"
-            .Columns(2).HeaderCell.Value = "First Name"
-            .Columns(3).HeaderCell.Value = "Prelim Grade"
-            .Columns(4).HeaderCell.Value = "Midterm Grade"
-            .Columns(5).HeaderCell.Value = "Final Grade"
-            .Columns(6).HeaderCell.Value = "Semestral Grade"
-        End With
-        con.Close()
-
-        'Prelims
-        Dim DS1 As New DataSet()
-        DS1.Clear()
-        con.Open()
-        Dim Sql1 As String = "SELECT LastName, FirstName, pQuiz, pAttend, pRecite, pProject, pHomework, pOthers, pExam, pGrade FROM '" & ClassIntl & "' ORDER BY LastName"
-        Dim da1 = New SQLiteDataAdapter(Sql1, con)
-        da1.Fill(DS1, "PrelimGrades")
-        DataGridView2.DataSource = DS1.Tables("PrelimGrades").DefaultView
-        With DataGridView2
-            .RowHeadersVisible = False
-            .Columns(0).HeaderCell.Value = "Last Name"
-            .Columns(1).HeaderCell.Value = "First Name"
-            .Columns(2).HeaderCell.Value = "Quiz"
-            .Columns(3).HeaderCell.Value = "Attendance"
-            .Columns(4).HeaderCell.Value = "Recitation"
-            .Columns(5).HeaderCell.Value = "Project"
-            .Columns(6).HeaderCell.Value = "Homework"
-            .Columns(7).HeaderCell.Value = "Activities"
-            .Columns(8).HeaderCell.Value = "Exam"
-            .Columns(9).HeaderCell.Value = "Prelim Grade"
-        End With
-        con.Close()
-
-        'Midterms
-        Dim DS2 As New DataSet()
-        DS2.Clear()
-        con.Open()
-        Dim Sql2 As String = "SELECT LastName, FirstName, mQuiz, mAttend, mRecite, mProject, mHomework, mOthers, mExam, mGrade FROM '" & ClassIntl & "' ORDER BY LastName"
-        Dim da2 = New SQLiteDataAdapter(Sql2, con)
-        da2.Fill(DS2, "MidtermGrades")
-        DataGridView3.DataSource = DS2.Tables("MidtermGrades").DefaultView
-        With DataGridView3
-            .RowHeadersVisible = False
-            .Columns(0).HeaderCell.Value = "Last Name"
-            .Columns(1).HeaderCell.Value = "First Name"
-            .Columns(2).HeaderCell.Value = "Quiz"
-            .Columns(3).HeaderCell.Value = "Attendance"
-            .Columns(4).HeaderCell.Value = "Recitation"
-            .Columns(5).HeaderCell.Value = "Project"
-            .Columns(6).HeaderCell.Value = "Homework"
-            .Columns(7).HeaderCell.Value = "Activities"
-            .Columns(8).HeaderCell.Value = "Exam"
-            .Columns(9).HeaderCell.Value = "Midterm Grade"
-        End With
-        con.Close()
-
-        'Finals
-        Dim DS3 As New DataSet()
-        DS3.Clear()
-        con.Open()
-        Dim Sql3 As String = "SELECT LastName, FirstName, fQuiz, fAttend, fRecite, fProject, fHomework, fOthers, fExam, fGrade FROM '" & ClassIntl & "' ORDER BY LastName"
-        Dim da3 = New SQLiteDataAdapter(Sql3, con)
-        da3.Fill(DS3, "FinalGrades")
-        DataGridView4.DataSource = DS3.Tables("FinalGrades").DefaultView
-        With DataGridView4
-            .RowHeadersVisible = False
-            .Columns(0).HeaderCell.Value = "Last Name"
-            .Columns(1).HeaderCell.Value = "First Name"
-            .Columns(2).HeaderCell.Value = "Quiz"
-            .Columns(3).HeaderCell.Value = "Attendance"
-            .Columns(4).HeaderCell.Value = "Recitation"
-            .Columns(5).HeaderCell.Value = "Project"
-            .Columns(6).HeaderCell.Value = "Homework"
-            .Columns(7).HeaderCell.Value = "Activities"
-            .Columns(8).HeaderCell.Value = "Exam"
-            .Columns(9).HeaderCell.Value = "Final Grade"
-        End With
-        con.Close()
 
         'Check Seat Plan
         Dim checker As String
@@ -277,12 +203,106 @@ Public Class AddGrades
     End Sub
 
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+
+        Dim ClassIntl = TextBox1.Text
+
+        'Semestral Grades
+        Dim DS As New DataSet()
+        DS.Clear()
+        Dim con = New SQLiteConnection("Data Source = C:\Mickosis\ClassRecords")
+        con.Open()
+        Dim Sql As String = "SELECT StudentID, LastName, FirstName, pGrade, mGrade, fGrade, semGrade, remarks FROM '" & ClassIntl & "' ORDER BY LastName, StudentID"
+        Dim da = New SQLiteDataAdapter(Sql, con)
+        da.Fill(DS, "GeneralGrades")
+        DataGridView1.DataSource = DS.Tables("GeneralGrades").DefaultView
+        With DataGridView1
+            .RowHeadersVisible = False
+            .Columns(0).HeaderCell.Value = "Student ID"
+            .Columns(1).HeaderCell.Value = "Last Name"
+            .Columns(2).HeaderCell.Value = "First Name"
+            .Columns(3).HeaderCell.Value = "Prelim Grade"
+            .Columns(4).HeaderCell.Value = "Midterm Grade"
+            .Columns(5).HeaderCell.Value = "Final Grade"
+            .Columns(6).HeaderCell.Value = "Semestral Grade"
+            .Columns(7).HeaderCell.Value = "Remarks"
+        End With
+        con.Close()
+
+        'Prelims
+        Dim DS1 As New DataSet()
+        DS1.Clear()
+        con.Open()
+        Dim Sql1 As String = "SELECT LastName, FirstName, pQuiz, pAttend, pRecite, pProject, pHomework, pOthers, pExam, pGrade FROM '" & ClassIntl & "' ORDER BY LastName"
+        Dim da1 = New SQLiteDataAdapter(Sql1, con)
+        da1.Fill(DS1, "PrelimGrades")
+        DataGridView2.DataSource = DS1.Tables("PrelimGrades").DefaultView
+        With DataGridView2
+            .RowHeadersVisible = False
+            .Columns(0).HeaderCell.Value = "Last Name"
+            .Columns(1).HeaderCell.Value = "First Name"
+            .Columns(2).HeaderCell.Value = "Quiz"
+            .Columns(3).HeaderCell.Value = "Attendance"
+            .Columns(4).HeaderCell.Value = "Recitation"
+            .Columns(5).HeaderCell.Value = "Project"
+            .Columns(6).HeaderCell.Value = "Homework"
+            .Columns(7).HeaderCell.Value = "Activities"
+            .Columns(8).HeaderCell.Value = "Exam"
+            .Columns(9).HeaderCell.Value = "Prelim Grade"
+        End With
+        con.Close()
+
+        'Midterms
+        Dim DS2 As New DataSet()
+        DS2.Clear()
+        con.Open()
+        Dim Sql2 As String = "SELECT LastName, FirstName, mQuiz, mAttend, mRecite, mProject, mHomework, mOthers, mExam, mGrade FROM '" & ClassIntl & "' ORDER BY LastName"
+        Dim da2 = New SQLiteDataAdapter(Sql2, con)
+        da2.Fill(DS2, "MidtermGrades")
+        DataGridView3.DataSource = DS2.Tables("MidtermGrades").DefaultView
+        With DataGridView3
+            .RowHeadersVisible = False
+            .Columns(0).HeaderCell.Value = "Last Name"
+            .Columns(1).HeaderCell.Value = "First Name"
+            .Columns(2).HeaderCell.Value = "Quiz"
+            .Columns(3).HeaderCell.Value = "Attendance"
+            .Columns(4).HeaderCell.Value = "Recitation"
+            .Columns(5).HeaderCell.Value = "Project"
+            .Columns(6).HeaderCell.Value = "Homework"
+            .Columns(7).HeaderCell.Value = "Activities"
+            .Columns(8).HeaderCell.Value = "Exam"
+            .Columns(9).HeaderCell.Value = "Midterm Grade"
+        End With
+        con.Close()
+
+        'Finals
+        Dim DS3 As New DataSet()
+        DS3.Clear()
+        con.Open()
+        Dim Sql3 As String = "SELECT LastName, FirstName, fQuiz, fAttend, fRecite, fProject, fHomework, fOthers, fExam, fGrade FROM '" & ClassIntl & "' ORDER BY LastName"
+        Dim da3 = New SQLiteDataAdapter(Sql3, con)
+        da3.Fill(DS3, "FinalGrades")
+        DataGridView4.DataSource = DS3.Tables("FinalGrades").DefaultView
+        With DataGridView4
+            .RowHeadersVisible = False
+            .Columns(0).HeaderCell.Value = "Last Name"
+            .Columns(1).HeaderCell.Value = "First Name"
+            .Columns(2).HeaderCell.Value = "Quiz"
+            .Columns(3).HeaderCell.Value = "Attendance"
+            .Columns(4).HeaderCell.Value = "Recitation"
+            .Columns(5).HeaderCell.Value = "Project"
+            .Columns(6).HeaderCell.Value = "Homework"
+            .Columns(7).HeaderCell.Value = "Activities"
+            .Columns(8).HeaderCell.Value = "Exam"
+            .Columns(9).HeaderCell.Value = "Final Grade"
+        End With
+        con.Close()
+
         Try
             Dim pdfTable As New PdfPTable(DataGridView1.ColumnCount)
 
             'Add Title of PDF
             Dim cell1 As New PdfPCell(New Phrase(StudentToolStripMenuItem.Text + ", " + ToolStripMenuItem1.Text))
-            cell1.Colspan = 7
+            cell1.Colspan = 8
             cell1.Border = 0
             cell1.HorizontalAlignment = 1
             pdfTable.AddCell(cell1)
@@ -430,7 +450,12 @@ Public Class AddGrades
                 stream.Close()
             End Using
 
-            MsgBox("PDF Created", , msgboxtitle)
+            MsgBox("PDF Created!", , msgboxtitle)
+
+            Dim FileName As String = folderPath & StudentToolStripMenuItem.Text & ".pdf"
+            Process.Start(FileName)
+
+
         Catch ex As Exception
             MsgBox("PDF file is in use, please close any programs first then try again.")
         End Try

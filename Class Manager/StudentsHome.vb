@@ -105,14 +105,24 @@ ByVal e As MouseEventArgs) Handles ListView1.MouseDown
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Email.Click
+        Dim list As New List(Of String)
         EmailStudent.Show()
         Me.Hide()
-        If Not ListView1.SelectedItems.Count = 0 Then
-            With ListView1.SelectedItems.Item(0)
-                EmailStudent.TextBox3.Text = .SubItems(4).Text
+        For Each item As ListViewItem In ListView1.SelectedItems
+            list.Add(item.SubItems(4).Text)
+            EmailStudent.TextBox3.Text = String.Join(", ", list.ToArray)
+        Next
 
-            End With
-        End If
+        DBConn()
+        Dim querystring As String = "SELECT username, password FROM LoginCredentials WHERE IndexID = 2"
+        Dim command As New SQLiteCommand(querystring, SQLCONN)
+        Dim reader As SQLiteDataReader = command.ExecuteReader
+        While reader.Read
+            EmailStudent.TextBox1.Text = reader.GetValue(0)
+            EmailStudent.TextBox2.Text = reader.GetValue(1)
+        End While
+        reader.Close()
+
     End Sub
 
     Private Sub Email_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Email.MouseHover
@@ -139,7 +149,7 @@ ByVal e As MouseEventArgs) Handles ListView1.MouseDown
         ListView1.GridLines = True
         ListView1.FullRowSelect = True
         ListView1.View = View.Details
-        ListView1.MultiSelect = False
+        ListView1.MultiSelect = True
         ListView1.Columns.Add("StudentID", 80)
         ListView1.Columns.Add("First Name", 80)
         ListView1.Columns.Add("Last Name", 80)

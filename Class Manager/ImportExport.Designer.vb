@@ -23,74 +23,15 @@ Partial Class ImportExport
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ImportExport))
-        Me.Import = New System.Windows.Forms.Button()
-        Me.Export = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Browse = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StudentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Close = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Import
-        '
-        Me.Import.Enabled = False
-        Me.Import.FlatAppearance.BorderSize = 0
-        Me.Import.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.Import.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Import.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Import.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Import.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Import.Image = Global.Class_Manager.My.Resources.Resources.addbrowse
-        Me.Import.Location = New System.Drawing.Point(310, 73)
-        Me.Import.Name = "Import"
-        Me.Import.Size = New System.Drawing.Size(111, 57)
-        Me.Import.TabIndex = 0
-        Me.Import.Text = "Import DB"
-        Me.Import.UseVisualStyleBackColor = True
-        '
-        'Export
-        '
-        Me.Export.FlatAppearance.BorderSize = 0
-        Me.Export.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.Export.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Export.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Export.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Export.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Export.Image = Global.Class_Manager.My.Resources.Resources.addbrowse
-        Me.Export.Location = New System.Drawing.Point(113, 150)
-        Me.Export.Name = "Export"
-        Me.Export.Size = New System.Drawing.Size(111, 50)
-        Me.Export.TabIndex = 1
-        Me.Export.Text = "Export DB"
-        Me.Export.UseVisualStyleBackColor = True
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(126, 88)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(178, 29)
-        Me.TextBox1.TabIndex = 2
-        '
-        'Browse
-        '
-        Me.Browse.FlatAppearance.BorderSize = 0
-        Me.Browse.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.Browse.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Browse.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Browse.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Browse.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Browse.Image = Global.Class_Manager.My.Resources.Resources.addbrowse
-        Me.Browse.Location = New System.Drawing.Point(12, 75)
-        Me.Browse.Name = "Browse"
-        Me.Browse.Size = New System.Drawing.Size(87, 53)
-        Me.Browse.TabIndex = 4
-        Me.Browse.Text = "Browse"
-        Me.Browse.UseVisualStyleBackColor = True
         '
         'MenuStrip1
         '
@@ -141,26 +82,56 @@ Partial Class ImportExport
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Image = Global.Class_Manager.My.Resources.Resources.addbrowse
-        Me.Button1.Location = New System.Drawing.Point(218, 147)
+        Me.Button1.Location = New System.Drawing.Point(168, 150)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(107, 56)
         Me.Button1.TabIndex = 25
         Me.Button1.Text = "Reset DB"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Button2
+        '
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Image = Global.Class_Manager.My.Resources.Resources.addbrowse
+        Me.Button2.Location = New System.Drawing.Point(67, 78)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(135, 56)
+        Me.Button2.TabIndex = 26
+        Me.Button2.Text = "Pull from Android"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Image = Global.Class_Manager.My.Resources.Resources.addbrowse
+        Me.Button3.Location = New System.Drawing.Point(248, 68)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(140, 76)
+        Me.Button3.TabIndex = 27
+        Me.Button3.Text = "Push to Android"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'ImportExport
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(447, 223)
+        Me.ClientSize = New System.Drawing.Size(447, 224)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Close)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.Browse)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Export)
-        Me.Controls.Add(Me.Import)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "ImportExport"
@@ -172,13 +143,11 @@ Partial Class ImportExport
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Import As System.Windows.Forms.Button
-    Friend WithEvents Export As System.Windows.Forms.Button
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents Browse As System.Windows.Forms.Button
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents HomeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents StudentToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Close As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Button3 As System.Windows.Forms.Button
 End Class

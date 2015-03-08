@@ -2,6 +2,7 @@
 Imports System.Web
 Imports System.IO
 Imports System.Net.Mail
+Imports System.Data.SQLite
 
 Public Class EmailStudent
 
@@ -24,9 +25,17 @@ Public Class EmailStudent
             Smtp_Server.Send(e_mail)
             MsgBox("Mail Sent")
 
+            DBConn()
+            SQLSTR = "UPDATE LoginCredentials SET username = '" & TextBox1.Text & "', password = '" & TextBox2.Text & "' WHERE IndexID = 2"
+            alterDB()
+            SQLDR.Dispose()
+            SQLCONN.Close()
+
+
         Catch error_t As Exception
             MsgBox(error_t.ToString)
         End Try
+
     End Sub
 
     Private Sub Add_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Email.MouseHover

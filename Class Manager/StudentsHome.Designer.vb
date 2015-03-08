@@ -30,7 +30,6 @@ Partial Class StudentsHome
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Update = New System.Windows.Forms.Button()
-        Me.Email = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -44,6 +43,7 @@ Partial Class StudentsHome
         Me.Import = New System.Windows.Forms.Button()
         Me.AddStudent = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Email = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -108,22 +108,6 @@ Partial Class StudentsHome
         Me.Update.TabIndex = 10
         Me.Update.Text = "Update"
         Me.Update.UseVisualStyleBackColor = True
-        '
-        'Email
-        '
-        Me.Email.FlatAppearance.BorderSize = 0
-        Me.Email.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
-        Me.Email.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Email.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Email.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Email.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Email.Image = CType(resources.GetObject("Email.Image"), System.Drawing.Image)
-        Me.Email.Location = New System.Drawing.Point(597, 374)
-        Me.Email.Name = "Email"
-        Me.Email.Size = New System.Drawing.Size(209, 39)
-        Me.Email.TabIndex = 11
-        Me.Email.Text = "Contact E-mail"
-        Me.Email.UseVisualStyleBackColor = True
         '
         'TextBox1
         '
@@ -274,6 +258,22 @@ Partial Class StudentsHome
         Me.Button1.Text = "Delete"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Email
+        '
+        Me.Email.FlatAppearance.BorderSize = 0
+        Me.Email.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Email.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Email.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Email.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Email.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Email.Image = CType(resources.GetObject("Email.Image"), System.Drawing.Image)
+        Me.Email.Location = New System.Drawing.Point(597, 374)
+        Me.Email.Name = "Email"
+        Me.Email.Size = New System.Drawing.Size(209, 39)
+        Me.Email.TabIndex = 11
+        Me.Email.Text = "Contact E-mail"
+        Me.Email.UseVisualStyleBackColor = True
+        '
         'StudentsHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -315,7 +315,6 @@ Partial Class StudentsHome
     Friend WithEvents ListView1 As System.Windows.Forms.ListView
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Update As System.Windows.Forms.Button
-    Friend WithEvents Email As System.Windows.Forms.Button
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents ContextMenuStrip1 As System.Windows.Forms.ContextMenuStrip
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
@@ -329,4 +328,5 @@ Partial Class StudentsHome
     Friend WithEvents Import As System.Windows.Forms.Button
     Friend WithEvents AddStudent As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Email As System.Windows.Forms.Button
 End Class
