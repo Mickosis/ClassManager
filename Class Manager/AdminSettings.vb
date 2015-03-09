@@ -142,9 +142,18 @@ thepath + "\ClassRecords",
 "C:\Mickosis\ClassRecords",
 Microsoft.VisualBasic.FileIO.UIOption.AllDialogs,
 Microsoft.VisualBasic.FileIO.UICancelOption.DoNothing)
-        My.Computer.FileSystem.DeleteFile(thepath + "\ClassRecords")
-        MsgBox("Import Success!")
         SQLitecreate.Close()
         SQLitecreate.Dispose()
+        SQLitecommand.Dispose()
+
+        Dim FileToDelete As String
+
+        FileToDelete = thepath + "\ClassRecords"
+
+        If System.IO.File.Exists(FileToDelete) = True Then
+            System.IO.File.Delete(FileToDelete)
+        End If
+
+        MsgBox("Import Success!")
     End Sub
 End Class

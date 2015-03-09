@@ -55,7 +55,7 @@ Partial Class StudentsHome
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HomeToolStripMenuItem, Me.StudentToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(834, 53)
+        Me.MenuStrip1.Size = New System.Drawing.Size(718, 53)
         Me.MenuStrip1.TabIndex = 7
         Me.MenuStrip1.Text = "Student"
         '
@@ -79,13 +79,13 @@ Partial Class StudentsHome
         Me.ListView1.Font = New System.Drawing.Font("Segoe UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ListView1.Location = New System.Drawing.Point(28, 209)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(536, 259)
+        Me.ListView1.Size = New System.Drawing.Size(450, 259)
         Me.ListView1.TabIndex = 8
         Me.ListView1.UseCompatibleStateImageBehavior = False
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(618, 67)
+        Me.PictureBox1.Location = New System.Drawing.Point(515, 70)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(160, 161)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -102,7 +102,7 @@ Partial Class StudentsHome
         Me.Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Update.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Update.Image = CType(resources.GetObject("Update.Image"), System.Drawing.Image)
-        Me.Update.Location = New System.Drawing.Point(597, 284)
+        Me.Update.Location = New System.Drawing.Point(494, 287)
         Me.Update.Name = "Update"
         Me.Update.Size = New System.Drawing.Size(209, 39)
         Me.Update.TabIndex = 10
@@ -111,7 +111,7 @@ Partial Class StudentsHome
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(570, 292)
+        Me.TextBox1.Location = New System.Drawing.Point(467, 295)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(10, 20)
         Me.TextBox1.TabIndex = 12
@@ -188,7 +188,7 @@ Partial Class StudentsHome
         Me.Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Search.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Search.Image = Global.Class_Manager.My.Resources.Resources.okay
-        Me.Search.Location = New System.Drawing.Point(453, 62)
+        Me.Search.Location = New System.Drawing.Point(367, 67)
         Me.Search.Name = "Search"
         Me.Search.Size = New System.Drawing.Size(111, 38)
         Me.Search.TabIndex = 21
@@ -203,7 +203,7 @@ Partial Class StudentsHome
         Me.Close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Close.Image = Global.Class_Manager.My.Resources.Resources.CloseButton
-        Me.Close.Location = New System.Drawing.Point(779, 0)
+        Me.Close.Location = New System.Drawing.Point(648, 0)
         Me.Close.Name = "Close"
         Me.Close.Size = New System.Drawing.Size(55, 53)
         Me.Close.TabIndex = 22
@@ -218,7 +218,7 @@ Partial Class StudentsHome
         Me.Import.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Import.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Import.Image = CType(resources.GetObject("Import.Image"), System.Drawing.Image)
-        Me.Import.Location = New System.Drawing.Point(597, 419)
+        Me.Import.Location = New System.Drawing.Point(494, 422)
         Me.Import.Name = "Import"
         Me.Import.Size = New System.Drawing.Size(209, 39)
         Me.Import.TabIndex = 23
@@ -234,7 +234,7 @@ Partial Class StudentsHome
         Me.AddStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.AddStudent.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AddStudent.Image = CType(resources.GetObject("AddStudent.Image"), System.Drawing.Image)
-        Me.AddStudent.Location = New System.Drawing.Point(597, 239)
+        Me.AddStudent.Location = New System.Drawing.Point(494, 242)
         Me.AddStudent.Name = "AddStudent"
         Me.AddStudent.Size = New System.Drawing.Size(209, 39)
         Me.AddStudent.TabIndex = 24
@@ -251,7 +251,7 @@ Partial Class StudentsHome
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(597, 329)
+        Me.Button1.Location = New System.Drawing.Point(494, 332)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(209, 39)
         Me.Button1.TabIndex = 25
@@ -268,7 +268,7 @@ Partial Class StudentsHome
         Me.Email.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Email.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Email.Image = CType(resources.GetObject("Email.Image"), System.Drawing.Image)
-        Me.Email.Location = New System.Drawing.Point(597, 374)
+        Me.Email.Location = New System.Drawing.Point(494, 377)
         Me.Email.Name = "Email"
         Me.Email.Size = New System.Drawing.Size(209, 39)
         Me.Email.TabIndex = 11
@@ -280,7 +280,7 @@ Partial Class StudentsHome
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(834, 480)
+        Me.ClientSize = New System.Drawing.Size(718, 480)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.AddStudent)
         Me.Controls.Add(Me.Import)

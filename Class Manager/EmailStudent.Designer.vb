@@ -184,6 +184,7 @@ Partial Class EmailStudent
         Me.RichTextBox2.Font = New System.Drawing.Font("Segoe UI Light", 12.0!)
         Me.RichTextBox2.Location = New System.Drawing.Point(206, 162)
         Me.RichTextBox2.Name = "RichTextBox2"
+        Me.RichTextBox2.ReadOnly = True
         Me.RichTextBox2.Size = New System.Drawing.Size(226, 53)
         Me.RichTextBox2.TabIndex = 24
         Me.RichTextBox2.Text = ""

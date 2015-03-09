@@ -107,6 +107,10 @@ ByVal e As MouseEventArgs) Handles ListView1.MouseDown
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Email.Click
+        EmailStudent.TextBox1.Clear()
+        EmailStudent.TextBox2.Clear()
+        EmailStudent.RichTextBox2.Clear()
+
         Dim list As New List(Of String)
         EmailStudent.Show()
         Me.Hide()
@@ -198,7 +202,7 @@ ByVal e As MouseEventArgs) Handles ListView1.MouseDown
         ListView1.Columns.Add("Last Name", 80)
         ListView1.Columns.Add("Contact Number", 80)
         ListView1.Columns.Add("E-mail", 80)
-        ListView1.Columns.Add("Path", 50)
+        ListView1.Columns.Add("Path", 10)
         While (SQLDR.Read())
             With ListView1.Items.Add(SQLDR("StudentID"))
                 .subitems.add(SQLDR("FirstName"))
