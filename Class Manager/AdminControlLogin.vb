@@ -1,8 +1,9 @@
 ﻿Imports System.Data.SQLite
 
 Public Class AdminControlLogin
-
+    Dim LoginAttempts = 0
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
         If TextBox1.Text = "" Then
             MsgBox("Please enter a username!")
             TextBox1.Clear()
@@ -21,17 +22,26 @@ Public Class AdminControlLogin
                 TextBox2.Clear()
                 SQLDR.Dispose()
                 SQLCONN.Close()
-
+                LoginAttempts = 0
                 AdminSettings.Show()
                 Me.Hide()
             Else
-                MsgBox("Incorrect Login!")
+                LoginAttempts += 1
+                If LoginAttempts = 1 Then
+                    MessageBox.Show("Incorrect password!")
+                ElseIf LoginAttempts = 2 Then
+                    MessageBox.Show("Incorrect password!")
+                ElseIf LoginAttempts = 3 Then
+                    MessageBox.Show("Login failed for 3 tries. Closing.")
+                    Me.Close()
+                End If
                 TextBox1.Clear()
                 TextBox2.Clear()
                 SQLDR.Dispose()
                 SQLCONN.Close()
             End If
         End If
+
     End Sub
 
     Private Sub Settings_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.MouseHover
