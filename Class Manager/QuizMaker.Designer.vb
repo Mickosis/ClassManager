@@ -50,6 +50,7 @@ Partial Class QuizMaker
         '
         'RichTextBox1
         '
+        Me.RichTextBox1.AcceptsTab = True
         Me.RichTextBox1.Font = New System.Drawing.Font("Segoe UI Light", 12.0!)
         Me.RichTextBox1.Location = New System.Drawing.Point(12, 158)
         Me.RichTextBox1.Name = "RichTextBox1"

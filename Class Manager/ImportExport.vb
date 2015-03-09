@@ -34,7 +34,7 @@ Microsoft.VisualBasic.FileIO.UICancelOption.DoNothing)
         Try
             Dim device As Device = android.GetConnectedDevice()
             Adb.ExecuteAdbCommand(Adb.FormAdbCommand(device, "pull", "/sdcard/ClassManager", "C:\Mickosis\"))
-            MsgBox("Pulling succesful23!")
+            MsgBox("Pulling succesful!")
         Catch ex As Exception
             MsgBox(ex.ToString)
         End Try
@@ -63,7 +63,7 @@ Microsoft.VisualBasic.FileIO.UICancelOption.DoNothing)
         Try
             Dim device As Device = android.GetConnectedDevice()
             Adb.ExecuteAdbCommand(Adb.FormAdbCommand(device, "push", "C:\Mickosis\ClassRecords", " /sdcard/ClassManager"))
-            MsgBox("Pushing succesful23!")
+            MsgBox("Pushing succesful!")
         Catch ex As Exception
             MsgBox(ex.ToString)
         End Try
