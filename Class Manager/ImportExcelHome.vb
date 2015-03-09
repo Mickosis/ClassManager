@@ -5,11 +5,33 @@ Imports Microsoft.Office.Interop
 
 Public Class ImportExcelHome
 
+    Private Sub TextBox_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox2.KeyPress
+
+        If Asc(e.KeyChar) <> 13 AndAlso Asc(e.KeyChar) <> 8 AndAlso Not IsNumeric(e.KeyChar) Then
+            MessageBox.Show("Please enter numbers only")
+            e.Handled = True
+        End If
+
+    End Sub
+
+    Private Sub ComboBoxUpper(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles ComboBox1.KeyPress
+
+        If Char.IsLower(e.KeyChar) Then
+
+            'Convert to uppercase, and put at the caret position in the TextBox.
+            ComboBox1.SelectedText = Char.ToUpper(e.KeyChar)
+
+            e.Handled = True
+        End If
+
+    End Sub
+
     Public Sub ClearShitOut()
         TextBox1.Clear()
         DataGridView1.Columns.Clear()
         TextBox2.Clear()
         RichTextBox1.Clear()
+        ComboBox1.Text = ""
 
     End Sub
 
@@ -134,7 +156,13 @@ Public Class ImportExcelHome
             Dim ExcelString As String
             Dim ExcelConn As SQLiteConnection = New SQLiteConnection("Data Source=C:\Mickosis\ClassRecords")
             Dim Ex As New SQLiteCommand
-            If RichTextBox1.Text = "" Then
+            If TextBox2.Text = "" Then
+                MsgBox("Please add a Section ID", , msgboxtitle)
+                TextBox2.Focus()
+            ElseIf ComboBox1.Text = "" Then
+                MsgBox("Please select your subject name", , msgboxtitle)
+                ComboBox1.Focus()
+            ElseIf RichTextBox1.Text = "" Then
                 MsgBox("Please add a description on your class! (Example: Schedule)", , msgboxtitle)
                 RichTextBox1.Focus()
             Else
@@ -154,7 +182,7 @@ Public Class ImportExcelHome
                 Next
                 ExcelConn.Close()
                 DBConn()
-                SQLSTR = "INSERT INTO MasterClasslist (Name, Desc, SeatPlan, Lab) VALUES ('" & TextBox2.Text & "', '" & RichTextBox1.Text & "', '" & Lec & "', '" & Lab & "')"
+                SQLSTR = "INSERT INTO MasterClasslist (ClassID, Name, Desc, SeatPlan, Lab) VALUES ('" & TextBox2.Text & "', '" & ComboBox1.Text & "', '" & RichTextBox1.Text & "', '" & Lec & "', '" & Lab & "')"
                 alterDB()
                 Dim querystring As String = "SELECT ClassID FROM MasterClasslist WHERE Name = ('" & TextBox2.Text & "')"
                 Dim command As New SQLiteCommand(querystring, SQLCONN)
@@ -163,14 +191,14 @@ Public Class ImportExcelHome
                     TextBox3.Text = reader.GetValue(0)
                 End While
                 reader.Close()
-                SQLSTR = "CREATE TABLE '" & TextBox3.Text & "' (StudentID INTEGER NOT NULL, FirstName TEXT, LastName TEXT, pQuiz INTEGER DEFAULT 0, pQuizRaw INTEGER DEFAULT 0, pAttend INTEGER DEFAULT 0, pAttendRaw INTEGER DEFAULT 0, pRecite INTEGER DEFAULT 0, pReciteRaw INTEGER DEFAULT 0, pProject INTEGER DEFAULT 0, pProjectRaw INTEGER DEFAULT 0, pHomework INTEGER DEFAULT 0, pHomeworkRaw INTEGER DEFAULT 0, pOthers INTEGER DEFAULT 0, pOthersRaw INTEGER DEFAULT 0, pExam INTEGER DEFAULT 0, pExamRaw INTEGER DEFAULT 0, mQuiz INTEGER DEFAULT 0, mQuizRaw INTEGER DEFAULT 0, mAttend INTEGER DEFAULT 0, mAttendRaw INTEGER DEFAULT 0, mRecite INTEGER DEFAULT 0, mReciteRaw INTEGER DEFAULT 0, mProject INTEGER DEFAULT 0, mProjectRaw INTEGER DEFAULT 0, mHomework INTEGER DEFAULT 0, mHomeworkRaw INTEGER DEFAULT 0, mOthers INTEGER DEFAULT 0, mOthersRaw INTEGER DEFAULT 0, mExam INTEGER DEFAULT 0, mExamRaw INTEGER DEFAULT 0, fQuiz INTEGER DEFAULT 0, fQuizRaw INTEGER DEFAULT 0, fAttend INTEGER DEFAULT 0, fAttendRaw INTEGER DEFAULT 0, fRecite INTEGER DEFAULT 0, fReciteRaw INTEGER DEFAULT 0, fProject INTEGER DEFAULT 0, fProjectRaw INTEGER DEFAULT 0, fHomework INTEGER DEFAULT 0, fHomeworkRaw INTEGER DEFAULT 0, fOthers INTEGER DEFAULT 0, fOthersRaw INTEGER DEFAULT 0, fExam INTEGER DEFAULT 0, fExamRaw INTEGER DEFAULT 0, pGrade INTEGER DEFAULT 0, mGrade INTEGER DEFAULT 0, fGrade INTEGER DEFAULT 0, semGrade INTEGER DEFAULT 0, remarks TEXT DEFAULT FAILED)"
+                SQLSTR = "CREATE TABLE '" & TextBox2.Text & "' (StudentID INTEGER NOT NULL, FirstName TEXT, LastName TEXT, pQuiz INTEGER DEFAULT 0, pQuizRaw INTEGER DEFAULT 0, pAttend INTEGER DEFAULT 0, pAttendRaw INTEGER DEFAULT 0, pRecite INTEGER DEFAULT 0, pReciteRaw INTEGER DEFAULT 0, pProject INTEGER DEFAULT 0, pProjectRaw INTEGER DEFAULT 0, pHomework INTEGER DEFAULT 0, pHomeworkRaw INTEGER DEFAULT 0, pOthers INTEGER DEFAULT 0, pOthersRaw INTEGER DEFAULT 0, pExam INTEGER DEFAULT 0, pExamRaw INTEGER DEFAULT 0, mQuiz INTEGER DEFAULT 0, mQuizRaw INTEGER DEFAULT 0, mAttend INTEGER DEFAULT 0, mAttendRaw INTEGER DEFAULT 0, mRecite INTEGER DEFAULT 0, mReciteRaw INTEGER DEFAULT 0, mProject INTEGER DEFAULT 0, mProjectRaw INTEGER DEFAULT 0, mHomework INTEGER DEFAULT 0, mHomeworkRaw INTEGER DEFAULT 0, mOthers INTEGER DEFAULT 0, mOthersRaw INTEGER DEFAULT 0, mExam INTEGER DEFAULT 0, mExamRaw INTEGER DEFAULT 0, fQuiz INTEGER DEFAULT 0, fQuizRaw INTEGER DEFAULT 0, fAttend INTEGER DEFAULT 0, fAttendRaw INTEGER DEFAULT 0, fRecite INTEGER DEFAULT 0, fReciteRaw INTEGER DEFAULT 0, fProject INTEGER DEFAULT 0, fProjectRaw INTEGER DEFAULT 0, fHomework INTEGER DEFAULT 0, fHomeworkRaw INTEGER DEFAULT 0, fOthers INTEGER DEFAULT 0, fOthersRaw INTEGER DEFAULT 0, fExam INTEGER DEFAULT 0, fExamRaw INTEGER DEFAULT 0, pGrade INTEGER DEFAULT 0, mGrade INTEGER DEFAULT 0, fGrade INTEGER DEFAULT 0, semGrade INTEGER DEFAULT 0, remarks TEXT DEFAULT FAILED)"
                 alterDB()
 
                 For Each item As DataGridViewRow In DataGridView1.Rows
                     Dim StudentID As Integer : StudentID = CInt(item.Cells(0).Value)
                     Dim FirstName As String : FirstName = item.Cells(1).Value
                     Dim LastName As String : LastName = item.Cells(2).Value
-                    ExcelString = "INSERT OR IGNORE INTO '" & TextBox3.Text & "' (StudentID, FirstName, LastName) VALUES ('" & StudentID & "', '" & FirstName & "', '" & LastName & "')"
+                    ExcelString = "INSERT OR IGNORE INTO '" & TextBox2.Text & "' (StudentID, FirstName, LastName) VALUES ('" & StudentID & "', '" & FirstName & "', '" & LastName & "')"
                     ExcelConn.Open()
                     Ex.CommandText = ExcelString
                     Ex.Connection = ExcelConn
@@ -178,8 +206,8 @@ Public Class ImportExcelHome
                     ExcelConn.Close()
                 Next
                 MsgBox("Import and Class Creation Succesful!")
-                AddGrades.TextBox1.Text = TextBox3.Text
-                AddGrades.StudentToolStripMenuItem.Text = TextBox2.Text
+                AddGrades.TextBox1.Text = TextBox2.Text
+                AddGrades.StudentToolStripMenuItem.Text = TextBox2.Text + " " + ComboBox1.Text
                 AddGrades.ToolStripMenuItem1.Text = RichTextBox1.Text
                 SQLDR.Dispose()
                 SQLCONN.Close()
@@ -227,5 +255,9 @@ Public Class ImportExcelHome
     Private Sub HomeToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
         Me.Hide()
         StudentsHome.Show()
+    End Sub
+
+    Private Sub RichTextBox1_TextChanged(sender As Object, e As EventArgs) Handles RichTextBox1.TextChanged
+
     End Sub
 End Class

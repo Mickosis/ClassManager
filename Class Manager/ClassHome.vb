@@ -66,4 +66,12 @@
 
         Button1.Image = My.Resources.importdbase
     End Sub
+
+    Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
+        Me.Hide()
+        QuizMaker.ComboBox1.Text = ""
+        QuizMaker.RichTextBox1.Clear()
+        QuizMaker.Show()
+
+    End Sub
 End Class

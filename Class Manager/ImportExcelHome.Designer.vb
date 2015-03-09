@@ -33,15 +33,17 @@ Partial Class ImportExcelHome
         Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.Close = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -117,7 +119,7 @@ Partial Class ImportExcelHome
         Me.ImportDbase.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ImportDbase.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ImportDbase.Image = Global.Class_Manager.My.Resources.Resources.importdbase
-        Me.ImportDbase.Location = New System.Drawing.Point(59, 535)
+        Me.ImportDbase.Location = New System.Drawing.Point(79, 571)
         Me.ImportDbase.Name = "ImportDbase"
         Me.ImportDbase.Size = New System.Drawing.Size(213, 49)
         Me.ImportDbase.TabIndex = 14
@@ -146,7 +148,7 @@ Partial Class ImportExcelHome
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HomeToolStripMenuItem, Me.StudentToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(338, 53)
+        Me.MenuStrip1.Size = New System.Drawing.Size(357, 53)
         Me.MenuStrip1.TabIndex = 15
         Me.MenuStrip1.Text = "Student"
         '
@@ -164,14 +166,6 @@ Partial Class ImportExcelHome
         Me.Close.TabIndex = 23
         Me.Close.UseVisualStyleBackColor = False
         '
-        'TextBox2
-        '
-        Me.TextBox2.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(28, 364)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(169, 29)
-        Me.TextBox2.TabIndex = 24
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -182,24 +176,15 @@ Partial Class ImportExcelHome
         Me.Label2.TabIndex = 25
         Me.Label2.Text = "Step 2: Name your Subject:"
         '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox1.Location = New System.Drawing.Point(28, 433)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(292, 96)
-        Me.RichTextBox1.TabIndex = 26
-        Me.RichTextBox1.Text = ""
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(26, 402)
+        Me.Label3.Location = New System.Drawing.Point(25, 404)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(157, 21)
+        Me.Label3.Size = New System.Drawing.Size(205, 21)
         Me.Label3.TabIndex = 27
-        Me.Label3.Text = "Step 3: Add Schedule:"
+        Me.Label3.Text = "Step 3: Add Section Number:"
         '
         'TextBox3
         '
@@ -212,7 +197,7 @@ Partial Class ImportExcelHome
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(305, 351)
+        Me.CheckBox1.Location = New System.Drawing.Point(284, 490)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox1.TabIndex = 36
@@ -222,7 +207,7 @@ Partial Class ImportExcelHome
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(261, 345)
+        Me.Label4.Location = New System.Drawing.Point(240, 484)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(38, 21)
         Me.Label4.TabIndex = 35
@@ -231,7 +216,7 @@ Partial Class ImportExcelHome
         'CheckBox2
         '
         Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(305, 377)
+        Me.CheckBox2.Location = New System.Drawing.Point(284, 459)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox2.TabIndex = 38
@@ -241,27 +226,67 @@ Partial Class ImportExcelHome
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(203, 372)
+        Me.Label5.Location = New System.Drawing.Point(182, 453)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(96, 21)
         Me.Label5.TabIndex = 37
         Me.Label5.Text = "Corner (Lec):"
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.AutoCompleteCustomSource.AddRange(New String() {"IT FUNDAMENTALS & OFFICE AUTO", "INTRODUCTION TO COMPUTING", "WEBPAGE COMPOSITION & DEVT", "COMPUTER ORGANIZATION", "DATA STRUCTURE & ALGORITHM", "OBJECT ORIENTED PROGG", "DATABASE MANAGEMENT SYSTEM ", "DYNAMIC WEBPAGE DEVT", "OPERATING SYSTEM", "IT PROGRAMMING 1", "DATA COMM & COMP NET", "ADV.DATABASE MGT SYSTEM", "MULTIMEDIA TECHNOLOGY", "IT PROGRAMMING 2", "SYSTEMS ANALYSIS & DESIGN", "SOFTWARE ENGINEERING", "OBJ ORNTD SYS ANAL & DES", "ARTIFICIAL INTELLIGENCE", "MICROPROCESSOR", "INTER MULT & WEB DESIGN", "COMPUTER GAMING", "E-COMMERCE", "MOBILE COMPUTING", "MEDICAL TRANSCRIPTION", "TECHNOPRENEURSHIP", "ENTREPRENEURSHIP", "TOTAL QUALITY MANAGEMENT", "CALL CENTER OPERATION", "IT ENTREPRENEURSHIP", "ADVERTISING & SALES PROMOTION", "COMPUTER ANIMATION", "CODE OF ETHICS FOR IT", "MANAGEMENT OF INFO SYSTEM", "ASS LANG & IT RES SEC", "IT ISSUES AND SEMINARS", "IT RESEARCH PROJECT 1", "ON-THE-JOB TRAINING", "PROJECT MANAGEMENT", "IT RESEARCH PROJECT 2", "WIRELESS TECHNOLOGY", "PC REPAIR & TROUBLESHTNG"})
+        Me.ComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.ComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"IT FUNDAMENTALS & OFFICE AUTO", "INTRODUCTION TO COMPUTING", "WEBPAGE COMPOSITION & DEVT", "COMPUTER ORGANIZATION", "DATA STRUCTURE & ALGORITHM", "OBJECT ORIENTED PROGG", "DATABASE MANAGEMENT SYSTEM ", "DYNAMIC WEBPAGE DEVT", "OPERATING SYSTEM", "IT PROGRAMMING 1", "DATA COMM & COMP NET", "ADV.DATABASE MGT SYSTEM", "MULTIMEDIA TECHNOLOGY", "IT PROGRAMMING 2", "SYSTEMS ANALYSIS & DESIGN", "SOFTWARE ENGINEERING", "OBJ ORNTD SYS ANAL & DES", "ARTIFICIAL INTELLIGENCE", "MICROPROCESSOR", "INTER MULT & WEB DESIGN", "COMPUTER GAMING", "E-COMMERCE", "MOBILE COMPUTING", "MEDICAL TRANSCRIPTION", "TECHNOPRENEURSHIP", "ENTREPRENEURSHIP", "TOTAL QUALITY MANAGEMENT", "CALL CENTER OPERATION", "IT ENTREPRENEURSHIP", "ADVERTISING & SALES PROMOTION", "COMPUTER ANIMATION", "CODE OF ETHICS FOR IT", "MANAGEMENT OF INFO SYSTEM", "ASS LANG & IT RES SEC", "IT ISSUES AND SEMINARS", "IT RESEARCH PROJECT 1", "ON-THE-JOB TRAINING", "PROJECT MANAGEMENT", "IT RESEARCH PROJECT 2", "WIRELESS TECHNOLOGY", "PC REPAIR & TROUBLESHTNG"})
+        Me.ComboBox1.Location = New System.Drawing.Point(28, 370)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(292, 21)
+        Me.ComboBox1.TabIndex = 39
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(43, 449)
+        Me.TextBox2.MaxLength = 5
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(93, 20)
+        Me.TextBox2.TabIndex = 40
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Location = New System.Drawing.Point(43, 496)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(92, 51)
+        Me.RichTextBox1.TabIndex = 41
+        Me.RichTextBox1.Text = ""
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(43, 472)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(75, 21)
+        Me.Label6.TabIndex = 42
+        Me.Label6.Text = "Schedule:"
         '
         'ImportExcelHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(338, 610)
+        Me.ClientSize = New System.Drawing.Size(357, 654)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.RichTextBox1)
+        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.CheckBox2)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.TextBox3)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.RichTextBox1)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Close)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.ImportDbase)
@@ -292,13 +317,15 @@ Partial Class ImportExcelHome
     Friend WithEvents HomeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents Close As System.Windows.Forms.Button
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents RichTextBox1 As System.Windows.Forms.RichTextBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
 End Class

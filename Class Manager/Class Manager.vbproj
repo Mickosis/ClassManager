@@ -221,6 +221,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="QuizMaker.Designer.vb">
+      <DependentUpon>QuizMaker.vb</DependentUpon>
+    </Compile>
+    <Compile Include="QuizMaker.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SeatPlanCorner.Designer.vb">
       <DependentUpon>SeatPlanCorner.vb</DependentUpon>
     </Compile>
@@ -321,6 +327,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ImportExcelHome.resx">
       <DependentUpon>ImportExcelHome.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuizMaker.resx">
+      <DependentUpon>QuizMaker.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SeatPlanCorner.resx">
       <DependentUpon>SeatPlanCorner.vb</DependentUpon>

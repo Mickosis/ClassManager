@@ -110,7 +110,7 @@ ByVal e As MouseEventArgs) Handles ListView1.MouseDown
         Me.Hide()
         For Each item As ListViewItem In ListView1.SelectedItems
             list.Add(item.SubItems(4).Text)
-            EmailStudent.TextBox3.Text = String.Join(", ", list.ToArray)
+            EmailStudent.Label6.Text = String.Join(", ", list.ToArray)
         Next
 
         DBConn()

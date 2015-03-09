@@ -37,6 +37,7 @@ Partial Class ClassCreateHome
         Me.Label4 = New System.Windows.Forms.Label()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -48,7 +49,7 @@ Partial Class ClassCreateHome
         Me.Create.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Create.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Create.Image = Global.Class_Manager.My.Resources.Resources.Browse_and_Update
-        Me.Create.Location = New System.Drawing.Point(287, 267)
+        Me.Create.Location = New System.Drawing.Point(278, 340)
         Me.Create.Name = "Create"
         Me.Create.Size = New System.Drawing.Size(104, 40)
         Me.Create.TabIndex = 0
@@ -58,7 +59,8 @@ Partial Class ClassCreateHome
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(185, 62)
+        Me.TextBox1.Location = New System.Drawing.Point(195, 145)
+        Me.TextBox1.MaxLength = 5
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(190, 29)
         Me.TextBox1.TabIndex = 1
@@ -67,7 +69,7 @@ Partial Class ClassCreateHome
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(17, 65)
+        Me.Label1.Location = New System.Drawing.Point(27, 148)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(154, 21)
         Me.Label1.TabIndex = 2
@@ -77,7 +79,7 @@ Partial Class ClassCreateHome
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(17, 108)
+        Me.Label2.Location = New System.Drawing.Point(27, 191)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(75, 21)
         Me.Label2.TabIndex = 3
@@ -86,7 +88,7 @@ Partial Class ClassCreateHome
         'RichTextBox1
         '
         Me.RichTextBox1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RichTextBox1.Location = New System.Drawing.Point(120, 108)
+        Me.RichTextBox1.Location = New System.Drawing.Point(130, 191)
         Me.RichTextBox1.Name = "RichTextBox1"
         Me.RichTextBox1.Size = New System.Drawing.Size(255, 83)
         Me.RichTextBox1.TabIndex = 11
@@ -94,7 +96,7 @@ Partial Class ClassCreateHome
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(21, 232)
+        Me.TextBox2.Location = New System.Drawing.Point(12, 342)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(34, 20)
         Me.TextBox2.TabIndex = 12
@@ -144,7 +146,7 @@ Partial Class ClassCreateHome
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(116, 216)
+        Me.Label3.Location = New System.Drawing.Point(126, 299)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(38, 21)
         Me.Label3.TabIndex = 32
@@ -154,7 +156,7 @@ Partial Class ClassCreateHome
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(230, 216)
+        Me.Label4.Location = New System.Drawing.Point(240, 299)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(96, 21)
         Me.Label4.TabIndex = 33
@@ -163,7 +165,7 @@ Partial Class ClassCreateHome
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(160, 222)
+        Me.CheckBox1.Location = New System.Drawing.Point(170, 305)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox1.TabIndex = 34
@@ -172,18 +174,31 @@ Partial Class ClassCreateHome
         'CheckBox2
         '
         Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(332, 221)
+        Me.CheckBox2.Location = New System.Drawing.Point(342, 305)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox2.TabIndex = 35
         Me.CheckBox2.UseVisualStyleBackColor = True
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.AutoCompleteCustomSource.AddRange(New String() {"IT FUNDAMENTALS & OFFICE AUTO", "INTRODUCTION TO COMPUTING", "WEBPAGE COMPOSITION & DEVT", "COMPUTER ORGANIZATION", "DATA STRUCTURE & ALGORITHM", "OBJECT ORIENTED PROGG", "DATABASE MANAGEMENT SYSTEM ", "DYNAMIC WEBPAGE DEVT", "OPERATING SYSTEM", "IT PROGRAMMING 1", "DATA COMM & COMP NET", "ADV.DATABASE MGT SYSTEM", "MULTIMEDIA TECHNOLOGY", "IT PROGRAMMING 2", "SYSTEMS ANALYSIS & DESIGN", "SOFTWARE ENGINEERING", "OBJ ORNTD SYS ANAL & DES", "ARTIFICIAL INTELLIGENCE", "MICROPROCESSOR", "INTER MULT & WEB DESIGN", "COMPUTER GAMING", "E-COMMERCE", "MOBILE COMPUTING", "ARTIFICIAL INTELLIGENCE", "MEDICAL TRANSCRIPTION", "TECHNOPRENEURSHIP", "ENTREPRENEURSHIP", "TOTAL QUALITY MANAGEMENT", "CALL CENTER OPERATION", "IT ENTREPRENEURSHIP", "ADVERTISING & SALES PROMOTION", "COMPUTER ANIMATION", "CODE OF ETHICS FOR IT", "MANAGEMENT OF INFO SYSTEM", "ASS LANG & IT RES SEC", "IT ISSUES AND SEMINARS", "IT RESEARCH PROJECT 1", "ON-THE-JOB TRAINING", "PROJECT MANAGEMENT", "IT RESEARCH PROJECT 2", "WIRELESS TECHNOLOGY", "PC REPAIR & TROUBLESHTNG"})
+        Me.ComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.ComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"IT FUNDAMENTALS & OFFICE AUTO", "INTRODUCTION TO COMPUTING", "WEBPAGE COMPOSITION & DEVT", "COMPUTER ORGANIZATION", "DATA STRUCTURE & ALGORITHM", "OBJECT ORIENTED PROGG", "DATABASE MANAGEMENT SYSTEM ", "DYNAMIC WEBPAGE DEVT", "OPERATING SYSTEM", "IT PROGRAMMING 1", "DATA COMM & COMP NET", "ADV.DATABASE MGT SYSTEM", "MULTIMEDIA TECHNOLOGY", "IT PROGRAMMING 2", "SYSTEMS ANALYSIS & DESIGN", "SOFTWARE ENGINEERING", "OBJ ORNTD SYS ANAL & DES", "ARTIFICIAL INTELLIGENCE", "MICROPROCESSOR", "INTER MULT & WEB DESIGN", "COMPUTER GAMING", "E-COMMERCE", "MOBILE COMPUTING", "ARTIFICIAL INTELLIGENCE", "MEDICAL TRANSCRIPTION", "TECHNOPRENEURSHIP", "ENTREPRENEURSHIP", "TOTAL QUALITY MANAGEMENT", "CALL CENTER OPERATION", "IT ENTREPRENEURSHIP", "ADVERTISING & SALES PROMOTION", "COMPUTER ANIMATION", "CODE OF ETHICS FOR IT", "MANAGEMENT OF INFO SYSTEM", "ASS LANG & IT RES SEC", "IT ISSUES AND SEMINARS", "IT RESEARCH PROJECT 1", "ON-THE-JOB TRAINING", "PROJECT MANAGEMENT", "IT RESEARCH PROJECT 2", "WIRELESS TECHNOLOGY", "PC REPAIR & TROUBLESHTNG"})
+        Me.ComboBox1.Location = New System.Drawing.Point(93, 93)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(292, 21)
+        Me.ComboBox1.TabIndex = 40
         '
         'ClassCreateHome
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(403, 330)
+        Me.ClientSize = New System.Drawing.Size(403, 403)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.CheckBox2)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Label4)
@@ -221,4 +236,5 @@ Partial Class ClassCreateHome
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
     Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
 End Class

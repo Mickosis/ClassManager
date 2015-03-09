@@ -18,7 +18,7 @@ Public Class EmailStudent
 
             e_mail = New MailMessage()
             e_mail.From = New MailAddress(TextBox1.Text)
-            e_mail.To.Add(TextBox3.Text)
+            e_mail.To.Add(Label6.Text)
             e_mail.Subject = TextBox4.Text
             e_mail.IsBodyHtml = False
             e_mail.Body = RichTextBox1.Text()

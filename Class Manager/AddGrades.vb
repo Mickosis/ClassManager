@@ -346,7 +346,6 @@ Public Class AddGrades
             pdfTable1.HorizontalAlignment = Element.ALIGN_LEFT
             pdfTable1.DefaultCell.BorderWidth = 1
 
-
             'Adding Header row
             For Each column As DataGridViewColumn In DataGridView2.Columns
                 Dim cell As New PdfPCell(New Phrase(column.HeaderText))
