@@ -1,8 +1,11 @@
 ﻿Public Class ClassHome
 
     Private Sub Create_Click(sender As Object, e As EventArgs) Handles Create.Click
-        Me.Hide()
+        ClassCreateHome.RichTextBox1.Clear()
+        ClassCreateHome.TextBox1.Clear()
+        ClassCreateHome.ComboBox1.Text = ""
         ClassCreateHome.Show()
+        Me.Hide()
 
     End Sub
 
@@ -39,8 +42,9 @@
     End Sub
 
     Private Sub HomeToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
-        Me.Hide()
         Home.Show()
+        Me.Hide()
+
     End Sub
 
     Private Sub Close_Click(sender As Object, e As EventArgs) Handles Close.Click
@@ -52,8 +56,9 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.Hide()
+
         AdminControlLogin.Show()
+        Me.Hide()
 
     End Sub
 
@@ -68,10 +73,21 @@
     End Sub
 
     Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
-        Me.Hide()
+
         QuizMaker.ComboBox1.Text = ""
         QuizMaker.RichTextBox1.Clear()
         QuizMaker.Show()
+        Me.Hide()
 
+    End Sub
+
+    Private Sub Settings2_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button2.MouseHover
+
+        Button2.Image = My.Resources.importdbasepressed
+
+    End Sub
+    Private Sub Settings2_MouseLeave(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button2.MouseLeave
+
+        Button2.Image = My.Resources.importdbase
     End Sub
 End Class

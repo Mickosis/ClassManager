@@ -125,20 +125,24 @@ Public Class ImportExcelHome
     End Sub
 
     Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs)
-        Me.Hide()
         Home.Show()
+        Me.Hide()
+
 
     End Sub
 
     Private Sub ViewStudentsListToolStripMenuItem_Click(sender As Object, e As EventArgs)
-        Me.Hide()
         StudentsHome.Show()
+        Me.Hide()
+
 
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles ImportDbase.Click
         Dim Lab As String
         Dim Lec As String
+
+
 
         If CheckBox1.Checked Then
             Lab = "withlab"
@@ -161,6 +165,10 @@ Public Class ImportExcelHome
                 TextBox2.Focus()
             ElseIf ComboBox1.Text = "" Then
                 MsgBox("Please select your subject name", , msgboxtitle)
+                ComboBox1.Focus()
+            ElseIf ComboBox1.SelectedItem = Nothing Then
+                MsgBox("Please select a subjectname from the list", , msgboxtitle)
+                ComboBox1.Text = ""
                 ComboBox1.Focus()
             ElseIf RichTextBox1.Text = "" Then
                 MsgBox("Please add a description on your class! (Example: Schedule)", , msgboxtitle)
@@ -211,9 +219,9 @@ Public Class ImportExcelHome
                 AddGrades.ToolStripMenuItem1.Text = RichTextBox1.Text
                 SQLDR.Dispose()
                 SQLCONN.Close()
-                Me.Hide()
                 AddGrades.AddGrades()
                 AddGrades.Show()
+                Me.Hide()
             End If
         Catch ex As SQLiteException
             MsgBox(ex.ToString)
@@ -239,8 +247,10 @@ Public Class ImportExcelHome
     End Sub
 
     Private Sub AddAStudentToolStripMenuItem_Click(sender As Object, e As EventArgs)
-        Me.Hide()
         AddAStudent.Show()
+        Me.Hide()
+
+
 
     End Sub
 
@@ -253,11 +263,15 @@ Public Class ImportExcelHome
     End Sub
 
     Private Sub HomeToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
-        Me.Hide()
         StudentsHome.Show()
+        Me.Hide()
+
+
+
     End Sub
 
     Private Sub RichTextBox1_TextChanged(sender As Object, e As EventArgs) Handles RichTextBox1.TextChanged
 
     End Sub
+
 End Class

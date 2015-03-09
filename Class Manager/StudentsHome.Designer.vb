@@ -260,6 +260,7 @@ Partial Class StudentsHome
         '
         'Email
         '
+        Me.Email.Enabled = False
         Me.Email.FlatAppearance.BorderSize = 0
         Me.Email.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
         Me.Email.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent

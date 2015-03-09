@@ -160,7 +160,7 @@ Partial Class ImportExcelHome
         Me.Close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Close.Image = Global.Class_Manager.My.Resources.Resources.CloseButton
-        Me.Close.Location = New System.Drawing.Point(283, 0)
+        Me.Close.Location = New System.Drawing.Point(305, 0)
         Me.Close.Name = "Close"
         Me.Close.Size = New System.Drawing.Size(55, 53)
         Me.Close.TabIndex = 23
@@ -197,7 +197,7 @@ Partial Class ImportExcelHome
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(284, 490)
+        Me.CheckBox1.Location = New System.Drawing.Point(298, 483)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox1.TabIndex = 36
@@ -207,7 +207,7 @@ Partial Class ImportExcelHome
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(240, 484)
+        Me.Label4.Location = New System.Drawing.Point(254, 477)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(38, 21)
         Me.Label4.TabIndex = 35
@@ -216,7 +216,7 @@ Partial Class ImportExcelHome
         'CheckBox2
         '
         Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(284, 459)
+        Me.CheckBox2.Location = New System.Drawing.Point(298, 452)
         Me.CheckBox2.Name = "CheckBox2"
         Me.CheckBox2.Size = New System.Drawing.Size(15, 14)
         Me.CheckBox2.TabIndex = 38
@@ -226,7 +226,7 @@ Partial Class ImportExcelHome
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(182, 453)
+        Me.Label5.Location = New System.Drawing.Point(196, 446)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(96, 21)
         Me.Label5.TabIndex = 37
@@ -246,17 +246,18 @@ Partial Class ImportExcelHome
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(43, 449)
+        Me.TextBox2.Location = New System.Drawing.Point(29, 449)
         Me.TextBox2.MaxLength = 5
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(93, 20)
+        Me.TextBox2.Size = New System.Drawing.Size(159, 20)
         Me.TextBox2.TabIndex = 40
         '
         'RichTextBox1
         '
-        Me.RichTextBox1.Location = New System.Drawing.Point(43, 496)
+        Me.RichTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RichTextBox1.Location = New System.Drawing.Point(30, 514)
         Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(92, 51)
+        Me.RichTextBox1.Size = New System.Drawing.Size(158, 51)
         Me.RichTextBox1.TabIndex = 41
         Me.RichTextBox1.Text = ""
         '
@@ -264,7 +265,7 @@ Partial Class ImportExcelHome
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(43, 472)
+        Me.Label6.Location = New System.Drawing.Point(26, 483)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(75, 21)
         Me.Label6.TabIndex = 42

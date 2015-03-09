@@ -18,7 +18,7 @@ Public Class EmailStudent
 
             e_mail = New MailMessage()
             e_mail.From = New MailAddress(TextBox1.Text)
-            e_mail.To.Add(Label6.Text)
+            e_mail.To.Add(RichTextBox2.Text)
             e_mail.Subject = TextBox4.Text
             e_mail.IsBodyHtml = False
             e_mail.Body = RichTextBox1.Text()
@@ -51,8 +51,10 @@ Public Class EmailStudent
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs)
-        Me.Hide()
+
         StudentsHome.Show()
+        Me.Hide()
+
 
     End Sub
 
@@ -69,8 +71,9 @@ Public Class EmailStudent
     End Sub
 
     Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
-        Me.Hide()
         StudentsHome.Show()
+        Me.Hide()
+
 
 
     End Sub

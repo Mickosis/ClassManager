@@ -109,15 +109,17 @@ Public Class AddGrades
     End Sub
 
     Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
-        Me.Hide()
+
         UpdateClass.Show()
+        Me.Hide()
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         Dim ClassIntl = TextBox1.Text
-        Me.Hide()
+
         ClassCreateHomeAddStudents.TextBox4.Text = ClassIntl
         ClassCreateHomeAddStudents.Show()
+        Me.Hide()
     End Sub
 
     Private Sub Add_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button4.MouseHover
@@ -136,9 +138,11 @@ Public Class AddGrades
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim ClassIntl = TextBox1.Text
         AddPrelimGrades.TextBox1.Text = ClassIntl
-        Me.Hide()
+
         AddPrelimGrades.LoadGrades()
         AddPrelimGrades.Show()
+
+        Me.Hide()
     End Sub
 
     Private Sub Prelim_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button1.MouseHover
@@ -155,9 +159,11 @@ Public Class AddGrades
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim ClassIntl = TextBox1.Text
         AddMidtermGrades.TextBox1.Text = ClassIntl
-        Me.Hide()
+
         AddMidtermGrades.LoadGrades()
         AddMidtermGrades.Show()
+
+        Me.Hide()
     End Sub
 
     Private Sub Nidterm_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button2.MouseHover
@@ -174,9 +180,11 @@ Public Class AddGrades
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Dim ClassIntl = TextBox1.Text
         AddFinalGrades.TextBox1.Text = ClassIntl
-        Me.Hide()
+
         AddFinalGrades.LoadGrades()
         AddFinalGrades.Show()
+
+        Me.Hide()
     End Sub
 
     Private Sub Finals_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Button3.MouseHover
@@ -488,7 +496,6 @@ Public Class AddGrades
         SeatPlanLab.TextBox1.Text = ClassIntl
         SeatPlanCorner.TextBox1.Text = ClassIntl
         SeatPlanNotCorner.TextBox1.Text = ClassIntl
-        Me.Hide()
         Checker = ComboBox1.SelectedItem.ToString
         'MessageBox.Show(Checker)
         'DBConn()
@@ -499,13 +506,16 @@ Public Class AddGrades
         If Checker = "Lab" Then
             SeatPlanLab.Arrangement()
             SeatPlanLab.Show()
+            Me.Hide()
         Else
             If Checker2 = "corner" Then
                 SeatPlanCorner.Arrangement()
                 SeatPlanCorner.Show()
+                Me.Hide()
             Else
                 SeatPlanNotCorner.Arrangement()
                 SeatPlanNotCorner.Show()
+                Me.Hide()
             End If
         End If
         'End While

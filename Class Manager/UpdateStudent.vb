@@ -55,6 +55,10 @@ Public Class UpdateStudent
                     Directory.CreateDirectory(DestPath)
                 End If
                 Directory.CreateDirectory("C:\Mickosis\Class Manager\" + folderpath)
+                If TextBox6.Text = "" Then
+                    Dim thepath As String = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
+                    TextBox6.Text = thepath + "\Class Manager\Class Manager\Resources\Default.png"
+                End If
                 Dim file = New FileInfo(TextBox6.Text)
                 file.CopyTo(Path.Combine(DestPath, TextBox1.Text, file.Name), True)
                 DBConn()
@@ -70,8 +74,10 @@ Public Class UpdateStudent
                 MsgBox("Update successful!", , msgboxtitle)
                 SQLCONN.Close()
                 ms.Dispose()
-                Me.Hide()
+
+                StudentsHome.LoadGrades()
                 StudentsHome.Show()
+                Me.Hide()
             End If
         End If
     End Sub
@@ -89,14 +95,16 @@ Public Class UpdateStudent
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs)
-        Me.Hide()
+
         StudentsHome.Show()
+        Me.Hide()
 
     End Sub
 
     Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
-        Me.Hide()
+
         StudentsHome.Show()
+        Me.Hide()
     End Sub
 
     Private Sub Close_Click(sender As Object, e As EventArgs) Handles Close.Click

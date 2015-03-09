@@ -123,10 +123,12 @@ ByVal e As MouseEventArgs) Handles ListView1.MouseDown
                 MsgBox("Students added!", , msgboxtitle)
                 SQLDR.Dispose()
                 SQLCONN.Close()
-                Me.Hide()
+
                 AddGrades.TextBox1.Text = TextBox4.Text
                 AddGrades.AddGrades()
                 AddGrades.Show()
+
+                Me.Hide()
             Catch ex As SQLiteException
                 MsgBox("Student already added into the class.")
             End Try
@@ -142,10 +144,12 @@ ByVal e As MouseEventArgs) Handles ListView1.MouseDown
             MsgBox("Students added!", , msgboxtitle)
             SQLDR.Dispose()
             SQLCONN.Close()
-            Me.Hide()
+
             AddGrades.TextBox1.Text = TextBox4.Text
             AddGrades.AddGrades()
             AddGrades.Show()
+
+            Me.Hide()
 
         End If
 
@@ -180,8 +184,10 @@ ByVal e As MouseEventArgs) Handles ListView1.MouseDown
 
     Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
         AddGrades.TextBox1.Text = TextBox4.Text
-        Me.Hide()
+
         AddGrades.AddGrades()
         AddGrades.Show()
+
+        Me.Hide()
     End Sub
 End Class

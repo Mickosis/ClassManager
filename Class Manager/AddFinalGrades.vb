@@ -148,8 +148,6 @@ Public Class AddFinalGrades
                 SQLDR.Dispose()
                 SQLCONN.Close()
                 GradeMe.Show()
-
-                GradeMe.Show()
             End With
         End If
     End Sub
@@ -181,9 +179,11 @@ Public Class AddFinalGrades
     End Sub
 
     Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
-        Me.Hide()
+
         AddGrades.AddGrades()
         AddGrades.Show()
+
+        Me.Hide()
     End Sub
 
     Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView1.SelectedIndexChanged

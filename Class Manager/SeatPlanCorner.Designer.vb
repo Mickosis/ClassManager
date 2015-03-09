@@ -108,8 +108,18 @@ Partial Class SeatPlanCorner
         Me.Label38 = New System.Windows.Forms.Label()
         Me.Label39 = New System.Windows.Forms.Label()
         Me.Label40 = New System.Windows.Forms.Label()
-        Me.Label41 = New System.Windows.Forms.Label()
+        Me.Label60 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.PictureBox42 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox43 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox44 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox45 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox46 = New System.Windows.Forms.PictureBox()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.Label42 = New System.Windows.Forms.Label()
+        Me.Label43 = New System.Windows.Forms.Label()
+        Me.Label44 = New System.Windows.Forms.Label()
+        Me.Label45 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox41, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox40, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -152,6 +162,11 @@ Partial Class SeatPlanCorner
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox42, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox43, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox44, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox45, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox46, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -183,7 +198,7 @@ Partial Class SeatPlanCorner
         'PictureBox41
         '
         Me.PictureBox41.Image = Global.Class_Manager.My.Resources.Resources.teacher
-        Me.PictureBox41.Location = New System.Drawing.Point(483, 554)
+        Me.PictureBox41.Location = New System.Drawing.Point(477, 629)
         Me.PictureBox41.Name = "PictureBox41"
         Me.PictureBox41.Size = New System.Drawing.Size(383, 142)
         Me.PictureBox41.TabIndex = 88
@@ -192,7 +207,7 @@ Partial Class SeatPlanCorner
         'PictureBox40
         '
         Me.PictureBox40.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox40.Location = New System.Drawing.Point(717, 408)
+        Me.PictureBox40.Location = New System.Drawing.Point(713, 515)
         Me.PictureBox40.Name = "PictureBox40"
         Me.PictureBox40.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox40.TabIndex = 87
@@ -201,7 +216,7 @@ Partial Class SeatPlanCorner
         'PictureBox39
         '
         Me.PictureBox39.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox39.Location = New System.Drawing.Point(847, 408)
+        Me.PictureBox39.Location = New System.Drawing.Point(843, 515)
         Me.PictureBox39.Name = "PictureBox39"
         Me.PictureBox39.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox39.TabIndex = 86
@@ -210,7 +225,7 @@ Partial Class SeatPlanCorner
         'PictureBox38
         '
         Me.PictureBox38.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox38.Location = New System.Drawing.Point(969, 408)
+        Me.PictureBox38.Location = New System.Drawing.Point(965, 515)
         Me.PictureBox38.Name = "PictureBox38"
         Me.PictureBox38.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox38.TabIndex = 85
@@ -219,7 +234,7 @@ Partial Class SeatPlanCorner
         'PictureBox37
         '
         Me.PictureBox37.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox37.Location = New System.Drawing.Point(1091, 408)
+        Me.PictureBox37.Location = New System.Drawing.Point(1087, 515)
         Me.PictureBox37.Name = "PictureBox37"
         Me.PictureBox37.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox37.TabIndex = 84
@@ -228,7 +243,7 @@ Partial Class SeatPlanCorner
         'PictureBox36
         '
         Me.PictureBox36.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox36.Location = New System.Drawing.Point(1219, 408)
+        Me.PictureBox36.Location = New System.Drawing.Point(1215, 515)
         Me.PictureBox36.Name = "PictureBox36"
         Me.PictureBox36.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox36.TabIndex = 83
@@ -237,7 +252,7 @@ Partial Class SeatPlanCorner
         'PictureBox35
         '
         Me.PictureBox35.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox35.Location = New System.Drawing.Point(497, 408)
+        Me.PictureBox35.Location = New System.Drawing.Point(493, 515)
         Me.PictureBox35.Name = "PictureBox35"
         Me.PictureBox35.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox35.TabIndex = 82
@@ -246,7 +261,7 @@ Partial Class SeatPlanCorner
         'PictureBox34
         '
         Me.PictureBox34.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox34.Location = New System.Drawing.Point(373, 408)
+        Me.PictureBox34.Location = New System.Drawing.Point(369, 515)
         Me.PictureBox34.Name = "PictureBox34"
         Me.PictureBox34.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox34.TabIndex = 81
@@ -255,7 +270,7 @@ Partial Class SeatPlanCorner
         'PictureBox33
         '
         Me.PictureBox33.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox33.Location = New System.Drawing.Point(249, 408)
+        Me.PictureBox33.Location = New System.Drawing.Point(245, 515)
         Me.PictureBox33.Name = "PictureBox33"
         Me.PictureBox33.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox33.TabIndex = 80
@@ -264,7 +279,7 @@ Partial Class SeatPlanCorner
         'PictureBox32
         '
         Me.PictureBox32.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox32.Location = New System.Drawing.Point(125, 408)
+        Me.PictureBox32.Location = New System.Drawing.Point(121, 515)
         Me.PictureBox32.Name = "PictureBox32"
         Me.PictureBox32.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox32.TabIndex = 79
@@ -273,7 +288,7 @@ Partial Class SeatPlanCorner
         'PictureBox31
         '
         Me.PictureBox31.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox31.Location = New System.Drawing.Point(-1, 408)
+        Me.PictureBox31.Location = New System.Drawing.Point(-5, 515)
         Me.PictureBox31.Name = "PictureBox31"
         Me.PictureBox31.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox31.TabIndex = 78
@@ -282,7 +297,7 @@ Partial Class SeatPlanCorner
         'PictureBox30
         '
         Me.PictureBox30.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox30.Location = New System.Drawing.Point(717, 289)
+        Me.PictureBox30.Location = New System.Drawing.Point(713, 396)
         Me.PictureBox30.Name = "PictureBox30"
         Me.PictureBox30.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox30.TabIndex = 77
@@ -291,7 +306,7 @@ Partial Class SeatPlanCorner
         'PictureBox29
         '
         Me.PictureBox29.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox29.Location = New System.Drawing.Point(847, 289)
+        Me.PictureBox29.Location = New System.Drawing.Point(843, 396)
         Me.PictureBox29.Name = "PictureBox29"
         Me.PictureBox29.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox29.TabIndex = 76
@@ -300,7 +315,7 @@ Partial Class SeatPlanCorner
         'PictureBox28
         '
         Me.PictureBox28.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox28.Location = New System.Drawing.Point(969, 289)
+        Me.PictureBox28.Location = New System.Drawing.Point(965, 396)
         Me.PictureBox28.Name = "PictureBox28"
         Me.PictureBox28.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox28.TabIndex = 75
@@ -309,7 +324,7 @@ Partial Class SeatPlanCorner
         'PictureBox27
         '
         Me.PictureBox27.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox27.Location = New System.Drawing.Point(1091, 289)
+        Me.PictureBox27.Location = New System.Drawing.Point(1087, 396)
         Me.PictureBox27.Name = "PictureBox27"
         Me.PictureBox27.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox27.TabIndex = 74
@@ -318,7 +333,7 @@ Partial Class SeatPlanCorner
         'PictureBox26
         '
         Me.PictureBox26.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox26.Location = New System.Drawing.Point(1214, 289)
+        Me.PictureBox26.Location = New System.Drawing.Point(1210, 396)
         Me.PictureBox26.Name = "PictureBox26"
         Me.PictureBox26.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox26.TabIndex = 73
@@ -327,7 +342,7 @@ Partial Class SeatPlanCorner
         'PictureBox25
         '
         Me.PictureBox25.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox25.Location = New System.Drawing.Point(497, 289)
+        Me.PictureBox25.Location = New System.Drawing.Point(493, 396)
         Me.PictureBox25.Name = "PictureBox25"
         Me.PictureBox25.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox25.TabIndex = 72
@@ -336,7 +351,7 @@ Partial Class SeatPlanCorner
         'PictureBox24
         '
         Me.PictureBox24.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox24.Location = New System.Drawing.Point(373, 290)
+        Me.PictureBox24.Location = New System.Drawing.Point(369, 397)
         Me.PictureBox24.Name = "PictureBox24"
         Me.PictureBox24.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox24.TabIndex = 71
@@ -345,7 +360,7 @@ Partial Class SeatPlanCorner
         'PictureBox23
         '
         Me.PictureBox23.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox23.Location = New System.Drawing.Point(249, 289)
+        Me.PictureBox23.Location = New System.Drawing.Point(245, 396)
         Me.PictureBox23.Name = "PictureBox23"
         Me.PictureBox23.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox23.TabIndex = 70
@@ -354,7 +369,7 @@ Partial Class SeatPlanCorner
         'PictureBox22
         '
         Me.PictureBox22.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox22.Location = New System.Drawing.Point(125, 290)
+        Me.PictureBox22.Location = New System.Drawing.Point(121, 397)
         Me.PictureBox22.Name = "PictureBox22"
         Me.PictureBox22.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox22.TabIndex = 69
@@ -363,7 +378,7 @@ Partial Class SeatPlanCorner
         'PictureBox21
         '
         Me.PictureBox21.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox21.Location = New System.Drawing.Point(0, 290)
+        Me.PictureBox21.Location = New System.Drawing.Point(-4, 397)
         Me.PictureBox21.Name = "PictureBox21"
         Me.PictureBox21.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox21.TabIndex = 68
@@ -372,7 +387,7 @@ Partial Class SeatPlanCorner
         'PictureBox20
         '
         Me.PictureBox20.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox20.Location = New System.Drawing.Point(717, 172)
+        Me.PictureBox20.Location = New System.Drawing.Point(713, 279)
         Me.PictureBox20.Name = "PictureBox20"
         Me.PictureBox20.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox20.TabIndex = 67
@@ -381,7 +396,7 @@ Partial Class SeatPlanCorner
         'PictureBox19
         '
         Me.PictureBox19.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox19.Location = New System.Drawing.Point(847, 172)
+        Me.PictureBox19.Location = New System.Drawing.Point(843, 279)
         Me.PictureBox19.Name = "PictureBox19"
         Me.PictureBox19.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox19.TabIndex = 66
@@ -390,7 +405,7 @@ Partial Class SeatPlanCorner
         'PictureBox18
         '
         Me.PictureBox18.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox18.Location = New System.Drawing.Point(969, 171)
+        Me.PictureBox18.Location = New System.Drawing.Point(965, 278)
         Me.PictureBox18.Name = "PictureBox18"
         Me.PictureBox18.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox18.TabIndex = 65
@@ -399,7 +414,7 @@ Partial Class SeatPlanCorner
         'PictureBox17
         '
         Me.PictureBox17.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox17.Location = New System.Drawing.Point(1091, 171)
+        Me.PictureBox17.Location = New System.Drawing.Point(1087, 278)
         Me.PictureBox17.Name = "PictureBox17"
         Me.PictureBox17.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox17.TabIndex = 64
@@ -408,7 +423,7 @@ Partial Class SeatPlanCorner
         'PictureBox16
         '
         Me.PictureBox16.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox16.Location = New System.Drawing.Point(1214, 171)
+        Me.PictureBox16.Location = New System.Drawing.Point(1210, 278)
         Me.PictureBox16.Name = "PictureBox16"
         Me.PictureBox16.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox16.TabIndex = 63
@@ -417,7 +432,7 @@ Partial Class SeatPlanCorner
         'PictureBox15
         '
         Me.PictureBox15.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox15.Location = New System.Drawing.Point(497, 172)
+        Me.PictureBox15.Location = New System.Drawing.Point(493, 279)
         Me.PictureBox15.Name = "PictureBox15"
         Me.PictureBox15.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox15.TabIndex = 62
@@ -426,7 +441,7 @@ Partial Class SeatPlanCorner
         'PictureBox14
         '
         Me.PictureBox14.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox14.Location = New System.Drawing.Point(373, 172)
+        Me.PictureBox14.Location = New System.Drawing.Point(369, 279)
         Me.PictureBox14.Name = "PictureBox14"
         Me.PictureBox14.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox14.TabIndex = 61
@@ -435,7 +450,7 @@ Partial Class SeatPlanCorner
         'PictureBox13
         '
         Me.PictureBox13.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox13.Location = New System.Drawing.Point(249, 172)
+        Me.PictureBox13.Location = New System.Drawing.Point(245, 279)
         Me.PictureBox13.Name = "PictureBox13"
         Me.PictureBox13.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox13.TabIndex = 60
@@ -444,7 +459,7 @@ Partial Class SeatPlanCorner
         'PictureBox12
         '
         Me.PictureBox12.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox12.Location = New System.Drawing.Point(125, 172)
+        Me.PictureBox12.Location = New System.Drawing.Point(121, 279)
         Me.PictureBox12.Name = "PictureBox12"
         Me.PictureBox12.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox12.TabIndex = 59
@@ -453,7 +468,7 @@ Partial Class SeatPlanCorner
         'PictureBox11
         '
         Me.PictureBox11.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox11.Location = New System.Drawing.Point(0, 172)
+        Me.PictureBox11.Location = New System.Drawing.Point(-4, 279)
         Me.PictureBox11.Name = "PictureBox11"
         Me.PictureBox11.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox11.TabIndex = 58
@@ -462,7 +477,7 @@ Partial Class SeatPlanCorner
         'PictureBox10
         '
         Me.PictureBox10.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox10.Location = New System.Drawing.Point(1214, 55)
+        Me.PictureBox10.Location = New System.Drawing.Point(538, 46)
         Me.PictureBox10.Name = "PictureBox10"
         Me.PictureBox10.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox10.TabIndex = 57
@@ -471,7 +486,7 @@ Partial Class SeatPlanCorner
         'PictureBox9
         '
         Me.PictureBox9.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox9.Location = New System.Drawing.Point(1080, 55)
+        Me.PictureBox9.Location = New System.Drawing.Point(404, 46)
         Me.PictureBox9.Name = "PictureBox9"
         Me.PictureBox9.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox9.TabIndex = 56
@@ -480,7 +495,7 @@ Partial Class SeatPlanCorner
         'PictureBox8
         '
         Me.PictureBox8.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox8.Location = New System.Drawing.Point(945, 55)
+        Me.PictureBox8.Location = New System.Drawing.Point(269, 46)
         Me.PictureBox8.Name = "PictureBox8"
         Me.PictureBox8.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox8.TabIndex = 55
@@ -489,7 +504,7 @@ Partial Class SeatPlanCorner
         'PictureBox7
         '
         Me.PictureBox7.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox7.Location = New System.Drawing.Point(810, 55)
+        Me.PictureBox7.Location = New System.Drawing.Point(134, 46)
         Me.PictureBox7.Name = "PictureBox7"
         Me.PictureBox7.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox7.TabIndex = 54
@@ -498,7 +513,7 @@ Partial Class SeatPlanCorner
         'PictureBox6
         '
         Me.PictureBox6.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox6.Location = New System.Drawing.Point(675, 55)
+        Me.PictureBox6.Location = New System.Drawing.Point(-1, 46)
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox6.TabIndex = 53
@@ -507,7 +522,7 @@ Partial Class SeatPlanCorner
         'PictureBox5
         '
         Me.PictureBox5.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox5.Location = New System.Drawing.Point(540, 56)
+        Me.PictureBox5.Location = New System.Drawing.Point(871, 154)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox5.TabIndex = 52
@@ -516,7 +531,7 @@ Partial Class SeatPlanCorner
         'PictureBox4
         '
         Me.PictureBox4.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox4.Location = New System.Drawing.Point(405, 56)
+        Me.PictureBox4.Location = New System.Drawing.Point(736, 154)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox4.TabIndex = 51
@@ -525,7 +540,7 @@ Partial Class SeatPlanCorner
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox3.Location = New System.Drawing.Point(270, 56)
+        Me.PictureBox3.Location = New System.Drawing.Point(601, 154)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox3.TabIndex = 50
@@ -534,7 +549,7 @@ Partial Class SeatPlanCorner
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox2.Location = New System.Drawing.Point(135, 56)
+        Me.PictureBox2.Location = New System.Drawing.Point(466, 154)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox2.TabIndex = 49
@@ -557,7 +572,7 @@ Partial Class SeatPlanCorner
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.Class_Manager.My.Resources.Resources.Seat1
-        Me.PictureBox1.Location = New System.Drawing.Point(0, 56)
+        Me.PictureBox1.Location = New System.Drawing.Point(331, 154)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(135, 119)
         Me.PictureBox1.TabIndex = 39
@@ -568,7 +583,7 @@ Partial Class SeatPlanCorner
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(22, 425)
+        Me.Label1.Location = New System.Drawing.Point(18, 532)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(13, 17)
         Me.Label1.TabIndex = 89
@@ -579,7 +594,7 @@ Partial Class SeatPlanCorner
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(149, 425)
+        Me.Label2.Location = New System.Drawing.Point(145, 532)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(13, 17)
         Me.Label2.TabIndex = 90
@@ -590,7 +605,7 @@ Partial Class SeatPlanCorner
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(275, 425)
+        Me.Label3.Location = New System.Drawing.Point(271, 532)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(13, 17)
         Me.Label3.TabIndex = 91
@@ -601,7 +616,7 @@ Partial Class SeatPlanCorner
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label4.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(395, 425)
+        Me.Label4.Location = New System.Drawing.Point(391, 532)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(13, 17)
         Me.Label4.TabIndex = 92
@@ -612,7 +627,7 @@ Partial Class SeatPlanCorner
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label5.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(520, 425)
+        Me.Label5.Location = New System.Drawing.Point(516, 532)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(13, 17)
         Me.Label5.TabIndex = 93
@@ -623,7 +638,7 @@ Partial Class SeatPlanCorner
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label6.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(738, 425)
+        Me.Label6.Location = New System.Drawing.Point(734, 532)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(13, 17)
         Me.Label6.TabIndex = 94
@@ -634,7 +649,7 @@ Partial Class SeatPlanCorner
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label7.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(868, 425)
+        Me.Label7.Location = New System.Drawing.Point(864, 532)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(13, 17)
         Me.Label7.TabIndex = 95
@@ -645,7 +660,7 @@ Partial Class SeatPlanCorner
         Me.Label8.AutoSize = True
         Me.Label8.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label8.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(994, 425)
+        Me.Label8.Location = New System.Drawing.Point(990, 532)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(13, 17)
         Me.Label8.TabIndex = 96
@@ -656,7 +671,7 @@ Partial Class SeatPlanCorner
         Me.Label9.AutoSize = True
         Me.Label9.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label9.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(1121, 425)
+        Me.Label9.Location = New System.Drawing.Point(1117, 532)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(13, 17)
         Me.Label9.TabIndex = 97
@@ -667,7 +682,7 @@ Partial Class SeatPlanCorner
         Me.Label10.AutoSize = True
         Me.Label10.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label10.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(1245, 425)
+        Me.Label10.Location = New System.Drawing.Point(1241, 532)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(13, 17)
         Me.Label10.TabIndex = 98
@@ -678,7 +693,7 @@ Partial Class SeatPlanCorner
         Me.Label11.AutoSize = True
         Me.Label11.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label11.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(22, 307)
+        Me.Label11.Location = New System.Drawing.Point(18, 414)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(13, 17)
         Me.Label11.TabIndex = 99
@@ -689,7 +704,7 @@ Partial Class SeatPlanCorner
         Me.Label12.AutoSize = True
         Me.Label12.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label12.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(149, 307)
+        Me.Label12.Location = New System.Drawing.Point(145, 414)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(13, 17)
         Me.Label12.TabIndex = 100
@@ -700,7 +715,7 @@ Partial Class SeatPlanCorner
         Me.Label13.AutoSize = True
         Me.Label13.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label13.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(275, 307)
+        Me.Label13.Location = New System.Drawing.Point(271, 414)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(13, 17)
         Me.Label13.TabIndex = 101
@@ -711,7 +726,7 @@ Partial Class SeatPlanCorner
         Me.Label14.AutoSize = True
         Me.Label14.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label14.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(395, 307)
+        Me.Label14.Location = New System.Drawing.Point(391, 414)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(13, 17)
         Me.Label14.TabIndex = 102
@@ -722,7 +737,7 @@ Partial Class SeatPlanCorner
         Me.Label15.AutoSize = True
         Me.Label15.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label15.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(520, 307)
+        Me.Label15.Location = New System.Drawing.Point(516, 414)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(13, 17)
         Me.Label15.TabIndex = 103
@@ -733,7 +748,7 @@ Partial Class SeatPlanCorner
         Me.Label16.AutoSize = True
         Me.Label16.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label16.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(738, 307)
+        Me.Label16.Location = New System.Drawing.Point(734, 414)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(13, 17)
         Me.Label16.TabIndex = 104
@@ -744,7 +759,7 @@ Partial Class SeatPlanCorner
         Me.Label17.AutoSize = True
         Me.Label17.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label17.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(868, 307)
+        Me.Label17.Location = New System.Drawing.Point(864, 414)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(13, 17)
         Me.Label17.TabIndex = 105
@@ -755,7 +770,7 @@ Partial Class SeatPlanCorner
         Me.Label18.AutoSize = True
         Me.Label18.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label18.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(994, 307)
+        Me.Label18.Location = New System.Drawing.Point(990, 414)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(13, 17)
         Me.Label18.TabIndex = 106
@@ -766,7 +781,7 @@ Partial Class SeatPlanCorner
         Me.Label19.AutoSize = True
         Me.Label19.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label19.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(1121, 307)
+        Me.Label19.Location = New System.Drawing.Point(1117, 414)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(13, 17)
         Me.Label19.TabIndex = 107
@@ -777,7 +792,7 @@ Partial Class SeatPlanCorner
         Me.Label20.AutoSize = True
         Me.Label20.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label20.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(1245, 307)
+        Me.Label20.Location = New System.Drawing.Point(1241, 414)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(13, 17)
         Me.Label20.TabIndex = 108
@@ -788,7 +803,7 @@ Partial Class SeatPlanCorner
         Me.Label21.AutoSize = True
         Me.Label21.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label21.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(22, 193)
+        Me.Label21.Location = New System.Drawing.Point(18, 300)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(13, 17)
         Me.Label21.TabIndex = 109
@@ -799,7 +814,7 @@ Partial Class SeatPlanCorner
         Me.Label22.AutoSize = True
         Me.Label22.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label22.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(149, 193)
+        Me.Label22.Location = New System.Drawing.Point(145, 300)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(13, 17)
         Me.Label22.TabIndex = 110
@@ -810,7 +825,7 @@ Partial Class SeatPlanCorner
         Me.Label23.AutoSize = True
         Me.Label23.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label23.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(275, 193)
+        Me.Label23.Location = New System.Drawing.Point(271, 300)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(13, 17)
         Me.Label23.TabIndex = 111
@@ -821,7 +836,7 @@ Partial Class SeatPlanCorner
         Me.Label24.AutoSize = True
         Me.Label24.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label24.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(395, 193)
+        Me.Label24.Location = New System.Drawing.Point(391, 300)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(13, 17)
         Me.Label24.TabIndex = 112
@@ -832,7 +847,7 @@ Partial Class SeatPlanCorner
         Me.Label25.AutoSize = True
         Me.Label25.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label25.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(520, 193)
+        Me.Label25.Location = New System.Drawing.Point(516, 300)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(13, 17)
         Me.Label25.TabIndex = 113
@@ -843,7 +858,7 @@ Partial Class SeatPlanCorner
         Me.Label26.AutoSize = True
         Me.Label26.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label26.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(738, 193)
+        Me.Label26.Location = New System.Drawing.Point(734, 300)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(13, 17)
         Me.Label26.TabIndex = 114
@@ -854,7 +869,7 @@ Partial Class SeatPlanCorner
         Me.Label27.AutoSize = True
         Me.Label27.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label27.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.Location = New System.Drawing.Point(868, 193)
+        Me.Label27.Location = New System.Drawing.Point(864, 300)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(13, 17)
         Me.Label27.TabIndex = 115
@@ -865,7 +880,7 @@ Partial Class SeatPlanCorner
         Me.Label28.AutoSize = True
         Me.Label28.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label28.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label28.Location = New System.Drawing.Point(994, 193)
+        Me.Label28.Location = New System.Drawing.Point(990, 300)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(13, 17)
         Me.Label28.TabIndex = 116
@@ -876,7 +891,7 @@ Partial Class SeatPlanCorner
         Me.Label29.AutoSize = True
         Me.Label29.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label29.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(1121, 193)
+        Me.Label29.Location = New System.Drawing.Point(1117, 300)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(13, 17)
         Me.Label29.TabIndex = 117
@@ -887,7 +902,7 @@ Partial Class SeatPlanCorner
         Me.Label30.AutoSize = True
         Me.Label30.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label30.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.Location = New System.Drawing.Point(1245, 193)
+        Me.Label30.Location = New System.Drawing.Point(1241, 300)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(13, 17)
         Me.Label30.TabIndex = 118
@@ -898,7 +913,7 @@ Partial Class SeatPlanCorner
         Me.Label31.AutoSize = True
         Me.Label31.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label31.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label31.Location = New System.Drawing.Point(22, 74)
+        Me.Label31.Location = New System.Drawing.Point(353, 172)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(13, 17)
         Me.Label31.TabIndex = 119
@@ -909,7 +924,7 @@ Partial Class SeatPlanCorner
         Me.Label32.AutoSize = True
         Me.Label32.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label32.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.Location = New System.Drawing.Point(159, 74)
+        Me.Label32.Location = New System.Drawing.Point(490, 172)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(13, 17)
         Me.Label32.TabIndex = 120
@@ -920,7 +935,7 @@ Partial Class SeatPlanCorner
         Me.Label33.AutoSize = True
         Me.Label33.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label33.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label33.Location = New System.Drawing.Point(292, 74)
+        Me.Label33.Location = New System.Drawing.Point(623, 172)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(13, 17)
         Me.Label33.TabIndex = 121
@@ -931,7 +946,7 @@ Partial Class SeatPlanCorner
         Me.Label34.AutoSize = True
         Me.Label34.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label34.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label34.Location = New System.Drawing.Point(427, 74)
+        Me.Label34.Location = New System.Drawing.Point(758, 172)
         Me.Label34.Name = "Label34"
         Me.Label34.Size = New System.Drawing.Size(13, 17)
         Me.Label34.TabIndex = 122
@@ -942,7 +957,7 @@ Partial Class SeatPlanCorner
         Me.Label35.AutoSize = True
         Me.Label35.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label35.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label35.Location = New System.Drawing.Point(561, 74)
+        Me.Label35.Location = New System.Drawing.Point(892, 172)
         Me.Label35.Name = "Label35"
         Me.Label35.Size = New System.Drawing.Size(13, 17)
         Me.Label35.TabIndex = 123
@@ -953,7 +968,7 @@ Partial Class SeatPlanCorner
         Me.Label36.AutoSize = True
         Me.Label36.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label36.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label36.Location = New System.Drawing.Point(696, 74)
+        Me.Label36.Location = New System.Drawing.Point(20, 65)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(13, 17)
         Me.Label36.TabIndex = 124
@@ -964,7 +979,7 @@ Partial Class SeatPlanCorner
         Me.Label37.AutoSize = True
         Me.Label37.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label37.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label37.Location = New System.Drawing.Point(831, 74)
+        Me.Label37.Location = New System.Drawing.Point(155, 65)
         Me.Label37.Name = "Label37"
         Me.Label37.Size = New System.Drawing.Size(13, 17)
         Me.Label37.TabIndex = 125
@@ -975,7 +990,7 @@ Partial Class SeatPlanCorner
         Me.Label38.AutoSize = True
         Me.Label38.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label38.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label38.Location = New System.Drawing.Point(969, 74)
+        Me.Label38.Location = New System.Drawing.Point(293, 65)
         Me.Label38.Name = "Label38"
         Me.Label38.Size = New System.Drawing.Size(13, 17)
         Me.Label38.TabIndex = 126
@@ -986,7 +1001,7 @@ Partial Class SeatPlanCorner
         Me.Label39.AutoSize = True
         Me.Label39.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label39.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label39.Location = New System.Drawing.Point(1103, 74)
+        Me.Label39.Location = New System.Drawing.Point(427, 65)
         Me.Label39.Name = "Label39"
         Me.Label39.Size = New System.Drawing.Size(13, 17)
         Me.Label39.TabIndex = 127
@@ -997,30 +1012,130 @@ Partial Class SeatPlanCorner
         Me.Label40.AutoSize = True
         Me.Label40.BackColor = System.Drawing.SystemColors.ScrollBar
         Me.Label40.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label40.Location = New System.Drawing.Point(1236, 74)
+        Me.Label40.Location = New System.Drawing.Point(560, 65)
         Me.Label40.Name = "Label40"
         Me.Label40.Size = New System.Drawing.Size(13, 17)
         Me.Label40.TabIndex = 128
         Me.Label40.Text = "-"
         '
-        'Label41
+        'Label60
         '
-        Me.Label41.AutoSize = True
-        Me.Label41.BackColor = System.Drawing.SystemColors.ScrollBar
-        Me.Label41.Font = New System.Drawing.Font("Segoe UI Light", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label41.Location = New System.Drawing.Point(619, 609)
-        Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(110, 32)
-        Me.Label41.TabIndex = 129
-        Me.Label41.Text = "TEACHER"
+        Me.Label60.AutoSize = True
+        Me.Label60.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.Label60.Font = New System.Drawing.Font("Segoe UI Light", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label60.Location = New System.Drawing.Point(611, 665)
+        Me.Label60.Name = "Label60"
+        Me.Label60.Size = New System.Drawing.Size(110, 32)
+        Me.Label60.TabIndex = 129
+        Me.Label60.Text = "TEACHER"
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(638, 239)
+        Me.TextBox1.Location = New System.Drawing.Point(634, 346)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(57, 20)
         Me.TextBox1.TabIndex = 130
         Me.TextBox1.Visible = False
+        '
+        'PictureBox42
+        '
+        Me.PictureBox42.Image = Global.Class_Manager.My.Resources.Resources.Seat1
+        Me.PictureBox42.Location = New System.Drawing.Point(1204, 46)
+        Me.PictureBox42.Name = "PictureBox42"
+        Me.PictureBox42.Size = New System.Drawing.Size(135, 119)
+        Me.PictureBox42.TabIndex = 135
+        Me.PictureBox42.TabStop = False
+        '
+        'PictureBox43
+        '
+        Me.PictureBox43.Image = Global.Class_Manager.My.Resources.Resources.Seat1
+        Me.PictureBox43.Location = New System.Drawing.Point(1070, 46)
+        Me.PictureBox43.Name = "PictureBox43"
+        Me.PictureBox43.Size = New System.Drawing.Size(135, 119)
+        Me.PictureBox43.TabIndex = 134
+        Me.PictureBox43.TabStop = False
+        '
+        'PictureBox44
+        '
+        Me.PictureBox44.Image = Global.Class_Manager.My.Resources.Resources.Seat1
+        Me.PictureBox44.Location = New System.Drawing.Point(935, 46)
+        Me.PictureBox44.Name = "PictureBox44"
+        Me.PictureBox44.Size = New System.Drawing.Size(135, 119)
+        Me.PictureBox44.TabIndex = 133
+        Me.PictureBox44.TabStop = False
+        '
+        'PictureBox45
+        '
+        Me.PictureBox45.Image = Global.Class_Manager.My.Resources.Resources.Seat1
+        Me.PictureBox45.Location = New System.Drawing.Point(800, 46)
+        Me.PictureBox45.Name = "PictureBox45"
+        Me.PictureBox45.Size = New System.Drawing.Size(135, 119)
+        Me.PictureBox45.TabIndex = 132
+        Me.PictureBox45.TabStop = False
+        '
+        'PictureBox46
+        '
+        Me.PictureBox46.Image = Global.Class_Manager.My.Resources.Resources.Seat1
+        Me.PictureBox46.Location = New System.Drawing.Point(665, 46)
+        Me.PictureBox46.Name = "PictureBox46"
+        Me.PictureBox46.Size = New System.Drawing.Size(135, 119)
+        Me.PictureBox46.TabIndex = 131
+        Me.PictureBox46.TabStop = False
+        '
+        'Label41
+        '
+        Me.Label41.AutoSize = True
+        Me.Label41.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.Label41.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label41.Location = New System.Drawing.Point(691, 65)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(13, 17)
+        Me.Label41.TabIndex = 140
+        Me.Label41.Text = "-"
+        '
+        'Label42
+        '
+        Me.Label42.AutoSize = True
+        Me.Label42.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.Label42.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label42.Location = New System.Drawing.Point(823, 65)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(13, 17)
+        Me.Label42.TabIndex = 139
+        Me.Label42.Text = "-"
+        '
+        'Label43
+        '
+        Me.Label43.AutoSize = True
+        Me.Label43.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.Label43.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label43.Location = New System.Drawing.Point(964, 65)
+        Me.Label43.Name = "Label43"
+        Me.Label43.Size = New System.Drawing.Size(13, 17)
+        Me.Label43.TabIndex = 138
+        Me.Label43.Text = "-"
+        '
+        'Label44
+        '
+        Me.Label44.AutoSize = True
+        Me.Label44.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.Label44.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label44.Location = New System.Drawing.Point(1091, 65)
+        Me.Label44.Name = "Label44"
+        Me.Label44.Size = New System.Drawing.Size(13, 17)
+        Me.Label44.TabIndex = 137
+        Me.Label44.Text = "-"
+        '
+        'Label45
+        '
+        Me.Label45.AutoSize = True
+        Me.Label45.BackColor = System.Drawing.SystemColors.ScrollBar
+        Me.Label45.Font = New System.Drawing.Font("Segoe UI Light", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label45.Location = New System.Drawing.Point(1232, 65)
+        Me.Label45.Name = "Label45"
+        Me.Label45.Size = New System.Drawing.Size(13, 17)
+        Me.Label45.TabIndex = 136
+        Me.Label45.Text = "-"
         '
         'SeatPlanCorner
         '
@@ -1028,18 +1143,13 @@ Partial Class SeatPlanCorner
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(1351, 720)
-        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label41)
-        Me.Controls.Add(Me.Label40)
-        Me.Controls.Add(Me.Label39)
-        Me.Controls.Add(Me.Label38)
-        Me.Controls.Add(Me.Label37)
-        Me.Controls.Add(Me.Label36)
-        Me.Controls.Add(Me.Label35)
-        Me.Controls.Add(Me.Label34)
-        Me.Controls.Add(Me.Label33)
-        Me.Controls.Add(Me.Label32)
-        Me.Controls.Add(Me.Label31)
+        Me.Controls.Add(Me.Label42)
+        Me.Controls.Add(Me.Label43)
+        Me.Controls.Add(Me.Label44)
+        Me.Controls.Add(Me.Label45)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Label60)
         Me.Controls.Add(Me.Label30)
         Me.Controls.Add(Me.Label29)
         Me.Controls.Add(Me.Label28)
@@ -1070,7 +1180,6 @@ Partial Class SeatPlanCorner
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.PictureBox41)
         Me.Controls.Add(Me.PictureBox40)
         Me.Controls.Add(Me.PictureBox39)
         Me.Controls.Add(Me.PictureBox38)
@@ -1101,18 +1210,34 @@ Partial Class SeatPlanCorner
         Me.Controls.Add(Me.PictureBox13)
         Me.Controls.Add(Me.PictureBox12)
         Me.Controls.Add(Me.PictureBox11)
+        Me.Controls.Add(Me.Button6)
+        Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.Label40)
+        Me.Controls.Add(Me.Label39)
+        Me.Controls.Add(Me.Label38)
+        Me.Controls.Add(Me.Label37)
+        Me.Controls.Add(Me.Label36)
         Me.Controls.Add(Me.PictureBox10)
         Me.Controls.Add(Me.PictureBox9)
         Me.Controls.Add(Me.PictureBox8)
         Me.Controls.Add(Me.PictureBox7)
         Me.Controls.Add(Me.PictureBox6)
+        Me.Controls.Add(Me.PictureBox42)
+        Me.Controls.Add(Me.PictureBox43)
+        Me.Controls.Add(Me.PictureBox44)
+        Me.Controls.Add(Me.PictureBox45)
+        Me.Controls.Add(Me.PictureBox46)
+        Me.Controls.Add(Me.Label35)
+        Me.Controls.Add(Me.Label34)
+        Me.Controls.Add(Me.Label33)
+        Me.Controls.Add(Me.Label32)
+        Me.Controls.Add(Me.Label31)
         Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.MenuStrip1)
+        Me.Controls.Add(Me.PictureBox41)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "SeatPlanCorner"
@@ -1161,6 +1286,11 @@ Partial Class SeatPlanCorner
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox42, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox43, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox44, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox45, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox46, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1250,6 +1380,16 @@ Partial Class SeatPlanCorner
     Friend WithEvents Label38 As System.Windows.Forms.Label
     Friend WithEvents Label39 As System.Windows.Forms.Label
     Friend WithEvents Label40 As System.Windows.Forms.Label
-    Friend WithEvents Label41 As System.Windows.Forms.Label
+    Friend WithEvents Label60 As System.Windows.Forms.Label
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents PictureBox42 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox43 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox44 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox45 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox46 As System.Windows.Forms.PictureBox
+    Friend WithEvents Label41 As System.Windows.Forms.Label
+    Friend WithEvents Label42 As System.Windows.Forms.Label
+    Friend WithEvents Label43 As System.Windows.Forms.Label
+    Friend WithEvents Label44 As System.Windows.Forms.Label
+    Friend WithEvents Label45 As System.Windows.Forms.Label
 End Class

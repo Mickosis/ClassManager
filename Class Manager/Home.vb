@@ -1,11 +1,12 @@
 ﻿Public Class Home
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Students.Click
-        Me.Hide()
+
         StudentsHome.LoadGrades()
         StudentsHome.ClearShitOut()
         StudentsHome.Update.Enabled = False
         StudentsHome.Button1.Enabled = False
         StudentsHome.Show()
+        Me.Hide()
     End Sub
 
     Private Sub Students_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Students.MouseHover
@@ -20,8 +21,9 @@
     End Sub
 
     Private Sub Classes_Click(sender As Object, e As EventArgs) Handles Classes.Click
-        Me.Hide()
+
         ClassHome.Show()
+        Me.Hide()
 
     End Sub
 
@@ -37,8 +39,9 @@
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Sync.Click
-        Me.Hide()
+
         ImportExport.Show()
+        Me.Hide()
     End Sub
 
     Private Sub Sync_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Sync.MouseHover

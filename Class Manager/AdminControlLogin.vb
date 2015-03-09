@@ -21,8 +21,9 @@ Public Class AdminControlLogin
                 TextBox2.Clear()
                 SQLDR.Dispose()
                 SQLCONN.Close()
-                Me.Hide()
+
                 AdminSettings.Show()
+                Me.Hide()
             Else
                 MsgBox("Incorrect Login!")
                 TextBox1.Clear()
@@ -52,8 +53,9 @@ Public Class AdminControlLogin
     End Sub
 
     Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
-        Me.Hide()
+
         ClassHome.Show()
+        Me.Hide()
     End Sub
 
     Private Sub StudentToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StudentToolStripMenuItem.Click

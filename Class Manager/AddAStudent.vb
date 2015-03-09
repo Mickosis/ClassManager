@@ -12,9 +12,9 @@ Public Class AddAStudent
 
 
     Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs)
-        Me.Hide()
-        Home.Show()
 
+        Home.Show()
+        Me.Hide()
 
     End Sub
 
@@ -23,14 +23,17 @@ Public Class AddAStudent
     End Sub
 
     Private Sub ImportExcelFileToolStripMenuItem_Click(sender As Object, e As EventArgs)
-        Me.Hide()
+
         ImportExcelHome.Show()
+        Me.Hide()
+
 
     End Sub
 
     Private Sub ViewStudentsListToolStripMenuItem_Click(sender As Object, e As EventArgs)
-        Me.Hide()
+
         StudentsHome.Show()
+        Me.Hide()
 
     End Sub
 
@@ -73,9 +76,11 @@ Public Class AddAStudent
                 PictureBox1.ImageLocation = "C:\Mickosis\Class Manager\Default.png"
                 Dim thepath As String = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
                 TextBox6.Text = "C:\Mickosis\Class Manager\Default.png"
-                Me.Hide()
+
                 StudentsHome.LoadGrades()
                 StudentsHome.Show()
+
+                Me.Hide()
             End If
         End If
     End Sub
@@ -134,8 +139,9 @@ Public Class AddAStudent
     End Sub
 
     Private Sub HomeToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
-        Me.Hide()
+
         StudentsHome.Show()
+        Me.Hide()
     End Sub
 
     Private Sub Close_Click(sender As Object, e As EventArgs) Handles Close.Click

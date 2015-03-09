@@ -37,7 +37,7 @@ Partial Class EmailStudent
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Close = New System.Windows.Forms.Button()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -65,11 +65,11 @@ Partial Class EmailStudent
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Light", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(50, 190)
+        Me.Label3.Location = New System.Drawing.Point(40, 190)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(136, 25)
+        Me.Label3.Size = New System.Drawing.Size(160, 25)
         Me.Label3.TabIndex = 2
-        Me.Label3.Text = "E-mail Address:"
+        Me.Label3.Text = "E-mail Address/es:"
         '
         'Email
         '
@@ -95,7 +95,7 @@ Partial Class EmailStudent
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(206, 131)
+        Me.TextBox2.Location = New System.Drawing.Point(206, 127)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBox2.Size = New System.Drawing.Size(226, 29)
@@ -179,14 +179,14 @@ Partial Class EmailStudent
         Me.Close.TabIndex = 23
         Me.Close.UseVisualStyleBackColor = False
         '
-        'Label6
+        'RichTextBox2
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Segoe UI Light", 12.0!)
-        Me.Label6.Location = New System.Drawing.Point(202, 193)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(0, 21)
-        Me.Label6.TabIndex = 24
+        Me.RichTextBox2.Font = New System.Drawing.Font("Segoe UI Light", 12.0!)
+        Me.RichTextBox2.Location = New System.Drawing.Point(206, 162)
+        Me.RichTextBox2.Name = "RichTextBox2"
+        Me.RichTextBox2.Size = New System.Drawing.Size(226, 53)
+        Me.RichTextBox2.TabIndex = 24
+        Me.RichTextBox2.Text = ""
         '
         'EmailStudent
         '
@@ -194,7 +194,7 @@ Partial Class EmailStudent
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(602, 410)
-        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.RichTextBox2)
         Me.Controls.Add(Me.Close)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.RichTextBox1)
@@ -232,5 +232,5 @@ Partial Class EmailStudent
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents HomeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Close As System.Windows.Forms.Button
-    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents RichTextBox2 As System.Windows.Forms.RichTextBox
 End Class

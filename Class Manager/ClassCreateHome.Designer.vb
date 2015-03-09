@@ -38,6 +38,7 @@ Partial Class ClassCreateHome
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.CheckBox2 = New System.Windows.Forms.CheckBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -59,10 +60,10 @@ Partial Class ClassCreateHome
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(195, 145)
+        Me.TextBox1.Location = New System.Drawing.Point(130, 145)
         Me.TextBox1.MaxLength = 5
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(190, 29)
+        Me.TextBox1.Size = New System.Drawing.Size(255, 29)
         Me.TextBox1.TabIndex = 1
         '
         'Label1
@@ -71,9 +72,9 @@ Partial Class ClassCreateHome
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(27, 148)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(154, 21)
+        Me.Label1.Size = New System.Drawing.Size(91, 21)
         Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Class / Subject Name:"
+        Me.Label1.Text = "Section  No:"
         '
         'Label2
         '
@@ -185,12 +186,23 @@ Partial Class ClassCreateHome
         Me.ComboBox1.AutoCompleteCustomSource.AddRange(New String() {"IT FUNDAMENTALS & OFFICE AUTO", "INTRODUCTION TO COMPUTING", "WEBPAGE COMPOSITION & DEVT", "COMPUTER ORGANIZATION", "DATA STRUCTURE & ALGORITHM", "OBJECT ORIENTED PROGG", "DATABASE MANAGEMENT SYSTEM ", "DYNAMIC WEBPAGE DEVT", "OPERATING SYSTEM", "IT PROGRAMMING 1", "DATA COMM & COMP NET", "ADV.DATABASE MGT SYSTEM", "MULTIMEDIA TECHNOLOGY", "IT PROGRAMMING 2", "SYSTEMS ANALYSIS & DESIGN", "SOFTWARE ENGINEERING", "OBJ ORNTD SYS ANAL & DES", "ARTIFICIAL INTELLIGENCE", "MICROPROCESSOR", "INTER MULT & WEB DESIGN", "COMPUTER GAMING", "E-COMMERCE", "MOBILE COMPUTING", "ARTIFICIAL INTELLIGENCE", "MEDICAL TRANSCRIPTION", "TECHNOPRENEURSHIP", "ENTREPRENEURSHIP", "TOTAL QUALITY MANAGEMENT", "CALL CENTER OPERATION", "IT ENTREPRENEURSHIP", "ADVERTISING & SALES PROMOTION", "COMPUTER ANIMATION", "CODE OF ETHICS FOR IT", "MANAGEMENT OF INFO SYSTEM", "ASS LANG & IT RES SEC", "IT ISSUES AND SEMINARS", "IT RESEARCH PROJECT 1", "ON-THE-JOB TRAINING", "PROJECT MANAGEMENT", "IT RESEARCH PROJECT 2", "WIRELESS TECHNOLOGY", "PC REPAIR & TROUBLESHTNG"})
         Me.ComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
         Me.ComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.ComboBox1.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"IT FUNDAMENTALS & OFFICE AUTO", "INTRODUCTION TO COMPUTING", "WEBPAGE COMPOSITION & DEVT", "COMPUTER ORGANIZATION", "DATA STRUCTURE & ALGORITHM", "OBJECT ORIENTED PROGG", "DATABASE MANAGEMENT SYSTEM ", "DYNAMIC WEBPAGE DEVT", "OPERATING SYSTEM", "IT PROGRAMMING 1", "DATA COMM & COMP NET", "ADV.DATABASE MGT SYSTEM", "MULTIMEDIA TECHNOLOGY", "IT PROGRAMMING 2", "SYSTEMS ANALYSIS & DESIGN", "SOFTWARE ENGINEERING", "OBJ ORNTD SYS ANAL & DES", "ARTIFICIAL INTELLIGENCE", "MICROPROCESSOR", "INTER MULT & WEB DESIGN", "COMPUTER GAMING", "E-COMMERCE", "MOBILE COMPUTING", "ARTIFICIAL INTELLIGENCE", "MEDICAL TRANSCRIPTION", "TECHNOPRENEURSHIP", "ENTREPRENEURSHIP", "TOTAL QUALITY MANAGEMENT", "CALL CENTER OPERATION", "IT ENTREPRENEURSHIP", "ADVERTISING & SALES PROMOTION", "COMPUTER ANIMATION", "CODE OF ETHICS FOR IT", "MANAGEMENT OF INFO SYSTEM", "ASS LANG & IT RES SEC", "IT ISSUES AND SEMINARS", "IT RESEARCH PROJECT 1", "ON-THE-JOB TRAINING", "PROJECT MANAGEMENT", "IT RESEARCH PROJECT 2", "WIRELESS TECHNOLOGY", "PC REPAIR & TROUBLESHTNG"})
-        Me.ComboBox1.Location = New System.Drawing.Point(93, 93)
+        Me.ComboBox1.Location = New System.Drawing.Point(31, 93)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(292, 21)
+        Me.ComboBox1.Size = New System.Drawing.Size(354, 29)
         Me.ComboBox1.TabIndex = 40
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(25, 62)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(154, 21)
+        Me.Label5.TabIndex = 41
+        Me.Label5.Text = "Class / Subject Name:"
         '
         'ClassCreateHome
         '
@@ -198,6 +210,7 @@ Partial Class ClassCreateHome
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(403, 403)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.CheckBox2)
         Me.Controls.Add(Me.CheckBox1)
@@ -237,4 +250,5 @@ Partial Class ClassCreateHome
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
     Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label5 As System.Windows.Forms.Label
 End Class

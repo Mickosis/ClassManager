@@ -5,7 +5,7 @@ Public Class UpdateClass
     Private Sub UpdateClass_Activated(sender As Object, e As EventArgs) Handles MyBase.Activated
 
         DBConn()
-        SQLSTR = "SELECT * FROM MasterClasslist"
+        SQLSTR = "SELECT * FROM MasterClasslist ORDER BY ClassID"
         readDB()
         ListView1.GridLines = True
         ListView1.FullRowSelect = True
@@ -34,9 +34,10 @@ Public Class UpdateClass
                 AddGrades.StudentToolStripMenuItem.Text = .SubItems(0).Text + " " + .SubItems(1).Text
                 AddGrades.ToolStripMenuItem1.Text = .SubItems(2).Text
             End With
-            Me.Hide()
             AddGrades.AddGrades()
             AddGrades.Show()
+            Me.Hide()
+
         End If
     End Sub
 
@@ -47,9 +48,10 @@ Public Class UpdateClass
                 AddGrades.StudentToolStripMenuItem.Text = .SubItems(0).Text + " " + .SubItems(1).Text
                 AddGrades.ToolStripMenuItem1.Text = .SubItems(2).Text
             End With
-            Me.Hide()
             AddGrades.AddGrades()
             AddGrades.Show()
+            Me.Hide()
+
         End If
     End Sub
 
@@ -120,9 +122,10 @@ Public Class UpdateClass
     End Sub
 
     Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
-        Me.Hide()
 
         ClassHome.Show()
+        Me.Hide()
+
 
     End Sub
 

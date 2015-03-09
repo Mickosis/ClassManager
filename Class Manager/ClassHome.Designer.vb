@@ -59,7 +59,7 @@ Partial Class ClassHome
         Me.Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Update.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Update.Image = CType(resources.GetObject("Update.Image"), System.Drawing.Image)
-        Me.Update.Location = New System.Drawing.Point(42, 142)
+        Me.Update.Location = New System.Drawing.Point(41, 150)
         Me.Update.Name = "Update"
         Me.Update.Size = New System.Drawing.Size(201, 66)
         Me.Update.TabIndex = 1
@@ -115,7 +115,7 @@ Partial Class ClassHome
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.Location = New System.Drawing.Point(41, 288)
+        Me.Button1.Location = New System.Drawing.Point(41, 294)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(201, 66)
         Me.Button1.TabIndex = 25
@@ -131,7 +131,7 @@ Partial Class ClassHome
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.Location = New System.Drawing.Point(41, 214)
+        Me.Button2.Location = New System.Drawing.Point(41, 222)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(201, 66)
         Me.Button2.TabIndex = 26
@@ -143,7 +143,7 @@ Partial Class ClassHome
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(283, 385)
+        Me.ClientSize = New System.Drawing.Size(283, 370)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Close)

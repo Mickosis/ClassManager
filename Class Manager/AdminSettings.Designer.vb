@@ -53,6 +53,7 @@ Partial Class AdminSettings
         Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StudentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -75,7 +76,7 @@ Partial Class AdminSettings
         Me.Label8.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.Location = New System.Drawing.Point(15, 69)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(114, 21)
+        Me.Label8.Size = New System.Drawing.Size(113, 21)
         Me.Label8.TabIndex = 4
         Me.Label8.Text = "Periodical Exam"
         '
@@ -85,7 +86,7 @@ Partial Class AdminSettings
         Me.Label9.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.Location = New System.Drawing.Point(13, 66)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(114, 21)
+        Me.Label9.Size = New System.Drawing.Size(113, 21)
         Me.Label9.TabIndex = 5
         Me.Label9.Text = "Periodical Exam"
         '
@@ -95,7 +96,7 @@ Partial Class AdminSettings
         Me.Label10.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(15, 31)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(144, 21)
+        Me.Label10.Size = New System.Drawing.Size(141, 21)
         Me.Label10.TabIndex = 10
         Me.Label10.Text = "Total Class Standing"
         '
@@ -105,7 +106,7 @@ Partial Class AdminSettings
         Me.Label11.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.Location = New System.Drawing.Point(6, 28)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(144, 21)
+        Me.Label11.Size = New System.Drawing.Size(141, 21)
         Me.Label11.TabIndex = 11
         Me.Label11.Text = "Total Class Standing"
         '
@@ -131,7 +132,7 @@ Partial Class AdminSettings
         Me.Label12.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.Location = New System.Drawing.Point(341, 267)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(103, 21)
+        Me.Label12.Size = New System.Drawing.Size(102, 21)
         Me.Label12.TabIndex = 17
         Me.Label12.Text = "Prelim Weight"
         '
@@ -141,7 +142,7 @@ Partial Class AdminSettings
         Me.Label13.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.Location = New System.Drawing.Point(341, 310)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(118, 21)
+        Me.Label13.Size = New System.Drawing.Size(117, 21)
         Me.Label13.TabIndex = 18
         Me.Label13.Text = "Midterm Weight"
         '
@@ -151,7 +152,7 @@ Partial Class AdminSettings
         Me.Label20.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label20.Location = New System.Drawing.Point(341, 354)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(92, 21)
+        Me.Label20.Size = New System.Drawing.Size(91, 21)
         Me.Label20.TabIndex = 19
         Me.Label20.Text = "Final Weight"
         '
@@ -161,7 +162,7 @@ Partial Class AdminSettings
         Me.Label21.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label21.Location = New System.Drawing.Point(341, 399)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(105, 21)
+        Me.Label21.Size = New System.Drawing.Size(104, 21)
         Me.Label21.TabIndex = 20
         Me.Label21.Text = "Passing Grade"
         '
@@ -297,7 +298,7 @@ Partial Class AdminSettings
         Me.Label2.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(4, 28)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(127, 21)
+        Me.Label2.Size = New System.Drawing.Size(126, 21)
         Me.Label2.TabIndex = 30
         Me.Label2.Text = "Desired Password"
         '
@@ -307,7 +308,7 @@ Partial Class AdminSettings
         Me.Label3.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(6, 67)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(124, 21)
+        Me.Label3.Size = New System.Drawing.Size(123, 21)
         Me.Label3.TabIndex = 31
         Me.Label3.Text = "Repeat Password"
         '
@@ -367,12 +368,29 @@ Partial Class AdminSettings
         Me.Button6.TabIndex = 51
         Me.Button6.UseVisualStyleBackColor = False
         '
+        'Button3
+        '
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent
+        Me.Button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Segoe UI Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
+        Me.Button3.Location = New System.Drawing.Point(75, 451)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(208, 47)
+        Me.Button3.TabIndex = 52
+        Me.Button3.Text = "Reset Database"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'AdminSettings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(639, 510)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.GroupBox3)
@@ -435,4 +453,5 @@ Partial Class AdminSettings
     Friend WithEvents HomeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents StudentToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Button6 As System.Windows.Forms.Button
+    Friend WithEvents Button3 As System.Windows.Forms.Button
 End Class

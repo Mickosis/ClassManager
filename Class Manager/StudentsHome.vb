@@ -20,31 +20,32 @@ Public Class StudentsHome
     End Sub
 
     Private Sub ImportExcelFileToolStripMenuItem_Click(sender As Object, e As EventArgs)
-        Me.Hide()
         ImportExcelHome.Show()
+        Me.Hide()
     End Sub
 
     Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
-        Me.Hide()
         Home.Show()
-
+        Me.Hide()
     End Sub
 
 
 
     Private Sub ImportExcelFileToolStripMenuItem_Click_1(sender As Object, e As EventArgs)
-        Me.Hide()
         ImportExcelHome.Show()
+        Me.Hide()
 
     End Sub
 
     Private Sub AddAStudentToolStripMenuItem_Click(sender As Object, e As EventArgs)
-        Me.Hide()
         AddAStudent.Show()
+        Me.Hide()
+
     End Sub
 
     Private Sub ListView1_MouseDown(ByVal sender As Object, _
 ByVal e As MouseEventArgs) Handles ListView1.MouseDown
+
         Dim selection As ListViewItem = ListView1.GetItemAt(e.X, e.Y)
         If Not (selection Is Nothing) Then
             Dim curFile As String = selection.SubItems(5).Text
@@ -54,6 +55,7 @@ ByVal e As MouseEventArgs) Handles ListView1.MouseDown
                 TextBox1.Text = (selection.SubItems(5).Text)
                 Update.Enabled = True
                 Button1.Enabled = True
+                Email.Enabled = True
             Else
                 PictureBox1.Image = System.Drawing.Image.FromFile _
                 ("C:\Mickosis\Class Manager\Default.png")
@@ -65,8 +67,8 @@ ByVal e As MouseEventArgs) Handles ListView1.MouseDown
         Else
             Update.Enabled = False
             Button1.Enabled = False
+            Email.Enabled = False
         End If
-
 
 
     End Sub
@@ -110,7 +112,7 @@ ByVal e As MouseEventArgs) Handles ListView1.MouseDown
         Me.Hide()
         For Each item As ListViewItem In ListView1.SelectedItems
             list.Add(item.SubItems(4).Text)
-            EmailStudent.Label6.Text = String.Join(", ", list.ToArray)
+            EmailStudent.RichTextBox2.Text = String.Join(", ", list.ToArray)
         Next
 
         DBConn()
@@ -231,9 +233,10 @@ ByVal e As MouseEventArgs) Handles ListView1.MouseDown
     End Sub
 
     Private Sub Import_Click(sender As Object, e As EventArgs) Handles Import.Click
-        Me.Hide()
+
         ImportExcelHome.ClearShitOut()
         ImportExcelHome.Show()
+        Me.Hide()
     End Sub
 
     Private Sub Import_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles Import.MouseHover
@@ -250,9 +253,10 @@ ByVal e As MouseEventArgs) Handles ListView1.MouseDown
 
 
     Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles AddStudent.Click
-        Me.Hide()
+
         AddAStudent.ClearShitOut()
         AddAStudent.Show()
+        Me.Hide()
     End Sub
     Private Sub Add_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles AddStudent.MouseHover
 

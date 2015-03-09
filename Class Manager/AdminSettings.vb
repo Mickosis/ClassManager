@@ -1,6 +1,7 @@
 ﻿Imports System.Data.SQLite
 
 Public Class AdminSettings
+    Public thepath As String = Environment.GetFolderPath(Environment.SpecialFolder.Desktop)
 
     Private Sub AdminSettings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DBConn()
@@ -83,8 +84,8 @@ Public Class AdminSettings
             MsgBox("Password change succesfully! Please login again", , msgboxtitle)
             TextBox9.Clear()
             TextBox10.Clear()
-            Me.Hide()
             AdminControlLogin.Show()
+            Me.Hide()
         Else
             MsgBox("Passwords does not match")
             TextBox9.Clear()
@@ -102,7 +103,48 @@ Public Class AdminSettings
     End Sub
 
     Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
-        Me.Hide()
         ClassHome.Show()
+        Me.Hide()
+
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim SQLitecreate As New SQLiteConnection
+        Dim SQLitecommand As New SQLiteCommand
+        SQLiteConnection.CreateFile(thepath + "\ClassRecords")
+        SQLitecreate = New SQLiteConnection("Data Source=" + thepath + "\ClassRecords")
+        SQLitecommand.Connection = SQLitecreate
+        SQLitecreate.Open()
+        Dim TableCreate As String = "CREATE TABLE MasterStudents (StudentID INTEGER NOT NULL UNIQUE PRIMARY KEY, FirstName TEXT NOT NULL, LastName TEXT NOT NULL, ContactNumber INTEGER, EmailAddress TEXT, Path TEXT)"
+        SQLitecommand.CommandText = TableCreate
+        SQLitecommand.ExecuteNonQuery()
+        Dim TableCreate2 As String = "CREATE TABLE MasterClasslist (ClassID INTEGER NOT NULL PRIMARY KEY UNIQUE, Name TEXT NOT NULL, Desc TEXT NOT NULL, pQuiz INTEGER DEFAULT 30, pQuizTotal INTEGER DEFAULT 0, pAttend INTEGER DEFAULT 5, pAttendTotal INTEGER DEFAULT 0, pRecite INTEGER DEFAULT 5, pReciteTotal INTEGER DEFAULT 0, pProject INTEGER DEFAULT 20, pProjectTotal INTEGER DEFAULT 0, pHomework INTEGER DEFAULT 10, pHomeworkTotal INTEGER DEFAULT 0, pOthers INTEGER DEFAULT 30, pOthersTotal INTEGER DEFAULT 0, pExamTotal INTEGER DEFAULT 0, mQuiz INTEGER DEFAULT 30, mQuizTotal INTEGER DEFAULT 0, mAttend INTEGER DEFAULT 5, mAttendTotal INTEGER DEFAULT 0, mRecite INTEGER DEFAULT 5, mReciteTotal INTEGER DEFAULT 0, mProject INTEGER DEFAULT 20, mProjectTotal INTEGER DEFAULT 0, mHomework INTEGER DEFAULT 10, mHomeworkTotal INTEGER DEFAULT 0, mOthers INTEGER DEFAULT 30, mOthersTotal INTEGER DEFAULT 0, mExamTotal INTEGER DEFAULT 0, fQuiz INTEGER DEFAULT 30, fQuizTotal INTEGER DEFAULT 0, fAttend INTEGER DEFAULT 5, fAttendTotal INTEGER DEFAULT 0, fRecite INTEGER DEFAULT 5, fReciteTotal INTEGER DEFAULT 0, fProject INTEGER DEFAULT 20, fProjectTotal INTEGER DEFAULT 0, fHomework INTEGER DEFAULT 10, fHomeworkTotal INTEGER DEFAULT 0, fOthers INTEGER DEFAULT 30, fOthersTotal INTEGER DEFAULT 0, fExamTotal INTEGER DEFAULT 0, SeatPlan TEXT, Lab TEXT)"
+        SQLitecommand.CommandText = TableCreate2
+        SQLitecommand.ExecuteNonQuery()
+        Dim TableCreate3 As String = "CREATE TABLE LoginCredentials (IndexID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE, username TEXT DEFAULT adamson, password TEXT DEFAULT adamson)"
+        SQLitecommand.CommandText = TableCreate3
+        SQLitecommand.ExecuteNonQuery()
+        Dim TableCreate4 As String = "CREATE TABLE GlobalGrades (PMTotalCS INTEGER DEFAULT 60, PMExam INTEGER DEFAULT 40, FTotalCS INTEGER DEFAULT 50, FExam INTEGER DEFAULT 50, PrelimWeight INTEGER DEFAULT 30, MidtermWeight INTEGER DEFAULT 30, FinalWeight INTEGER DEFAULT 40, PassingMark INTEGER DEFAULT 70)"
+        SQLitecommand.CommandText = TableCreate4
+        SQLitecommand.ExecuteNonQuery()
+        Dim TableCreate5 As String = "INSERT INTO LoginCredentials (username, password) VALUES ('admin', 'adamson')"
+        SQLitecommand.CommandText = TableCreate5
+        SQLitecommand.ExecuteNonQuery()
+        Dim TableCreate6 As String = "INSERT INTO LoginCredentials (username, password) VALUES ('sample@gmail.com', 'adamson')"
+        SQLitecommand.CommandText = TableCreate6
+        SQLitecommand.ExecuteNonQuery()
+        Dim TableCreate7 As String = "INSERT INTO GlobalGrades VALUES (60, 40, 50, 50, 30 ,30 ,40, 70)"
+        SQLitecommand.CommandText = TableCreate7
+        SQLitecommand.ExecuteNonQuery()
+        SQLitecreate.Close()
+        My.Computer.FileSystem.CopyFile(
+thepath + "\ClassRecords",
+"C:\Mickosis\ClassRecords",
+Microsoft.VisualBasic.FileIO.UIOption.AllDialogs,
+Microsoft.VisualBasic.FileIO.UICancelOption.DoNothing)
+        My.Computer.FileSystem.DeleteFile(thepath + "\ClassRecords")
+        MsgBox("Import Success!")
+        SQLitecreate.Close()
+        SQLitecreate.Dispose()
     End Sub
 End Class

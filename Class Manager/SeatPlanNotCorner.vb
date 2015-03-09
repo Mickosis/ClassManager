@@ -7,14 +7,14 @@ Public Class SeatPlanNotCorner
         Dim count As Integer
         count = 1
         DBConn()
-        Dim querystring As String = "SELECT LastName FROM '" & ClassID & "' "
+        Dim querystring As String = "SELECT LastName FROM '" & ClassID & "' ORDER BY LastName"
         Dim command As New SQLiteCommand(querystring, SQLCONN)
         Dim reader As SQLiteDataReader = command.ExecuteReader
         While reader.Read
             Dim labels = "Label" & count.ToString
             Me.Controls(labels).Text = reader.GetValue(0)
             count += 1
-            If count > 40 Then
+            If count > 45 Then
                 Exit While
             End If
         End While
@@ -35,7 +35,8 @@ Public Class SeatPlanNotCorner
     End Sub
 
     Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
-        Me.Hide()
+
         AddGrades.Show()
+        Me.Hide()
     End Sub
 End Class
