@@ -6,9 +6,6 @@ Imports iTextSharp.text
 
 Public Class QuizMaker
 
-
-
-
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
         Dim SaveFileDialog1 As New SaveFileDialog()
@@ -30,6 +27,17 @@ Public Class QuizMaker
 
                 ' Open Document to write
                 doc.Open()
+
+                'Make a new image object
+                Dim ImagePath = "C:\Mickosis\Class Manager\Logo.jpg"
+                Dim Img = iTextSharp.text.Image.GetInstance(ImagePath)
+                Img.SetAbsolutePosition(464, 710)
+                wri.DirectContent.AddImage(Img)
+
+                Dim ImagePath1 = "C:\Mickosis\Class Manager\AdU.jpg"
+                Dim Img1 = iTextSharp.text.Image.GetInstance(ImagePath1)
+                Img1.SetAbsolutePosition(29, 710)
+                wri.DirectContent.AddImage(Img1)
 
                 Dim linespacing As Single = 1.0F
 
@@ -99,17 +107,6 @@ Public Class QuizMaker
                 p1.Add(RichTextBox1.Text)
                 ' Adding Paragraph to Document
                 doc.Add(p1)
-
-                'Make a new image object
-                Dim ImagePath = "C:\Mickosis\Class Manager\Logo.jpg"
-                Dim Img = iTextSharp.text.Image.GetInstance(ImagePath)
-                Img.SetAbsolutePosition(464, 710)
-                wri.DirectContent.AddImage(Img)
-
-                Dim ImagePath1 = "C:\Mickosis\Class Manager\AdU.jpg"
-                Dim Img1 = iTextSharp.text.Image.GetInstance(ImagePath1)
-                Img1.SetAbsolutePosition(29, 710)
-                wri.DirectContent.AddImage(Img1)
 
                 ' Document Closing
                 doc.Close()
