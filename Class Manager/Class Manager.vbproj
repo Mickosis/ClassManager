@@ -423,6 +423,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo1.ico" />
+    <None Include="Resources\sort1.png" />
+    <None Include="Resources\random.png" />
+    <None Include="Resources\sort.png" />
+    <None Include="Resources\11026519_1098765200139976_1740682501_n.jpg" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">

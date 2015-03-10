@@ -24,51 +24,8 @@ Partial Class SeatPlanLab
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SeatPlanLab))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StudentToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox14 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox15 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox16 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox17 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox18 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox19 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox20 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox21 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox22 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox23 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox24 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox25 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox26 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox27 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox28 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox29 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox30 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox31 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox32 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox33 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox34 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox35 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox36 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox37 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox38 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox39 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox40 = New System.Windows.Forms.PictureBox()
         Me.Label60 = New System.Windows.Forms.Label()
-        Me.PictureBox41 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -110,35 +67,70 @@ Partial Class SeatPlanLab
         Me.Label39 = New System.Windows.Forms.Label()
         Me.Label40 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.PictureBox42 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox43 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox44 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox45 = New System.Windows.Forms.PictureBox()
         Me.Label41 = New System.Windows.Forms.Label()
         Me.Label42 = New System.Windows.Forms.Label()
         Me.Label43 = New System.Windows.Forms.Label()
         Me.Label44 = New System.Windows.Forms.Label()
+        Me.PictureBox45 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox44 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox43 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox42 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox41 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox31 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox32 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox33 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox34 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox35 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox21 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox22 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox23 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox24 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox25 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox26 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox27 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox28 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox29 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox30 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox11 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox13 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox14 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox15 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox16 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox17 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox18 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox19 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox20 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox10 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox9 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox8 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PictureBox36 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox37 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox38 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox39 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox40 = New System.Windows.Forms.PictureBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox45, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox44, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox43, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox42, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox41, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox35, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -149,21 +141,31 @@ Partial Class SeatPlanLab
         CType(Me.PictureBox28, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox29, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox30, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox35, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox36, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox37, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox38, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox39, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox40, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox41, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox42, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox43, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox44, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox45, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -173,402 +175,15 @@ Partial Class SeatPlanLab
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HomeToolStripMenuItem, Me.StudentToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(669, 53)
+        Me.MenuStrip1.Size = New System.Drawing.Size(720, 53)
         Me.MenuStrip1.TabIndex = 40
         Me.MenuStrip1.Text = "Student"
-        '
-        'HomeToolStripMenuItem
-        '
-        Me.HomeToolStripMenuItem.Image = Global.Class_Manager.My.Resources.Resources.arrow
-        Me.HomeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
-        Me.HomeToolStripMenuItem.Name = "HomeToolStripMenuItem"
-        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(112, 49)
-        Me.HomeToolStripMenuItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal
-        Me.HomeToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
         '
         'StudentToolStripMenuItem
         '
         Me.StudentToolStripMenuItem.Name = "StudentToolStripMenuItem"
         Me.StudentToolStripMenuItem.Size = New System.Drawing.Size(113, 49)
         Me.StudentToolStripMenuItem.Text = "Seat Plan"
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox1.Location = New System.Drawing.Point(1, 419)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox1.TabIndex = 51
-        Me.PictureBox1.TabStop = False
-        '
-        'Button6
-        '
-        Me.Button6.BackColor = System.Drawing.Color.Firebrick
-        Me.Button6.FlatAppearance.BorderSize = 0
-        Me.Button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.Button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Image = Global.Class_Manager.My.Resources.Resources.CloseButton
-        Me.Button6.Location = New System.Drawing.Point(614, 0)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(55, 53)
-        Me.Button6.TabIndex = 50
-        Me.Button6.UseVisualStyleBackColor = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox2.Location = New System.Drawing.Point(1, 511)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox2.TabIndex = 52
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox3.Location = New System.Drawing.Point(1, 603)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox3.TabIndex = 53
-        Me.PictureBox3.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox4.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox4.Location = New System.Drawing.Point(1, 695)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox4.TabIndex = 54
-        Me.PictureBox4.TabStop = False
-        '
-        'PictureBox5
-        '
-        Me.PictureBox5.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox5.Location = New System.Drawing.Point(1, 787)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox5.TabIndex = 55
-        Me.PictureBox5.TabStop = False
-        '
-        'PictureBox6
-        '
-        Me.PictureBox6.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox6.Location = New System.Drawing.Point(1, 879)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox6.TabIndex = 56
-        Me.PictureBox6.TabStop = False
-        '
-        'PictureBox7
-        '
-        Me.PictureBox7.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox7.Location = New System.Drawing.Point(1, 971)
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox7.TabIndex = 57
-        Me.PictureBox7.TabStop = False
-        '
-        'PictureBox8
-        '
-        Me.PictureBox8.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox8.Location = New System.Drawing.Point(213, 52)
-        Me.PictureBox8.Name = "PictureBox8"
-        Me.PictureBox8.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox8.TabIndex = 58
-        Me.PictureBox8.TabStop = False
-        '
-        'PictureBox9
-        '
-        Me.PictureBox9.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox9.Location = New System.Drawing.Point(213, 145)
-        Me.PictureBox9.Name = "PictureBox9"
-        Me.PictureBox9.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox9.TabIndex = 59
-        Me.PictureBox9.TabStop = False
-        '
-        'PictureBox10
-        '
-        Me.PictureBox10.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox10.Location = New System.Drawing.Point(213, 236)
-        Me.PictureBox10.Name = "PictureBox10"
-        Me.PictureBox10.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox10.TabIndex = 60
-        Me.PictureBox10.TabStop = False
-        '
-        'PictureBox11
-        '
-        Me.PictureBox11.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox11.Location = New System.Drawing.Point(357, 143)
-        Me.PictureBox11.Name = "PictureBox11"
-        Me.PictureBox11.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox11.TabIndex = 70
-        Me.PictureBox11.TabStop = False
-        '
-        'PictureBox12
-        '
-        Me.PictureBox12.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox12.Location = New System.Drawing.Point(357, 52)
-        Me.PictureBox12.Name = "PictureBox12"
-        Me.PictureBox12.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox12.TabIndex = 69
-        Me.PictureBox12.TabStop = False
-        '
-        'PictureBox13
-        '
-        Me.PictureBox13.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox13.Location = New System.Drawing.Point(213, 971)
-        Me.PictureBox13.Name = "PictureBox13"
-        Me.PictureBox13.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox13.TabIndex = 68
-        Me.PictureBox13.TabStop = False
-        '
-        'PictureBox14
-        '
-        Me.PictureBox14.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox14.Location = New System.Drawing.Point(213, 879)
-        Me.PictureBox14.Name = "PictureBox14"
-        Me.PictureBox14.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox14.TabIndex = 67
-        Me.PictureBox14.TabStop = False
-        '
-        'PictureBox15
-        '
-        Me.PictureBox15.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox15.Location = New System.Drawing.Point(213, 787)
-        Me.PictureBox15.Name = "PictureBox15"
-        Me.PictureBox15.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox15.TabIndex = 66
-        Me.PictureBox15.TabStop = False
-        '
-        'PictureBox16
-        '
-        Me.PictureBox16.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox16.Location = New System.Drawing.Point(213, 695)
-        Me.PictureBox16.Name = "PictureBox16"
-        Me.PictureBox16.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox16.TabIndex = 65
-        Me.PictureBox16.TabStop = False
-        '
-        'PictureBox17
-        '
-        Me.PictureBox17.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox17.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox17.Location = New System.Drawing.Point(213, 603)
-        Me.PictureBox17.Name = "PictureBox17"
-        Me.PictureBox17.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox17.TabIndex = 64
-        Me.PictureBox17.TabStop = False
-        '
-        'PictureBox18
-        '
-        Me.PictureBox18.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox18.Location = New System.Drawing.Point(213, 511)
-        Me.PictureBox18.Name = "PictureBox18"
-        Me.PictureBox18.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox18.TabIndex = 63
-        Me.PictureBox18.TabStop = False
-        '
-        'PictureBox19
-        '
-        Me.PictureBox19.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox19.Location = New System.Drawing.Point(213, 419)
-        Me.PictureBox19.Name = "PictureBox19"
-        Me.PictureBox19.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox19.TabIndex = 62
-        Me.PictureBox19.TabStop = False
-        '
-        'PictureBox20
-        '
-        Me.PictureBox20.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox20.Location = New System.Drawing.Point(213, 328)
-        Me.PictureBox20.Name = "PictureBox20"
-        Me.PictureBox20.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox20.TabIndex = 61
-        Me.PictureBox20.TabStop = False
-        '
-        'PictureBox21
-        '
-        Me.PictureBox21.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox21.Location = New System.Drawing.Point(548, 52)
-        Me.PictureBox21.Name = "PictureBox21"
-        Me.PictureBox21.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox21.TabIndex = 80
-        Me.PictureBox21.TabStop = False
-        '
-        'PictureBox22
-        '
-        Me.PictureBox22.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox22.Location = New System.Drawing.Point(357, 972)
-        Me.PictureBox22.Name = "PictureBox22"
-        Me.PictureBox22.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox22.TabIndex = 79
-        Me.PictureBox22.TabStop = False
-        '
-        'PictureBox23
-        '
-        Me.PictureBox23.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox23.Location = New System.Drawing.Point(357, 879)
-        Me.PictureBox23.Name = "PictureBox23"
-        Me.PictureBox23.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox23.TabIndex = 78
-        Me.PictureBox23.TabStop = False
-        '
-        'PictureBox24
-        '
-        Me.PictureBox24.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox24.Location = New System.Drawing.Point(357, 787)
-        Me.PictureBox24.Name = "PictureBox24"
-        Me.PictureBox24.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox24.TabIndex = 77
-        Me.PictureBox24.TabStop = False
-        '
-        'PictureBox25
-        '
-        Me.PictureBox25.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox25.Location = New System.Drawing.Point(357, 695)
-        Me.PictureBox25.Name = "PictureBox25"
-        Me.PictureBox25.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox25.TabIndex = 76
-        Me.PictureBox25.TabStop = False
-        '
-        'PictureBox26
-        '
-        Me.PictureBox26.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox26.Location = New System.Drawing.Point(357, 603)
-        Me.PictureBox26.Name = "PictureBox26"
-        Me.PictureBox26.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox26.TabIndex = 75
-        Me.PictureBox26.TabStop = False
-        '
-        'PictureBox27
-        '
-        Me.PictureBox27.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox27.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox27.Location = New System.Drawing.Point(357, 511)
-        Me.PictureBox27.Name = "PictureBox27"
-        Me.PictureBox27.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox27.TabIndex = 74
-        Me.PictureBox27.TabStop = False
-        '
-        'PictureBox28
-        '
-        Me.PictureBox28.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox28.Location = New System.Drawing.Point(357, 419)
-        Me.PictureBox28.Name = "PictureBox28"
-        Me.PictureBox28.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox28.TabIndex = 73
-        Me.PictureBox28.TabStop = False
-        '
-        'PictureBox29
-        '
-        Me.PictureBox29.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox29.Location = New System.Drawing.Point(357, 327)
-        Me.PictureBox29.Name = "PictureBox29"
-        Me.PictureBox29.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox29.TabIndex = 72
-        Me.PictureBox29.TabStop = False
-        '
-        'PictureBox30
-        '
-        Me.PictureBox30.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox30.Location = New System.Drawing.Point(357, 236)
-        Me.PictureBox30.Name = "PictureBox30"
-        Me.PictureBox30.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox30.TabIndex = 71
-        Me.PictureBox30.TabStop = False
-        '
-        'PictureBox31
-        '
-        Me.PictureBox31.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox31.Location = New System.Drawing.Point(548, 972)
-        Me.PictureBox31.Name = "PictureBox31"
-        Me.PictureBox31.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox31.TabIndex = 90
-        Me.PictureBox31.TabStop = False
-        '
-        'PictureBox32
-        '
-        Me.PictureBox32.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox32.Location = New System.Drawing.Point(548, 881)
-        Me.PictureBox32.Name = "PictureBox32"
-        Me.PictureBox32.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox32.TabIndex = 89
-        Me.PictureBox32.TabStop = False
-        '
-        'PictureBox33
-        '
-        Me.PictureBox33.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox33.Location = New System.Drawing.Point(548, 788)
-        Me.PictureBox33.Name = "PictureBox33"
-        Me.PictureBox33.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox33.TabIndex = 88
-        Me.PictureBox33.TabStop = False
-        '
-        'PictureBox34
-        '
-        Me.PictureBox34.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox34.Location = New System.Drawing.Point(548, 696)
-        Me.PictureBox34.Name = "PictureBox34"
-        Me.PictureBox34.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox34.TabIndex = 87
-        Me.PictureBox34.TabStop = False
-        '
-        'PictureBox35
-        '
-        Me.PictureBox35.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox35.Location = New System.Drawing.Point(548, 603)
-        Me.PictureBox35.Name = "PictureBox35"
-        Me.PictureBox35.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox35.TabIndex = 86
-        Me.PictureBox35.TabStop = False
-        '
-        'PictureBox36
-        '
-        Me.PictureBox36.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox36.Location = New System.Drawing.Point(548, 511)
-        Me.PictureBox36.Name = "PictureBox36"
-        Me.PictureBox36.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox36.TabIndex = 85
-        Me.PictureBox36.TabStop = False
-        '
-        'PictureBox37
-        '
-        Me.PictureBox37.BackColor = System.Drawing.Color.Transparent
-        Me.PictureBox37.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox37.Location = New System.Drawing.Point(548, 419)
-        Me.PictureBox37.Name = "PictureBox37"
-        Me.PictureBox37.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox37.TabIndex = 84
-        Me.PictureBox37.TabStop = False
-        '
-        'PictureBox38
-        '
-        Me.PictureBox38.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox38.Location = New System.Drawing.Point(548, 327)
-        Me.PictureBox38.Name = "PictureBox38"
-        Me.PictureBox38.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox38.TabIndex = 83
-        Me.PictureBox38.TabStop = False
-        '
-        'PictureBox39
-        '
-        Me.PictureBox39.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox39.Location = New System.Drawing.Point(548, 235)
-        Me.PictureBox39.Name = "PictureBox39"
-        Me.PictureBox39.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox39.TabIndex = 82
-        Me.PictureBox39.TabStop = False
-        '
-        'PictureBox40
-        '
-        Me.PictureBox40.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox40.Location = New System.Drawing.Point(548, 144)
-        Me.PictureBox40.Name = "PictureBox40"
-        Me.PictureBox40.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox40.TabIndex = 81
-        Me.PictureBox40.TabStop = False
         '
         'Label60
         '
@@ -580,15 +195,6 @@ Partial Class SeatPlanLab
         Me.Label60.Size = New System.Drawing.Size(110, 32)
         Me.Label60.TabIndex = 131
         Me.Label60.Text = "TEACHER"
-        '
-        'PictureBox41
-        '
-        Me.PictureBox41.Image = Global.Class_Manager.My.Resources.Resources.teacher
-        Me.PictureBox41.Location = New System.Drawing.Point(140, 1101)
-        Me.PictureBox41.Name = "PictureBox41"
-        Me.PictureBox41.Size = New System.Drawing.Size(383, 142)
-        Me.PictureBox41.TabIndex = 130
-        Me.PictureBox41.TabStop = False
         '
         'Label1
         '
@@ -1038,42 +644,6 @@ Partial Class SeatPlanLab
         Me.TextBox1.TabIndex = 172
         Me.TextBox1.Visible = False
         '
-        'PictureBox42
-        '
-        Me.PictureBox42.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox42.Location = New System.Drawing.Point(1, 327)
-        Me.PictureBox42.Name = "PictureBox42"
-        Me.PictureBox42.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox42.TabIndex = 173
-        Me.PictureBox42.TabStop = False
-        '
-        'PictureBox43
-        '
-        Me.PictureBox43.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox43.Location = New System.Drawing.Point(0, 235)
-        Me.PictureBox43.Name = "PictureBox43"
-        Me.PictureBox43.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox43.TabIndex = 174
-        Me.PictureBox43.TabStop = False
-        '
-        'PictureBox44
-        '
-        Me.PictureBox44.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox44.Location = New System.Drawing.Point(0, 143)
-        Me.PictureBox44.Name = "PictureBox44"
-        Me.PictureBox44.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox44.TabIndex = 175
-        Me.PictureBox44.TabStop = False
-        '
-        'PictureBox45
-        '
-        Me.PictureBox45.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
-        Me.PictureBox45.Location = New System.Drawing.Point(0, 52)
-        Me.PictureBox45.Name = "PictureBox45"
-        Me.PictureBox45.Size = New System.Drawing.Size(109, 99)
-        Me.PictureBox45.TabIndex = 176
-        Me.PictureBox45.TabStop = False
-        '
         'Label41
         '
         Me.Label41.AutoSize = True
@@ -1118,13 +688,475 @@ Partial Class SeatPlanLab
         Me.Label44.TabIndex = 180
         Me.Label44.Text = "-"
         '
+        'PictureBox45
+        '
+        Me.PictureBox45.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox45.Location = New System.Drawing.Point(0, 52)
+        Me.PictureBox45.Name = "PictureBox45"
+        Me.PictureBox45.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox45.TabIndex = 176
+        Me.PictureBox45.TabStop = False
+        '
+        'PictureBox44
+        '
+        Me.PictureBox44.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox44.Location = New System.Drawing.Point(0, 143)
+        Me.PictureBox44.Name = "PictureBox44"
+        Me.PictureBox44.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox44.TabIndex = 175
+        Me.PictureBox44.TabStop = False
+        '
+        'PictureBox43
+        '
+        Me.PictureBox43.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox43.Location = New System.Drawing.Point(0, 235)
+        Me.PictureBox43.Name = "PictureBox43"
+        Me.PictureBox43.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox43.TabIndex = 174
+        Me.PictureBox43.TabStop = False
+        '
+        'PictureBox42
+        '
+        Me.PictureBox42.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox42.Location = New System.Drawing.Point(1, 327)
+        Me.PictureBox42.Name = "PictureBox42"
+        Me.PictureBox42.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox42.TabIndex = 173
+        Me.PictureBox42.TabStop = False
+        '
+        'PictureBox41
+        '
+        Me.PictureBox41.Image = Global.Class_Manager.My.Resources.Resources.teacher
+        Me.PictureBox41.Location = New System.Drawing.Point(140, 1101)
+        Me.PictureBox41.Name = "PictureBox41"
+        Me.PictureBox41.Size = New System.Drawing.Size(383, 142)
+        Me.PictureBox41.TabIndex = 130
+        Me.PictureBox41.TabStop = False
+        '
+        'PictureBox31
+        '
+        Me.PictureBox31.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox31.Location = New System.Drawing.Point(548, 972)
+        Me.PictureBox31.Name = "PictureBox31"
+        Me.PictureBox31.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox31.TabIndex = 90
+        Me.PictureBox31.TabStop = False
+        '
+        'PictureBox32
+        '
+        Me.PictureBox32.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox32.Location = New System.Drawing.Point(548, 881)
+        Me.PictureBox32.Name = "PictureBox32"
+        Me.PictureBox32.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox32.TabIndex = 89
+        Me.PictureBox32.TabStop = False
+        '
+        'PictureBox33
+        '
+        Me.PictureBox33.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox33.Location = New System.Drawing.Point(548, 788)
+        Me.PictureBox33.Name = "PictureBox33"
+        Me.PictureBox33.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox33.TabIndex = 88
+        Me.PictureBox33.TabStop = False
+        '
+        'PictureBox34
+        '
+        Me.PictureBox34.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox34.Location = New System.Drawing.Point(548, 696)
+        Me.PictureBox34.Name = "PictureBox34"
+        Me.PictureBox34.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox34.TabIndex = 87
+        Me.PictureBox34.TabStop = False
+        '
+        'PictureBox35
+        '
+        Me.PictureBox35.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox35.Location = New System.Drawing.Point(548, 603)
+        Me.PictureBox35.Name = "PictureBox35"
+        Me.PictureBox35.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox35.TabIndex = 86
+        Me.PictureBox35.TabStop = False
+        '
+        'PictureBox21
+        '
+        Me.PictureBox21.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox21.Location = New System.Drawing.Point(548, 52)
+        Me.PictureBox21.Name = "PictureBox21"
+        Me.PictureBox21.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox21.TabIndex = 80
+        Me.PictureBox21.TabStop = False
+        '
+        'PictureBox22
+        '
+        Me.PictureBox22.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox22.Location = New System.Drawing.Point(357, 972)
+        Me.PictureBox22.Name = "PictureBox22"
+        Me.PictureBox22.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox22.TabIndex = 79
+        Me.PictureBox22.TabStop = False
+        '
+        'PictureBox23
+        '
+        Me.PictureBox23.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox23.Location = New System.Drawing.Point(357, 879)
+        Me.PictureBox23.Name = "PictureBox23"
+        Me.PictureBox23.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox23.TabIndex = 78
+        Me.PictureBox23.TabStop = False
+        '
+        'PictureBox24
+        '
+        Me.PictureBox24.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox24.Location = New System.Drawing.Point(357, 787)
+        Me.PictureBox24.Name = "PictureBox24"
+        Me.PictureBox24.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox24.TabIndex = 77
+        Me.PictureBox24.TabStop = False
+        '
+        'PictureBox25
+        '
+        Me.PictureBox25.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox25.Location = New System.Drawing.Point(357, 695)
+        Me.PictureBox25.Name = "PictureBox25"
+        Me.PictureBox25.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox25.TabIndex = 76
+        Me.PictureBox25.TabStop = False
+        '
+        'PictureBox26
+        '
+        Me.PictureBox26.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox26.Location = New System.Drawing.Point(357, 603)
+        Me.PictureBox26.Name = "PictureBox26"
+        Me.PictureBox26.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox26.TabIndex = 75
+        Me.PictureBox26.TabStop = False
+        '
+        'PictureBox27
+        '
+        Me.PictureBox27.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox27.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox27.Location = New System.Drawing.Point(357, 511)
+        Me.PictureBox27.Name = "PictureBox27"
+        Me.PictureBox27.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox27.TabIndex = 74
+        Me.PictureBox27.TabStop = False
+        '
+        'PictureBox28
+        '
+        Me.PictureBox28.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox28.Location = New System.Drawing.Point(357, 419)
+        Me.PictureBox28.Name = "PictureBox28"
+        Me.PictureBox28.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox28.TabIndex = 73
+        Me.PictureBox28.TabStop = False
+        '
+        'PictureBox29
+        '
+        Me.PictureBox29.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox29.Location = New System.Drawing.Point(357, 327)
+        Me.PictureBox29.Name = "PictureBox29"
+        Me.PictureBox29.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox29.TabIndex = 72
+        Me.PictureBox29.TabStop = False
+        '
+        'PictureBox30
+        '
+        Me.PictureBox30.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox30.Location = New System.Drawing.Point(357, 236)
+        Me.PictureBox30.Name = "PictureBox30"
+        Me.PictureBox30.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox30.TabIndex = 71
+        Me.PictureBox30.TabStop = False
+        '
+        'PictureBox11
+        '
+        Me.PictureBox11.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox11.Location = New System.Drawing.Point(357, 143)
+        Me.PictureBox11.Name = "PictureBox11"
+        Me.PictureBox11.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox11.TabIndex = 70
+        Me.PictureBox11.TabStop = False
+        '
+        'PictureBox12
+        '
+        Me.PictureBox12.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox12.Location = New System.Drawing.Point(357, 52)
+        Me.PictureBox12.Name = "PictureBox12"
+        Me.PictureBox12.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox12.TabIndex = 69
+        Me.PictureBox12.TabStop = False
+        '
+        'PictureBox13
+        '
+        Me.PictureBox13.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox13.Location = New System.Drawing.Point(213, 971)
+        Me.PictureBox13.Name = "PictureBox13"
+        Me.PictureBox13.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox13.TabIndex = 68
+        Me.PictureBox13.TabStop = False
+        '
+        'PictureBox14
+        '
+        Me.PictureBox14.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox14.Location = New System.Drawing.Point(213, 879)
+        Me.PictureBox14.Name = "PictureBox14"
+        Me.PictureBox14.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox14.TabIndex = 67
+        Me.PictureBox14.TabStop = False
+        '
+        'PictureBox15
+        '
+        Me.PictureBox15.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox15.Location = New System.Drawing.Point(213, 787)
+        Me.PictureBox15.Name = "PictureBox15"
+        Me.PictureBox15.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox15.TabIndex = 66
+        Me.PictureBox15.TabStop = False
+        '
+        'PictureBox16
+        '
+        Me.PictureBox16.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox16.Location = New System.Drawing.Point(213, 695)
+        Me.PictureBox16.Name = "PictureBox16"
+        Me.PictureBox16.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox16.TabIndex = 65
+        Me.PictureBox16.TabStop = False
+        '
+        'PictureBox17
+        '
+        Me.PictureBox17.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox17.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox17.Location = New System.Drawing.Point(213, 603)
+        Me.PictureBox17.Name = "PictureBox17"
+        Me.PictureBox17.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox17.TabIndex = 64
+        Me.PictureBox17.TabStop = False
+        '
+        'PictureBox18
+        '
+        Me.PictureBox18.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox18.Location = New System.Drawing.Point(213, 511)
+        Me.PictureBox18.Name = "PictureBox18"
+        Me.PictureBox18.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox18.TabIndex = 63
+        Me.PictureBox18.TabStop = False
+        '
+        'PictureBox19
+        '
+        Me.PictureBox19.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox19.Location = New System.Drawing.Point(213, 419)
+        Me.PictureBox19.Name = "PictureBox19"
+        Me.PictureBox19.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox19.TabIndex = 62
+        Me.PictureBox19.TabStop = False
+        '
+        'PictureBox20
+        '
+        Me.PictureBox20.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox20.Location = New System.Drawing.Point(213, 328)
+        Me.PictureBox20.Name = "PictureBox20"
+        Me.PictureBox20.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox20.TabIndex = 61
+        Me.PictureBox20.TabStop = False
+        '
+        'PictureBox10
+        '
+        Me.PictureBox10.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox10.Location = New System.Drawing.Point(213, 236)
+        Me.PictureBox10.Name = "PictureBox10"
+        Me.PictureBox10.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox10.TabIndex = 60
+        Me.PictureBox10.TabStop = False
+        '
+        'PictureBox9
+        '
+        Me.PictureBox9.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox9.Location = New System.Drawing.Point(213, 145)
+        Me.PictureBox9.Name = "PictureBox9"
+        Me.PictureBox9.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox9.TabIndex = 59
+        Me.PictureBox9.TabStop = False
+        '
+        'PictureBox8
+        '
+        Me.PictureBox8.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox8.Location = New System.Drawing.Point(213, 52)
+        Me.PictureBox8.Name = "PictureBox8"
+        Me.PictureBox8.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox8.TabIndex = 58
+        Me.PictureBox8.TabStop = False
+        '
+        'PictureBox7
+        '
+        Me.PictureBox7.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox7.Location = New System.Drawing.Point(1, 971)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox7.TabIndex = 57
+        Me.PictureBox7.TabStop = False
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox6.Location = New System.Drawing.Point(1, 879)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox6.TabIndex = 56
+        Me.PictureBox6.TabStop = False
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox5.Location = New System.Drawing.Point(1, 787)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox5.TabIndex = 55
+        Me.PictureBox5.TabStop = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox4.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox4.Location = New System.Drawing.Point(1, 695)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox4.TabIndex = 54
+        Me.PictureBox4.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox3.Location = New System.Drawing.Point(1, 603)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox3.TabIndex = 53
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox2.Location = New System.Drawing.Point(1, 511)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox2.TabIndex = 52
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox1.Location = New System.Drawing.Point(1, 419)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox1.TabIndex = 51
+        Me.PictureBox1.TabStop = False
+        '
+        'Button6
+        '
+        Me.Button6.BackColor = System.Drawing.Color.Firebrick
+        Me.Button6.FlatAppearance.BorderSize = 0
+        Me.Button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.Image = Global.Class_Manager.My.Resources.Resources.CloseButton
+        Me.Button6.Location = New System.Drawing.Point(614, 0)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(55, 53)
+        Me.Button6.TabIndex = 50
+        Me.Button6.UseVisualStyleBackColor = False
+        '
+        'HomeToolStripMenuItem
+        '
+        Me.HomeToolStripMenuItem.Image = Global.Class_Manager.My.Resources.Resources.arrow
+        Me.HomeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
+        Me.HomeToolStripMenuItem.Name = "HomeToolStripMenuItem"
+        Me.HomeToolStripMenuItem.Size = New System.Drawing.Size(112, 49)
+        Me.HomeToolStripMenuItem.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal
+        Me.HomeToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.Overlay
+        '
+        'PictureBox36
+        '
+        Me.PictureBox36.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox36.Location = New System.Drawing.Point(548, 511)
+        Me.PictureBox36.Name = "PictureBox36"
+        Me.PictureBox36.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox36.TabIndex = 85
+        Me.PictureBox36.TabStop = False
+        '
+        'PictureBox37
+        '
+        Me.PictureBox37.BackColor = System.Drawing.Color.Transparent
+        Me.PictureBox37.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox37.Location = New System.Drawing.Point(548, 419)
+        Me.PictureBox37.Name = "PictureBox37"
+        Me.PictureBox37.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox37.TabIndex = 84
+        Me.PictureBox37.TabStop = False
+        '
+        'PictureBox38
+        '
+        Me.PictureBox38.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox38.Location = New System.Drawing.Point(548, 327)
+        Me.PictureBox38.Name = "PictureBox38"
+        Me.PictureBox38.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox38.TabIndex = 83
+        Me.PictureBox38.TabStop = False
+        '
+        'PictureBox39
+        '
+        Me.PictureBox39.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox39.Location = New System.Drawing.Point(548, 235)
+        Me.PictureBox39.Name = "PictureBox39"
+        Me.PictureBox39.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox39.TabIndex = 82
+        Me.PictureBox39.TabStop = False
+        '
+        'PictureBox40
+        '
+        Me.PictureBox40.Image = Global.Class_Manager.My.Resources.Resources.Seatlab
+        Me.PictureBox40.Location = New System.Drawing.Point(548, 144)
+        Me.PictureBox40.Name = "PictureBox40"
+        Me.PictureBox40.Size = New System.Drawing.Size(109, 99)
+        Me.PictureBox40.TabIndex = 81
+        Me.PictureBox40.TabStop = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.Firebrick
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Image = Global.Class_Manager.My.Resources.Resources.sort1
+        Me.Button2.Location = New System.Drawing.Point(548, 0)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(55, 53)
+        Me.Button2.TabIndex = 182
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Firebrick
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Image = Global.Class_Manager.My.Resources.Resources.random
+        Me.Button1.Location = New System.Drawing.Point(485, 0)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(55, 53)
+        Me.Button1.TabIndex = 181
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'SeatPlanLab
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(686, 700)
+        Me.ClientSize = New System.Drawing.Size(737, 700)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label44)
         Me.Controls.Add(Me.Label43)
         Me.Controls.Add(Me.Label42)
@@ -1227,26 +1259,16 @@ Partial Class SeatPlanLab
         Me.Text = "SeatPlanLab"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox45, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox44, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox43, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox42, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox41, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox35, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox21, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox22, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox23, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1257,21 +1279,31 @@ Partial Class SeatPlanLab
         CType(Me.PictureBox28, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox29, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox30, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox31, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox32, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox33, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox34, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox35, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox14, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox15, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox16, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox17, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox18, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox19, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox20, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox36, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox37, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox38, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox39, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox40, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox41, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox42, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox43, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox44, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox45, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -1371,4 +1403,6 @@ Partial Class SeatPlanLab
     Friend WithEvents Label42 As System.Windows.Forms.Label
     Friend WithEvents Label43 As System.Windows.Forms.Label
     Friend WithEvents Label44 As System.Windows.Forms.Label
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

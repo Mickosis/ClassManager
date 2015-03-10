@@ -130,6 +130,9 @@
   <data name="SeatNotCorner" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SeatNotCorner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Seat1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Seat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="arrowpressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrowpressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -151,8 +154,11 @@
   <data name="arrow mail" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\arrow mail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Seat1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Seat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="random" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\random.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Students Update and Contact pressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Students Update and Contact pressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Default" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Default.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,6 +184,12 @@
   <data name="StudentsButton" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\StudentsButton.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="sort" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sort.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Seatlab" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Seatlab.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="addbrowsepressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\addbrowsepressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -187,11 +199,11 @@
   <data name="Students Update and Contact" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Students Update and Contact.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="11026519_1098765200139976_1740682501_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\11026519_1098765200139976_1740682501_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="addbrowse" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\addbrowse.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Students Update and Contact pressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Students Update and Contact pressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="browseimportpressed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\browseimportpressed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -205,7 +217,7 @@
   <data name="People" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\People.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Seatlab" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Seatlab.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sort1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sort1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
